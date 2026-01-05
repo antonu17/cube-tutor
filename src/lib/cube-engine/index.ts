@@ -7,7 +7,7 @@
 export { parseMove, parseAlgorithm, invertMove, invertAlgorithm, movesToNotation } from "./parser";
 
 // State management
-export { createSolvedState, cloneState, isStateSolved, statesEqual, stateToString } from "./state";
+export { createSolvedState, cloneState, isStateSolved, statesEqual, stateToString, renderCubeNet } from "./state";
 
 // Move execution
 export { applyMove, applyAlgorithm, applyAlgorithmStepByStep } from "./executor";
