@@ -18,6 +18,7 @@ export default defineConfig({
     trace: process.env.PLAYWRIGHT_TRACE === 'on' ? 'on' : 'on-first-retry',
     video: process.env.PLAYWRIGHT_VIDEO === 'on' ? 'on' : 'retain-on-failure',
     screenshot: 'only-on-failure',
+    viewport: { width: 1280, height: 720 },
   },
 
   projects: [

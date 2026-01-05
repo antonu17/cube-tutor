@@ -19,7 +19,7 @@ test.describe('Accessibility', () => {
   });
 
   test('links should have accessible names', async ({ page }) => {
-    await page.goto('/methods');
+    await page.goto('/puzzles');
     
     // Check that links have text or aria-labels
     const links = page.getByRole('link');
@@ -33,20 +33,35 @@ test.describe('Accessibility', () => {
       expect(text || ariaLabel).toBeTruthy();
     }
   });
+
+  test('copy buttons should have accessible labels', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    
+    // Check copy button has aria-label
+    const copyButton = page.getByRole('button', { name: /copy/i });
+    await expect(copyButton).toBeVisible();
+  });
 });
 
 test.describe('SEO', () => {
-  test('should have meta description', async ({ page }) => {
+  test('homepage should have meta description', async ({ page }) => {
     await page.goto('/');
     
     const metaDescription = page.locator('meta[name="description"]');
     await expect(metaDescription).toHaveAttribute('content', /.+/);
   });
 
-  test('should have Open Graph tags', async ({ page }) => {
+  test('homepage should have Open Graph tags', async ({ page }) => {
     await page.goto('/');
     
     const ogTitle = page.locator('meta[property="og:title"]');
     await expect(ogTitle).toHaveAttribute('content', /.+/);
+  });
+
+  test('case detail page should have meta description', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    
+    const metaDescription = page.locator('meta[name="description"]');
+    await expect(metaDescription).toHaveAttribute('content', /.+/);
   });
 });

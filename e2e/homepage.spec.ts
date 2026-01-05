@@ -14,18 +14,36 @@ test.describe('Homepage', () => {
   test('should display navigation', async ({ page }) => {
     await page.goto('/');
     
-    // Check for navigation links
-    await expect(page.getByRole('link', { name: /home/i })).toBeVisible();
-    await expect(page.getByRole('link', { name: /methods/i })).toBeVisible();
+    // Check for navigation links (use exact names to avoid ambiguity)
+    await expect(page.getByRole('link', { name: 'Puzzles', exact: true })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'About', exact: true })).toBeVisible();
   });
 
-  test('should navigate to methods page', async ({ page }) => {
+  test('should navigate to puzzles page', async ({ page }) => {
     await page.goto('/');
     
-    // Click on methods link
-    await page.getByRole('link', { name: /methods/i }).click();
+    // Click on "Browse Puzzles" button on homepage (more specific than nav link)
+    await page.getByRole('link', { name: 'Browse Puzzles' }).click();
     
-    // Should navigate to methods page
-    await expect(page).toHaveURL('/methods');
+    // Should navigate to puzzles page
+    await expect(page).toHaveURL('/puzzles');
+  });
+
+  test('should navigate through full user flow', async ({ page }) => {
+    await page.goto('/');
+    
+    // Navigate to puzzles using nav link (be specific)
+    await page.getByRole('link', { name: 'Puzzles', exact: true }).click();
+    await expect(page).toHaveURL('/puzzles');
+    
+    // Click on 3x3x3 puzzle - the whole card is a link
+    await page.getByRole('link').filter({ hasText: '3×3×3' }).click();
+    await page.waitForURL('**/puzzles/3x3x3');
+    await expect(page.url()).toContain('/puzzles/3x3x3');
+    
+    // Click on CFOP method
+    await page.getByRole('link').filter({ hasText: 'CFOP' }).first().click();
+    await page.waitForURL('**/puzzles/3x3x3/cfop');
+    await expect(page.url()).toContain('/puzzles/3x3x3/cfop');
   });
 });

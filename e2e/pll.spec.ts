@@ -1,36 +1,44 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('PLL Algorithm Page', () => {
-  test('should display PLL cases', async ({ page }) => {
-    await page.goto('/methods/cfop/pll');
+  test('should display PLL stage page', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/cfop/pll');
     
     // Check page title
-    await expect(page.getByRole('heading', { name: /PLL/i })).toBeVisible();
+    await expect(page.getByRole('heading', { name: /PLL/i }).first()).toBeVisible();
     
     // Check that at least one case is displayed
-    await expect(page.getByText(/PLL/i)).toBeVisible();
+    await expect(page.getByText(/PLL/i).first()).toBeVisible();
   });
 
   test('should navigate to PLL case detail', async ({ page }) => {
-    await page.goto('/methods/cfop/pll');
+    await page.goto('/puzzles/3x3x3/cfop/pll');
     
-    // Click on first PLL case link
-    const firstCase = page.getByRole('link').filter({ hasText: /^[A-Z]/ }).first();
-    if (await firstCase.isVisible()) {
-      await firstCase.click();
-      
-      // Should navigate to case detail page
-      await expect(page.url()).toContain('/methods/cfop/pll/');
-    }
+    // Click on first PLL case link - be more specific to find actual PLL case
+    const firstCase = page.getByRole('link').filter({ hasText: /Ua/ }).or(page.getByRole('link').filter({ hasText: /PLL-/ })).first();
+    await firstCase.click();
+    
+    // Should navigate to case detail page
+    await page.waitForURL('**/puzzles/3x3x3/cfop/pll/pll-**', { timeout: 10000 });
+    await expect(page.url()).toMatch(/\/puzzles\/3x3x3\/cfop\/pll\/pll-/);
   });
 });
 
 test.describe('PLL Case Detail Page', () => {
-  test('should display case information for Aa perm', async ({ page }) => {
-    await page.goto('/methods/cfop/pll/aa');
+  test('should display case information for Ua perm', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/cfop/pll/pll-ua');
     
     // Check for algorithm notation
-    const algorithmText = page.locator('text=/[RUFLDBrufldb]/');
-    await expect(algorithmText.first()).toBeVisible();
+    const algorithmCode = page.locator('code');
+    await expect(algorithmCode.first()).toBeVisible();
+    await expect(algorithmCode.first()).toContainText(/[RUFLDBrufldb]/);
+  });
+
+  test('should have copy button', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/cfop/pll/pll-ua');
+    
+    // Look for copy button
+    const copyButton = page.getByRole('button', { name: /copy/i });
+    await expect(copyButton).toBeVisible();
   });
 });
