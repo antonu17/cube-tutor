@@ -1,53 +1,35 @@
-/**
- * Puzzle Data Loader
- * Functions for loading puzzle definitions
- */
-
-import type { PuzzleInfo } from "@/src/types/cube";
-import { readFile } from "fs/promises";
-import { join } from "path";
-
-const DATA_DIR = join(process.cwd(), "src", "data", "puzzles");
+import type { Puzzle } from "@/src/types/data";
+import type { MethodType } from "@/src/types/cube";
 
 /**
- * Load a specific puzzle by ID
- * @param id - Puzzle ID (e.g., "3x3x3")
- * @returns Puzzle data
- * @throws Error if puzzle not found or invalid JSON
+ * Load all puzzles from the data directory
  */
-export async function loadPuzzle(id: string): Promise<PuzzleInfo> {
-  const filePath = join(DATA_DIR, `${id}.json`);
+export async function loadPuzzles(): Promise<Puzzle[]> {
+  // For now, we only have 3x3x3
+  // In the future, we can read from a directory or database
+  const puzzle3x3 = await import("@/src/data/puzzles/3x3x3.json");
   
-  try {
-    const content = await readFile(filePath, "utf-8");
-    const puzzle = JSON.parse(content) as PuzzleInfo;
-    
-    // Validate required fields
-    if (!puzzle.type || !puzzle.name || !puzzle.supportedMethods) {
-      throw new Error(`Invalid puzzle data in ${id}.json: missing required fields`);
-    }
-    
-    return puzzle;
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      throw new Error(`Puzzle not found: ${id}`);
-    }
-    throw error;
-  }
+  return [
+    {
+      id: "3x3x3",
+      type: puzzle3x3.type,
+      name: puzzle3x3.name,
+      description: puzzle3x3.description,
+      dimensions: [3, 3, 3],
+      supportedMethods: puzzle3x3.supportedMethods as MethodType[],
+    },
+  ];
 }
 
 /**
- * Load all available puzzles
- * @returns Array of all puzzles
+ * Alias for backward compatibility
  */
-export async function loadAllPuzzles(): Promise<PuzzleInfo[]> {
-  // For now, we only have 3x3x3
-  // In the future, this could read the directory
-  const puzzleIds = ["3x3x3"];
-  
-  const puzzles = await Promise.all(
-    puzzleIds.map((id) => loadPuzzle(id).catch(() => null))
-  );
-  
-  return puzzles.filter((p): p is PuzzleInfo => p !== null);
+export const loadAllPuzzles = loadPuzzles;
+
+/**
+ * Load a specific puzzle by ID
+ */
+export async function loadPuzzle(puzzleId: string): Promise<Puzzle | null> {
+  const puzzles = await loadPuzzles();
+  return puzzles.find((p) => p.id === puzzleId) || null;
 }

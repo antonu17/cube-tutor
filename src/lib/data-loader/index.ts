@@ -5,4 +5,4 @@
 
 export { loadPuzzle, loadAllPuzzles } from "./puzzles";
 export { loadMethod, loadAllMethods } from "./methods";
-export { loadAlgorithms, loadCase, loadMethodAlgorithms } from "./algorithms";
+export { loadAlgorithms, loadAlgorithmsByCategory, loadCase, loadMethodAlgorithms } from "./algorithms";

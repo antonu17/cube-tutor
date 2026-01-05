@@ -41,6 +41,70 @@ export async function loadAlgorithms(
 }
 
 /**
+ * Load algorithm cases grouped by category
+ * @param methodId - Method ID
+ * @param stageId - Stage ID
+ * @returns Object with categories as keys, each containing name, description, and cases
+ */
+export async function loadAlgorithmsByCategory(
+  methodId: string,
+  stageId: string
+): Promise<Record<string, { name: string; description: string; cases: AlgorithmCase[] }>> {
+  const cases = await loadAlgorithms(methodId, stageId);
+  
+  const categorized: Record<string, { name: string; description: string; cases: AlgorithmCase[] }> = {};
+  
+  for (const algorithmCase of cases) {
+    const category = algorithmCase.category || "uncategorized";
+    
+    if (!categorized[category]) {
+      categorized[category] = {
+        name: formatCategoryName(category),
+        description: getCategoryDescription(category),
+        cases: [],
+      };
+    }
+    
+    categorized[category].cases.push(algorithmCase);
+  }
+  
+  return categorized;
+}
+
+/**
+ * Format category name for display
+ */
+function formatCategoryName(category: string): string {
+  return category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+/**
+ * Get category description based on category name
+ */
+function getCategoryDescription(category: string): string {
+  const descriptions: Record<string, string> = {
+    "dot": "No edges oriented correctly",
+    "line": "Two opposite edges oriented",
+    "square": "Two adjacent edges oriented",
+    "fish": "Three edges oriented in fish pattern",
+    "l-shape": "Three edges oriented in L pattern",
+    "i-shape": "Four edges oriented in line",
+    "corners-oriented": "All corners oriented, edges need fixing",
+    "edges-only": "Permute edges only, corners already solved",
+    "corners-only": "Permute corners only, edges already solved",
+    "adjacent-swap": "Swap two adjacent pieces",
+    "diagonal-swap": "Swap two diagonal pieces",
+    "all": "General solving techniques",
+    "uncategorized": "Miscellaneous cases",
+  };
+  
+  return descriptions[category] || "Algorithm cases for this category";
+}
+
+/**
  * Load a specific algorithm case by ID
  * @param methodId - Method ID
  * @param stageId - Stage ID
