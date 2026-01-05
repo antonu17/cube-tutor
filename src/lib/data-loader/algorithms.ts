@@ -81,25 +81,30 @@ export async function loadAlgorithmsByCategory(
   methodId: string,
   stageId: string
 ): Promise<Record<string, { name: string; description: string; cases: AlgorithmCase[] }>> {
-  const cases = await loadAlgorithms(methodId, stageId);
-  
-  const categorized: Record<string, { name: string; description: string; cases: AlgorithmCase[] }> = {};
-  
-  for (const algorithmCase of cases) {
-    const category = algorithmCase.category || "uncategorized";
+  try {
+    const cases = await loadAlgorithms(methodId, stageId);
     
-    if (!categorized[category]) {
-      categorized[category] = {
-        name: formatCategoryName(category),
-        description: getCategoryDescription(category),
-        cases: [],
-      };
+    const categorized: Record<string, { name: string; description: string; cases: AlgorithmCase[] }> = {};
+    
+    for (const algorithmCase of cases) {
+      const category = algorithmCase.category || "uncategorized";
+      
+      if (!categorized[category]) {
+        categorized[category] = {
+          name: formatCategoryName(category),
+          description: getCategoryDescription(category),
+          cases: [],
+        };
+      }
+      
+      categorized[category].cases.push(algorithmCase);
     }
     
-    categorized[category].cases.push(algorithmCase);
+    return categorized;
+  } catch (error) {
+    // Return empty object for stages without algorithms (e.g., Cross, F2L)
+    return {};
   }
-  
-  return categorized;
 }
 
 /**
