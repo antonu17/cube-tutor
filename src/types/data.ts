@@ -74,6 +74,18 @@ export interface MethodData {
   }[];
 }
 
+/**
+ * Puzzle data structure
+ */
+export interface Puzzle {
+  id: string;
+  type: string;
+  name: string;
+  description: string;
+  dimensions: number[];
+  supportedMethods: MethodType[];
+}
+
 // ============================================================================
 // Data Loading & Caching
 // ============================================================================
