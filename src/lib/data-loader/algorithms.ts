@@ -27,12 +27,33 @@ export async function loadAlgorithms(
   
   try {
     const content = await readFile(filePath, "utf-8");
-    const cases = JSON.parse(content) as AlgorithmCase[];
+    const rawCases = JSON.parse(content) as any[];
     
     // Validate it's an array
-    if (!Array.isArray(cases)) {
+    if (!Array.isArray(rawCases)) {
       throw new Error(`Invalid algorithm data: expected array`);
     }
+    
+    // Transform raw cases to include primaryAlg
+    const cases = rawCases.map((c) => {
+      // Find the recommended algorithm, or use the first one
+      const primaryAlg = c.algorithms.find((alg: any) => alg.recommended) || c.algorithms[0];
+      
+      // Ensure each algorithm has an id
+      const algorithmsWithIds = c.algorithms.map((alg: any, index: number) => ({
+        ...alg,
+        id: alg.id || `${c.id}-alg-${index}`,
+      }));
+      
+      return {
+        ...c,
+        algorithms: algorithmsWithIds,
+        primaryAlg: {
+          ...primaryAlg,
+          id: primaryAlg.id || `${c.id}-alg-0`,
+        },
+      };
+    });
     
     // For beginner method, filter by stage
     if (methodId === "beginner") {

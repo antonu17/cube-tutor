@@ -32,6 +32,7 @@ export function AlgorithmNotation({ notation, className }: AlgorithmNotationProp
           variant="outline"
           onClick={handleCopy}
           className="shrink-0"
+          aria-label={copied ? "Algorithm copied" : "Copy algorithm to clipboard"}
         >
           {copied ? (
             <Check className="h-4 w-4" />
