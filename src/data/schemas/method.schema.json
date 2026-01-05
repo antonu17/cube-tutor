@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Method",
+  "description": "Solving method definition (e.g., CFOP, Beginner)",
+  "type": "object",
+  "required": ["id", "name", "description", "puzzleId"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier (e.g., 'cfop', 'beginner')",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (e.g., 'CFOP Method')"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the method"
+    },
+    "puzzleId": {
+      "type": "string",
+      "description": "ID of the puzzle this method applies to"
+    },
+    "difficulty": {
+      "type": "integer",
+      "description": "Difficulty level (1-5)",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "stages": {
+      "type": "array",
+      "description": "Stages/phases of the method",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "description", "order"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "caseCount": {
+            "type": "integer",
+            "description": "Number of algorithm cases in this stage",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}

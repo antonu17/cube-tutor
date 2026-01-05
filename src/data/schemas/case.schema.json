@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AlgorithmCase",
+  "description": "A specific algorithm case (e.g., OLL 21, PLL T-Perm)",
+  "type": "object",
+  "required": ["id", "name", "method", "algorithms", "difficulty"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier (e.g., 'oll-21', 't-perm')",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (e.g., 'OLL 21', 'T-Perm')"
+    },
+    "method": {
+      "type": "string",
+      "description": "Method this case belongs to",
+      "enum": ["beginner", "cfop", "roux", "zz"]
+    },
+    "stage": {
+      "type": "string",
+      "description": "Stage/phase within the method (e.g., 'oll', 'pll')"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category or shape (e.g., 'dot', 'line', 'adjacent-swap')"
+    },
+    "algorithms": {
+      "type": "array",
+      "description": "List of algorithms that solve this case",
+      "items": {
+        "type": "object",
+        "required": ["notation", "moves"],
+        "properties": {
+          "notation": {
+            "type": "string",
+            "description": "Algorithm in WCA notation (e.g., 'R U R\\' U\\'')"
+          },
+          "moves": {
+            "type": "array",
+            "description": "Parsed moves array",
+            "items": {
+              "type": "object",
+              "required": ["base", "modifier", "notation"],
+              "properties": {
+                "base": {
+                  "type": "string"
+                },
+                "modifier": {
+                  "type": "string",
+                  "enum": ["", "'", "2"]
+                },
+                "notation": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "source": {
+            "type": "string",
+            "description": "Source of the algorithm (e.g., 'SpeedCubeDB', 'JPerm')"
+          },
+          "recommended": {
+            "type": "boolean",
+            "description": "Whether this is a recommended/primary algorithm",
+            "default": false
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "difficulty": {
+      "type": "integer",
+      "description": "Difficulty level (1-5)",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "recognitionHints": {
+      "type": "array",
+      "description": "Visual hints for recognizing this case",
+      "items": {
+        "type": "string"
+      }
+    },
+    "setupMoves": {
+      "type": "string",
+      "description": "Moves to create this case from solved (for practice)"
+    },
+    "probability": {
+      "type": "number",
+      "description": "Probability of encountering this case (0-1)",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

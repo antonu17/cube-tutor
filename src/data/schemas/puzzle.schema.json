@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Puzzle",
+  "description": "Twisty puzzle definition (e.g., 3x3x3 cube)",
+  "type": "object",
+  "required": ["id", "name", "description", "supportedMethods"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier (e.g., '3x3x3')",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name (e.g., '3×3×3 Cube')"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the puzzle"
+    },
+    "notation": {
+      "type": "string",
+      "description": "Notation system used (e.g., 'WCA')",
+      "default": "WCA"
+    },
+    "supportedMethods": {
+      "type": "array",
+      "description": "List of solving methods available for this puzzle",
+      "items": {
+        "type": "string",
+        "enum": ["beginner", "cfop", "roux", "zz"]
+      },
+      "minItems": 1
+    }
+  }
+}
