@@ -20,7 +20,10 @@ export async function loadAlgorithms(
   methodId: string,
   stageId: string
 ): Promise<AlgorithmCase[]> {
-  const filePath = join(DATA_DIR, methodId, stageId, "all-cases.json");
+  // Beginner method stores all stages in one file
+  const filePath = methodId === "beginner" 
+    ? join(DATA_DIR, methodId, "all", "all-cases.json")
+    : join(DATA_DIR, methodId, stageId, "all-cases.json");
   
   try {
     const content = await readFile(filePath, "utf-8");
@@ -29,6 +32,13 @@ export async function loadAlgorithms(
     // Validate it's an array
     if (!Array.isArray(cases)) {
       throw new Error(`Invalid algorithm data: expected array`);
+    }
+    
+    // For beginner method, filter by stage
+    if (methodId === "beginner") {
+      const filtered = cases.filter((c: any) => c.stage === stageId);
+      // Return empty array for intuitive stages (like white-cross)
+      return filtered;
     }
     
     return cases;

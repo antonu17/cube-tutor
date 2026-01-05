@@ -9,7 +9,16 @@
     "lint": "eslint",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:docker": "docker compose -f docker-compose.playwright.yml run --rm playwright",
+    "test:e2e:docker:build": "docker compose -f docker-compose.playwright.yml build",
+    "test:e2e:docker:headed": "docker compose -f docker-compose.playwright.yml run --rm playwright bunx playwright test --headed",
+    "test:e2e:docker:video": "docker compose -f docker-compose.playwright.yml run --rm -e PLAYWRIGHT_VIDEO=on playwright",
+    "test:e2e:docker:trace": "docker compose -f docker-compose.playwright.yml run --rm -e PLAYWRIGHT_TRACE=on playwright"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -25,10 +34,11 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.57.0",
     "@tailwindcss/postcss": "^4",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
-    "@types/node": "^20",
+    "@types/node": "^20.19.27",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^5.1.2",

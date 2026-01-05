@@ -1,0 +1,12 @@
+services:
+  playwright:
+    build:
+      context: .
+      dockerfile: Dockerfile.playwright
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - CI=true
+    network_mode: host
+    command: bunx playwright test

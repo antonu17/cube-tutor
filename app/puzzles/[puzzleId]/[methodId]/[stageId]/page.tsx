@@ -27,6 +27,10 @@ export default async function StagePage({ params }: StagePageProps) {
     notFound();
   }
 
+  // Check if this is an intuitive stage (no algorithms)
+  const hasAlgorithms = Object.keys(categories).length > 0;
+  const isIntuitive = !hasAlgorithms && (stage as any).caseCount === 0;
+
   return (
     <Container className="py-10">
       <div className="flex flex-col gap-8">
@@ -45,12 +49,25 @@ export default async function StagePage({ params }: StagePageProps) {
           subtitle={stage.description}
         />
 
-        <CaseBrowser
-          puzzleId={puzzleId}
-          methodId={methodId}
-          stageId={stageId}
-          categories={categories}
-        />
+        {isIntuitive ? (
+          <div className="rounded-lg border bg-muted/50 p-8 text-center">
+            <h3 className="text-lg font-semibold mb-2">Intuitive Step</h3>
+            <p className="text-muted-foreground mb-4">
+              This step is solved intuitively without memorizing specific algorithms.
+              Practice and experimentation will help you understand how to solve this step.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              {stage.description}
+            </p>
+          </div>
+        ) : (
+          <CaseBrowser
+            puzzleId={puzzleId}
+            methodId={methodId}
+            stageId={stageId}
+            categories={categories}
+          />
+        )}
       </div>
     </Container>
   );
