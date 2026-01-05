@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
@@ -6,6 +7,41 @@ import { loadPuzzle, loadAllMethods } from "@/src/lib/data-loader";
 
 interface PuzzlePageProps {
   params: Promise<{ puzzleId: string }>;
+}
+
+export async function generateMetadata({ params }: PuzzlePageProps): Promise<Metadata> {
+  const { puzzleId } = await params;
+  
+  try {
+    const puzzle = await loadPuzzle(puzzleId);
+
+    if (!puzzle) {
+      return {
+        title: "Puzzle Not Found",
+      };
+    }
+
+    const description = `Learn solving methods for ${puzzle.name}. ${puzzle.description}`;
+
+    return {
+      title: puzzle.name,
+      description,
+      openGraph: {
+        title: `${puzzle.name} - Solving Methods`,
+        description,
+        type: "website",
+      },
+      twitter: {
+        card: "summary",
+        title: `${puzzle.name} - Solving Methods`,
+        description,
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Puzzle Not Found",
+    };
+  }
 }
 
 export default async function PuzzlePage({ params }: PuzzlePageProps) {

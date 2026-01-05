@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
@@ -6,6 +7,52 @@ import { loadPuzzle, loadMethod, loadAlgorithmsByCategory } from "@/src/lib/data
 
 interface StagePageProps {
   params: Promise<{ puzzleId: string; methodId: string; stageId: string }>;
+}
+
+export async function generateMetadata({ params }: StagePageProps): Promise<Metadata> {
+  const { puzzleId, methodId, stageId } = await params;
+  
+  try {
+    const [puzzle, method] = await Promise.all([
+      loadPuzzle(puzzleId),
+      loadMethod(puzzleId, methodId),
+    ]);
+
+    if (!puzzle || !method) {
+      return {
+        title: "Stage Not Found",
+      };
+    }
+
+    const stage = method.stages?.find((s) => s.id === stageId);
+    
+    if (!stage) {
+      return {
+        title: "Stage Not Found",
+      };
+    }
+
+    const description = `Browse all ${stage.name} cases for ${method.name} on ${puzzle.name}. ${stage.description}`;
+
+    return {
+      title: `${stage.name} - ${method.name}`,
+      description,
+      openGraph: {
+        title: `${stage.name} - ${method.name}`,
+        description,
+        type: "website",
+      },
+      twitter: {
+        card: "summary",
+        title: `${stage.name} - ${method.name}`,
+        description,
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Stage Not Found",
+    };
+  }
 }
 
 export default async function StagePage({ params }: StagePageProps) {

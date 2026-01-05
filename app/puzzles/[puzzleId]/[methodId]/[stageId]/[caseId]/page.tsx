@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
@@ -8,6 +9,47 @@ import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
 
 interface CasePageProps {
   params: Promise<{ puzzleId: string; methodId: string; stageId: string; caseId: string }>;
+}
+
+export async function generateMetadata({ params }: CasePageProps): Promise<Metadata> {
+  const { puzzleId, methodId, stageId, caseId } = await params;
+  
+  try {
+    const [puzzle, method, algorithmCase] = await Promise.all([
+      loadPuzzle(puzzleId),
+      loadMethod(puzzleId, methodId),
+      loadCase(methodId, stageId, caseId),
+    ]);
+
+    if (!puzzle || !method || !algorithmCase) {
+      return {
+        title: "Case Not Found",
+      };
+    }
+
+    const stage = method.stages?.find((s) => s.id === stageId);
+    const stageName = stage?.name || stageId.toUpperCase();
+    const description = `Learn ${algorithmCase.name} - ${method.name} ${stageName} algorithm for ${puzzle.name}. Includes notation, fingertricks, and recognition hints.`;
+
+    return {
+      title: `${algorithmCase.name} - ${stageName}`,
+      description,
+      openGraph: {
+        title: `${algorithmCase.name} - ${method.name} ${stageName}`,
+        description,
+        type: "website",
+      },
+      twitter: {
+        card: "summary",
+        title: `${algorithmCase.name} - ${stageName}`,
+        description,
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Case Not Found",
+    };
+  }
 }
 
 const difficultyLabels: Record<1 | 2 | 3 | 4 | 5, string> = {

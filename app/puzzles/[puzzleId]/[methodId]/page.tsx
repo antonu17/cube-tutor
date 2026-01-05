@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
@@ -6,6 +7,44 @@ import { loadPuzzle, loadMethod } from "@/src/lib/data-loader";
 
 interface MethodPageProps {
   params: Promise<{ puzzleId: string; methodId: string }>;
+}
+
+export async function generateMetadata({ params }: MethodPageProps): Promise<Metadata> {
+  const { puzzleId, methodId } = await params;
+  
+  try {
+    const [puzzle, method] = await Promise.all([
+      loadPuzzle(puzzleId),
+      loadMethod(puzzleId, methodId),
+    ]);
+
+    if (!puzzle || !method) {
+      return {
+        title: "Method Not Found",
+      };
+    }
+
+    const description = `Learn ${method.name} for ${puzzle.name}. ${method.description}`;
+
+    return {
+      title: `${method.name} - ${puzzle.name}`,
+      description,
+      openGraph: {
+        title: `${method.name} - ${puzzle.name}`,
+        description,
+        type: "website",
+      },
+      twitter: {
+        card: "summary",
+        title: `${method.name} - ${puzzle.name}`,
+        description,
+      },
+    };
+  } catch (error) {
+    return {
+      title: "Method Not Found",
+    };
+  }
 }
 
 export default async function MethodPage({ params }: MethodPageProps) {
