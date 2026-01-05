@@ -1,0 +1,1422 @@
+[
+  {
+    "id": "oll-1",
+    "name": "OLL 1",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "R U2 R2 F R F' U2 R' F R F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped (dot case)",
+      "Headlights on front and back"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-2",
+    "name": "OLL 2",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "F R U R' U' F' f R U R' U' f'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped",
+      "Two adjacent corners oriented"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-3",
+    "name": "OLL 3",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "f R U R' U' f' U' F R U R' U' F'",
+        "moves": [
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped",
+      "Two diagonal corners oriented"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-4",
+    "name": "OLL 4",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "f R U R' U' f' U F R U R' U' F'",
+        "moves": [
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped",
+      "Two diagonal corners oriented (mirror of OLL 3)"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-17",
+    "name": "OLL 17",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' U R' F R F' U2 R' F R F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped",
+      "All corners oriented"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-19",
+    "name": "OLL 19",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "dot",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U2 F R U R' U' F2 U2 F R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All edges flipped",
+      "Wide H pattern"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-20",
+    "name": "OLL 20",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "F R U R' U' F'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "Most common OLL"
+    ],
+    "probability": 0.037
+  },
+  {
+    "id": "oll-21",
+    "name": "OLL 21",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U R' U R U' R' U R U2 R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "H case"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-22",
+    "name": "OLL 22",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U2 R2 U' R2 U' R2 U2 R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "Pi case"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-23",
+    "name": "OLL 23",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R2 D R' U2 R D' R' U2 R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "Headlights on right"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-24",
+    "name": "OLL 24",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "L F R' F' L' F R F'",
+        "moves": [
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "T case"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-25",
+    "name": "OLL 25",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "F' L F R' F' L' F R",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "T case (mirror)"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-26",
+    "name": "OLL 26",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U2 R' U' R U' R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "Antisune"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-27",
+    "name": "OLL 27",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "line",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U R' U R U2 R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line across top",
+      "Sune"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-28",
+    "name": "OLL 28",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "square",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "r U R' U' r' R U R U' R'",
+        "moves": [
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Square shape",
+      "Headlights on left"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-29",
+    "name": "OLL 29",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "fish",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' U' R U' R' F' U' F R U R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Fish shape",
+      "Two opposite edges oriented"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-45",
+    "name": "OLL 45",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "l-shape",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "F R U R' U' F'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "L shape in corner",
+      "Easy case"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-46",
+    "name": "OLL 46",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "l-shape",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R' U' R' F R F' U R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "L shape in corner",
+      "Mirror of 45"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-51",
+    "name": "OLL 51",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "i-shape",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "f R U R' U' R U R' U' f'",
+        "moves": [
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Line shape vertically",
+      "I case"
+    ],
+    "probability": 0.0185
+  },
+  {
+    "id": "oll-57",
+    "name": "OLL 57",
+    "method": "cfop",
+    "stage": "oll",
+    "category": "corners-oriented",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' U' R' F R2 U R' U' F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All corners oriented",
+      "Last edge case"
+    ],
+    "probability": 0.0185
+  }
+]

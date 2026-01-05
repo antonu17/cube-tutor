@@ -1,0 +1,1944 @@
+[
+  {
+    "id": "pll-ua",
+    "name": "Ua Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U' R U R U R U' R' U' R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Three edges need to cycle",
+      "One edge already solved"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-ub",
+    "name": "Ub Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R2 U R U R' U' R' U' R' U R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Three edges need to cycle",
+      "Mirror of Ua"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-h",
+    "name": "H Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "M2 U M2 U2 M2 U M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "All four edges swapped",
+      "Two opposite edge swaps"
+    ],
+    "probability": 0.0238
+  },
+  {
+    "id": "pll-z",
+    "name": "Z Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "M' U M2 U M2 U M' U2 M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Diagonal edge swap",
+      "Headlights on opposite sides"
+    ],
+    "probability": 0.0238
+  },
+  {
+    "id": "pll-aa",
+    "name": "Aa Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "corners-only",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "x R' U R' D2 R U' R' D2 R2 x'",
+        "moves": [
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Three corners cycle",
+      "Headlights on left"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-ab",
+    "name": "Ab Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "corners-only",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "x R2 D2 R U R' D2 R U' R x'",
+        "moves": [
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Three corners cycle",
+      "Headlights on right"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-e",
+    "name": "E Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "corners-only",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "x' R U' R' D R U R' D' R U R' D R U' R' D' x",
+        "moves": [
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Both diagonal corner swaps",
+      "No headlights"
+    ],
+    "probability": 0.0238
+  },
+  {
+    "id": "pll-t",
+    "name": "T Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U R' U' R' F R2 U' R' U' R U R' F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on left",
+      "One of the easiest PLLs"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-f",
+    "name": "F Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on back",
+      "Opposite corners swap"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-ja",
+    "name": "Ja Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "x R2 F R F' R U2 r' U r U2 x'",
+        "moves": [
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on left",
+      "Common PLL"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-jb",
+    "name": "Jb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "R U R' F' R U R' U' R' F R2 U' R' U'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on right",
+      "Mirror of Ja"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-ra",
+    "name": "Ra Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U' R' U' R U R D R' U' R D' R' U2 R' U'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on back",
+      "R perm family"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-rb",
+    "name": "Rb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U2 R U2 R' F R U R' U' R' F' R2 U'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on back",
+      "Mirror of Ra"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-ga",
+    "name": "Ga Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "G perm family"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-gb",
+    "name": "Gb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "R' U' R U D' R2 U R' U R U' R U' R2 D",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "G perm family"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-gc",
+    "name": "Gc Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "R2 U' R U' R U R' U R2 D' U R U' R' D",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "G perm family"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-gd",
+    "name": "Gd Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 4,
+    "algorithms": [
+      {
+        "notation": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "G perm family"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-v",
+    "name": "V Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on front",
+      "V pattern"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-y",
+    "name": "Y Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "Headlights on left and right",
+      "Y pattern"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-na",
+    "name": "Na Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "N perm - blocks on sides"
+    ],
+    "probability": 0.0476
+  },
+  {
+    "id": "pll-nb",
+    "name": "Nb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      }
+    ],
+    "recognitionHints": [
+      "No headlights",
+      "N perm - blocks on corners"
+    ],
+    "probability": 0.0476
+  }
+]
