@@ -6,3 +6,6 @@ export { AlgorithmMetadata } from "./AlgorithmMetadata";
 export { CaseDescription } from "./CaseDescription";
 export { AlgorithmCard } from "./AlgorithmCard";
 export { CaseDetail } from "./CaseDetail";
+export { CubeView } from "./CubeView";
+export { CubeNet } from "./CubeNet";
+export { AlgorithmAnimation } from "./AlgorithmAnimation";

@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 const solvedState = createSolvedState();
 
 // Example 1: Simple R U moves (scrambles top layer and some edges)
-const example1 = parseAlgorithm("R U R' U R U2 R'");
+const example1 = parseAlgorithm("R U R' U'");
 const state1 = applyAlgorithm(solvedState, example1);
 
 // Example 2: Sune-like pattern
-const example2 = parseAlgorithm("R U R' U R U2 R' U");
+const example2 = parseAlgorithm("R U R' U R U2 R'");
 const state2 = applyAlgorithm(solvedState, example2);
 
 // Example 3: F2L-like scramble

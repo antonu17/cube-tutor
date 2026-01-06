@@ -8,14 +8,14 @@ Cube Tutor helps users learn various Rubik's Cube solving methods, starting with
 
 ### Development Phases
 
-- **MVP (Current - 85% Complete)**: Text-based interface, Beginner + CFOP methods
-- **V1 (Next)**: 3D visualization, interactive cube manipulation, algorithm animation
-- **V2**: User accounts, progress tracking, custom training, practice mode
+- **MVP (Complete - 100%)**: Text-based interface, Beginner + CFOP methods ✅
+- **V1 (Current - 100%)**: 2D SVG visualization, algorithm animation, case previews ✅
+- **V2 (Next)**: User accounts, progress tracking, custom training, practice mode
 - **V3**: Mobile apps (iOS/Android), offline mode
 
 ## Features
 
-### Current (MVP)
+### Current (V1)
 - ✅ Complete Beginner method with 9 algorithms
 - ✅ CFOP OLL - All 57 cases with multiple algorithms
 - ✅ CFOP PLL - All 21 cases with multiple algorithms
@@ -26,14 +26,19 @@ Cube Tutor helps users learn various Rubik's Cube solving methods, starting with
 - ✅ Search-optimized (SEO)
 - ✅ Fast performance (Lighthouse 97-100/100)
 - ✅ 100% accessible (WCAG AA compliant)
+- ✅ **2D SVG cube visualization** - Full net view and case view (OLL/PLL)
+- ✅ **Algorithm animation player** - Step-by-step execution with playback controls
+- ✅ **Case previews** - Visual thumbnails on case cards
 
-### Coming in V1
-- 🔜 3D cube visualization
-- 🔜 Algorithm animation player
+### Coming in V2
 - 🔜 F2L algorithms (41 cases)
 - 🔜 Algorithm search and filtering
 - 🔜 Dark mode
 - 🔜 Algorithm comparison tool
+- 🔜 3D WebGL cube visualization (Three.js)
+- 🔜 User accounts and authentication
+- 🔜 Progress tracking and statistics
+- 🔜 Practice mode with timer
 
 ## Tech Stack
 
@@ -283,17 +288,21 @@ MIT License - see LICENSE file for details
 
 See [`.opencode/plan/implementation-plan.md`](.opencode/plan/implementation-plan.md) for detailed development roadmap and task breakdown.
 
-### Current Status: 85% MVP Complete, Ready for Deployment
+### Current Status: V1 Complete - 2D Visualization & Animation Ready for Deployment
 
 **Completed:**
-- ✅ All core features implemented
+- ✅ All MVP core features implemented
 - ✅ All algorithm data collected (87 total)
 - ✅ 128 tests passing (98 unit + 30 E2E)
 - ✅ Production build verified
 - ✅ Performance optimized (Lighthouse 97-100)
 - ✅ Accessibility complete (100/100)
+- ✅ **V1: 2D SVG cube renderer** - Full net, case view, and top face views
+- ✅ **V1: Algorithm animation** - Interactive step-by-step playback with controls
+- ✅ **V1: Case visualizations** - Preview thumbnails on all case cards
 
 **Next Steps:**
-1. Deployment to production server
-2. SSL/DNS configuration
-3. V1 development (3D visualization)
+1. V2: User accounts and progress tracking
+2. V2: F2L algorithms collection
+3. V2: 3D WebGL visualization with Three.js
+4. V3: Mobile apps (iOS/Android)

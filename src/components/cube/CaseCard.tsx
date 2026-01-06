@@ -1,6 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { useMemo } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/src/components/ui/card";
 import { Badge } from "@/src/components/ui/badge";
+import { CubeView } from "./CubeView";
+import { createSolvedState } from "@/src/lib/cube-engine/state";
+import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
+import { parseAlgorithm } from "@/src/lib/cube-engine/parser";
 import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseCardProps {
@@ -30,6 +37,20 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
  * CaseCard component for displaying algorithm case information in a card format
  */
 export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCardProps) {
+  // Generate cube state from setup moves (memoized for performance)
+  const setupState = useMemo(() => {
+    if (!algorithmCase.setupMoves) return null;
+    
+    try {
+      const solvedState = createSolvedState();
+      const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
+      return applyAlgorithm(solvedState, setupAlgorithm);
+    } catch (error) {
+      console.error("Failed to parse setup moves:", error);
+      return null;
+    }
+  }, [algorithmCase.setupMoves]);
+
   return (
     <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
       <Card className="h-full transition-colors hover:bg-accent">
@@ -42,7 +63,14 @@ export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCar
           </div>
         </CardHeader>
         <CardContent>
-          <div className="space-y-2">
+          <div className="space-y-3">
+            {/* Cube visualization */}
+            {setupState && (
+              <div className="flex justify-center bg-muted/50 rounded-lg py-3">
+                <CubeView state={setupState} mode="case" options={{ stickerSize: 15 }} />
+              </div>
+            )}
+            
             {algorithmCase.primaryAlg && (
               <div className="text-sm">
                 <code className="rounded bg-muted px-2 py-1 font-mono text-xs">

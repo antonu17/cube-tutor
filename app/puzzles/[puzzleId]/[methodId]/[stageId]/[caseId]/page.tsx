@@ -2,10 +2,13 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
-import { AlgorithmNotation, AlgorithmMetadata } from "@/src/components/cube";
+import { AlgorithmNotation, AlgorithmMetadata, CubeView, AlgorithmAnimation } from "@/src/components/cube";
 import { Badge } from "@/src/components/ui/badge";
 import { Separator } from "@/src/components/ui/separator";
 import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
+import { createSolvedState } from "@/src/lib/cube-engine/state";
+import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
+import { parseAlgorithm } from "@/src/lib/cube-engine/parser";
 
 interface CasePageProps {
   params: Promise<{ puzzleId: string; methodId: string; stageId: string; caseId: string }>;
@@ -87,6 +90,18 @@ export default async function CasePage({ params }: CasePageProps) {
     notFound();
   }
 
+  // Generate cube state from setup moves (if available)
+  let setupState = null;
+  if (algorithmCase.setupMoves) {
+    try {
+      const solvedState = createSolvedState();
+      const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
+      setupState = applyAlgorithm(solvedState, setupAlgorithm);
+    } catch (error) {
+      console.error("Failed to parse setup moves:", error);
+    }
+  }
+
   return (
     <Container className="py-10">
       <div className="flex flex-col gap-8">
@@ -117,9 +132,38 @@ export default async function CasePage({ params }: CasePageProps) {
           </div>
         )}
 
+        {setupState && (
+          <>
+            <Separator />
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Case Visualization</h2>
+              <p className="text-sm text-muted-foreground mb-4">
+                This is what the case looks like after applying the setup moves:
+              </p>
+              <div className="flex justify-center bg-card border rounded-lg p-6">
+                <CubeView state={setupState} mode="case" options={{ stickerSize: 25 }} />
+              </div>
+            </div>
+          </>
+        )}
+
         <Separator />
 
         <div className="space-y-8">
+          <div>
+            <h2 className="text-xl font-semibold mb-4">Algorithm Animation</h2>
+            <p className="text-sm text-muted-foreground mb-4">
+              Watch how the algorithm transforms the cube step by step:
+            </p>
+            <AlgorithmAnimation
+              notation={algorithmCase.primaryAlg.notation}
+              setupMoves={algorithmCase.setupMoves}
+              mode="case"
+            />
+          </div>
+
+          <Separator />
+
           <div>
             <h2 className="text-xl font-semibold mb-4">Primary Algorithm</h2>
             <div className="space-y-4">
