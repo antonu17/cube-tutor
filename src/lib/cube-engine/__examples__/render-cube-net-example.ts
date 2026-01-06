@@ -3,7 +3,8 @@
  * Run with: bun run src/lib/cube-engine/__examples__/render-cube-net-example.ts
  */
 
-import { createSolvedState, renderCubeNet } from "../state";
+import { createSolvedState } from "../state";
+import { renderCubeNet } from "../renderer";
 import { applyAlgorithm } from "../executor";
 import { parseAlgorithm } from "../parser";
 

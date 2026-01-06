@@ -7,7 +7,11 @@
 export { parseMove, parseAlgorithm, invertMove, invertAlgorithm, movesToNotation } from "./parser";
 
 // State management
-export { createSolvedState, cloneState, isStateSolved, statesEqual, stateToString, renderCubeNet } from "./state";
+export { createSolvedState, cloneState, isStateSolved, statesEqual, stateToString } from "./state";
+
+// Rendering
+export { renderCubeSVG, renderTopFaceSVG, renderCaseViewSVG, renderCubeNet, COLOR_MAP } from "./renderer";
+export type { RenderOptions } from "./renderer";
 
 // Move execution
 export { applyMove, applyAlgorithm, applyAlgorithmStepByStep } from "./executor";

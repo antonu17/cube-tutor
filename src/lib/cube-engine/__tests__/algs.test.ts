@@ -3,7 +3,8 @@
  */
 
 import { describe, test, expect } from "vitest";
-import { createSolvedState, isStateSolved, statesEqual, renderCubeNet } from "../state";
+import { createSolvedState, isStateSolved, statesEqual } from "../state";
+import { renderCubeNet } from "../renderer";
 import { applyMove, applyAlgorithm } from "../executor";
 import { parseMove, parseAlgorithm} from "../parser";
 

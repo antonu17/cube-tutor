@@ -327,3 +327,64 @@ function renderAdjacentStickers(
 
   return stickers.join("\n");
 }
+
+/**
+ * Render cube state as ASCII text net (for debugging/testing)
+ * 
+ * Renders the cube in cross/net pattern:
+ *       [U]
+ *   [L] [F] [R] [B]
+ *       [D]
+ * 
+ * Each face is shown as a 3x3 grid using first letter of color:
+ * W = white, Y = yellow, G = green, B = blue, R = red, O = orange
+ * 
+ * Example output:
+ * ```
+ *     WWW
+ *     WWW
+ *     WWW
+ * OOO GGG RRR BBB
+ * OOO GGG RRR BBB
+ * OOO GGG RRR BBB
+ *     YYY
+ *     YYY
+ *     YYY
+ * ```
+ * 
+ * @param state - CubeState to render
+ * @returns String representation in cross/net pattern
+ */
+export function renderCubeNet(state: CubeState): string {
+  const colorInitial = (c: FaceColor): string => c[0].toUpperCase();
+  
+  // Helper to render a face as a 3x3 grid
+  const faceRow = (face: FaceState, row: number): string => {
+    const start = row * 3;
+    return colorInitial(face[start]) + colorInitial(face[start + 1]) + colorInitial(face[start + 2]);
+  };
+  
+  // Build the net pattern
+  const lines: string[] = [];
+  
+  // Top face (U) - indented with 4 spaces
+  for (let row = 0; row < 3; row++) {
+    lines.push(`    ${faceRow(state.U, row)}`);
+  }
+  
+  // Middle row: L F R B (side by side)
+  for (let row = 0; row < 3; row++) {
+    const l = faceRow(state.L, row);
+    const f = faceRow(state.F, row);
+    const r = faceRow(state.R, row);
+    const b = faceRow(state.B, row);
+    lines.push(`${l} ${f} ${r} ${b}`);
+  }
+  
+  // Bottom face (D) - indented with 4 spaces
+  for (let row = 0; row < 3; row++) {
+    lines.push(`    ${faceRow(state.D, row)}`);
+  }
+  
+  return lines.join('\n');
+}
