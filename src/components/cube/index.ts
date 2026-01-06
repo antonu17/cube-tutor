@@ -9,3 +9,5 @@ export { CaseDetail } from "./CaseDetail";
 export { CubeView } from "./CubeView";
 export { CubeNet } from "./CubeNet";
 export { AlgorithmAnimation } from "./AlgorithmAnimation";
+export { CubeView3D } from "./CubeView3D";
+export { CubeView3DWithControls } from "./CubeView3DWithControls";

@@ -25,6 +25,8 @@ export interface AlgorithmAnimationProps {
   autoPlay?: boolean;
   /** Animation speed in milliseconds */
   speed?: number;
+  /** Stage ID (for determining if OLL/PLL) */
+  stageId?: string;
 }
 
 /**
@@ -36,9 +38,14 @@ export function AlgorithmAnimation({
   mode = "case",
   autoPlay = false,
   speed = 800,
+  stageId,
 }: AlgorithmAnimationProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
+
+  // Check if this is OLL or PLL (should use yellow on top)
+  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
+  const isOll = stageId === 'oll';
 
   // Parse algorithm and generate all states
   const { moves, states } = useMemo(() => {
@@ -46,7 +53,7 @@ export function AlgorithmAnimation({
       const parsedMoves = parseAlgorithm(notation);
       let initialState = createSolvedState();
 
-      // Apply setup moves if provided
+      // Apply setup moves if provided (caller should have already added z2 if needed)
       if (setupMoves) {
         const setup = parseAlgorithm(setupMoves);
         initialState = applyAlgorithm(initialState, setup);
@@ -114,7 +121,14 @@ export function AlgorithmAnimation({
     <div className="space-y-4">
       {/* Cube visualization */}
       <div className="flex justify-center bg-card border rounded-lg p-6">
-        <CubeView state={currentState} mode={mode} options={{ stickerSize: 25 }} />
+        <CubeView
+          state={currentState}
+          mode={mode}
+          options={{
+            stickerSize: 25,
+            grayscaleNonYellow: isOll
+          }}
+        />
       </div>
 
       {/* Current move indicator */}

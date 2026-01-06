@@ -507,20 +507,46 @@ export function applyAlgorithm(state: CubeState, moves: Move[]): CubeState {
 }
 
 /**
- * Apply an algorithm step by step, returning state after each move
- * Useful for animations and tutorials
- * @param state - Initial CubeState
- * @param moves - Array of Move objects
- * @returns Array of CubeStates (one per move + initial state)
+ * Apply algorithm step by step, returning all intermediate states
+ * Useful for animations
+ * @param state - Starting CubeState
+ * @param moves - Array of moves to apply
+ * @returns Array of CubeStates (starting state + each move applied)
  */
 export function applyAlgorithmStepByStep(state: CubeState, moves: Move[]): CubeState[] {
-  const states: CubeState[] = [cloneState(state)];
-  let currentState = state;
+  const states: CubeState[] = [state];
 
+  let currentState = state;
   for (const move of moves) {
     currentState = applyMove(currentState, move);
-    states.push(cloneState(currentState));
+    states.push(currentState);
   }
 
   return states;
+}
+
+/**
+ * Apply z2 rotation (flip cube upside down)
+ * Useful for OLL/PLL where we want yellow on top instead of white
+ * 
+ * @param state - CubeState to modify (mutates in place)
+ */
+function applyZ2(state: CubeState): void {
+  // z2 = z + z (180° rotation around z-axis)
+  // This swaps U<->D and rotates all side faces
+  applyZ(state);
+  applyZ(state);
+}
+
+/**
+ * Apply z2 rotation to a cube state (functional version)
+ * Returns a new state with yellow face on top
+ * 
+ * @param state - Current CubeState
+ * @returns New CubeState with z2 applied
+ */
+export function applyZ2Rotation(state: CubeState): CubeState {
+  const newState = cloneState(state);
+  applyZ2(newState);
+  return newState;
 }

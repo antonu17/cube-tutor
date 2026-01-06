@@ -10,11 +10,11 @@ export { parseMove, parseAlgorithm, invertMove, invertAlgorithm, movesToNotation
 export { createSolvedState, cloneState, isStateSolved, statesEqual, stateToString } from "./state";
 
 // Rendering
-export { renderCubeSVG, renderTopFaceSVG, renderCaseViewSVG, renderCubeNet, COLOR_MAP } from "./renderer";
-export type { RenderOptions } from "./renderer";
+export { renderCubeSVG, renderTopFaceSVG, renderCaseViewSVG, renderCubeNet, renderCube3D, COLOR_MAP } from "./renderer";
+export type { RenderOptions, Render3DOptions } from "./renderer";
 
 // Move execution
-export { applyMove, applyAlgorithm, applyAlgorithmStepByStep } from "./executor";
+export { applyMove, applyAlgorithm, applyAlgorithmStepByStep, applyZ2Rotation } from "./executor";
 
 // Validation
 export {

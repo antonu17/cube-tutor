@@ -90,7 +90,9 @@ export default async function CasePage({ params }: CasePageProps) {
 
   // Generate setup moves for animation
   // If setupMoves exist, use them. Otherwise, use inverse of primary algorithm.
+  // For OLL/PLL, prepend z2 to start with yellow on top.
   let effectiveSetupMoves: string | undefined = algorithmCase.setupMoves;
+  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
   
   if (!algorithmCase.setupMoves) {
     try {
@@ -102,6 +104,13 @@ export default async function CasePage({ params }: CasePageProps) {
     } catch (error) {
       console.error("Failed to generate setup moves:", error);
     }
+  }
+  
+  // Prepend z2 for OLL/PLL cases (to start with yellow on top)
+  if (isOllOrPll) {
+    effectiveSetupMoves = effectiveSetupMoves 
+      ? 'z2 ' + effectiveSetupMoves 
+      : 'z2';
   }
 
   return (
@@ -161,6 +170,7 @@ export default async function CasePage({ params }: CasePageProps) {
               notation={algorithmCase.primaryAlg.notation}
               setupMoves={effectiveSetupMoves}
               mode="case"
+              stageId={stageId}
             />
           </div>
 

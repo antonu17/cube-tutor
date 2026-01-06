@@ -37,27 +37,39 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
  * CaseCard component for displaying algorithm case information in a card format
  */
 export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCardProps) {
+  // Check if this is an OLL or PLL case (should start with yellow on top)
+  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
+  const isOll = stageId === 'oll';
+  
   // Generate cube state for visualization (memoized for performance)
   // Use setup moves if available, otherwise use inverse of primary algorithm
   const caseState = useMemo(() => {
     try {
       const solvedState = createSolvedState();
+      let setupNotation: string;
       
       if (algorithmCase.setupMoves) {
         // Use provided setup moves
-        const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
-        return applyAlgorithm(solvedState, setupAlgorithm);
+        setupNotation = algorithmCase.setupMoves;
       } else {
         // Use inverse of primary algorithm to create case state
         const primaryMoves = parseAlgorithm(algorithmCase.primaryAlg.notation);
         const inverseMoves = invertAlgorithm(primaryMoves);
-        return applyAlgorithm(solvedState, inverseMoves);
+        setupNotation = inverseMoves.map(m => m.notation).join(' ');
       }
+      
+      // Prepend z2 for OLL/PLL cases (yellow on top)
+      if (isOllOrPll) {
+        setupNotation = 'z2 ' + setupNotation;
+      }
+      
+      const setupAlgorithm = parseAlgorithm(setupNotation);
+      return applyAlgorithm(solvedState, setupAlgorithm);
     } catch (error) {
       console.error("Failed to generate case state:", error);
       return null;
     }
-  }, [algorithmCase.setupMoves, algorithmCase.primaryAlg.notation]);
+  }, [algorithmCase.setupMoves, algorithmCase.primaryAlg.notation, isOllOrPll]);
 
   return (
     <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
@@ -72,10 +84,17 @@ export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCar
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            {/* Cube visualization - top view thumbnail */}
+            {/* Cube visualization - case view for OLL/PLL, top view for others */}
             {caseState && (
               <div className="flex justify-center bg-muted/50 rounded-lg py-3">
-                <CubeView state={caseState} mode="top" options={{ stickerSize: 20 }} />
+                <CubeView 
+                  state={caseState} 
+                  mode={isOllOrPll ? "case" : "top"}
+                  options={{ 
+                    stickerSize: isOllOrPll ? 15 : 20,
+                    grayscaleNonYellow: isOll 
+                  }} 
+                />
               </div>
             )}
             

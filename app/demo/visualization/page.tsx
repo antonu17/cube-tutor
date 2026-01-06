@@ -1,6 +1,6 @@
 /**
  * Cube Visualization Demo Page
- * Showcases the 2D SVG renderer
+ * Showcases the 2D and 3D SVG renderers
  */
 
 import { Metadata } from "next";
@@ -8,6 +8,8 @@ import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
 import { CubeNet } from "@/src/components/cube/CubeNet";
 import { CubeView } from "@/src/components/cube/CubeView";
+import { CubeView3DWithControls } from "@/src/components/cube/CubeView3DWithControls";
+import { CubeView3D } from "@/src/components/cube/CubeView3D";
 import { createSolvedState } from "@/src/lib/cube-engine/state";
 import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
 import { parseAlgorithm } from "@/src/lib/cube-engine/parser";
@@ -15,7 +17,7 @@ import type { CubeState } from "@/src/types/cube";
 
 export const metadata: Metadata = {
   title: "Cube Visualization Demo",
-  description: "Interactive demonstration of Cube Tutor's 2D SVG cube renderer",
+  description: "Interactive demonstration of Cube Tutor's 2D and 3D SVG cube renderers",
 };
 
 // Create some example cube states
@@ -38,18 +40,18 @@ const scramble = parseAlgorithm("R U R' U' R' F R2 U' R' U R");
 const scrambledState = applyAlgorithm(solvedState, scramble);
 
 // PLL Cases
-const tPerm = parseAlgorithm("R U R' U' R' F R2 U' R' U' R U R' F'");
+const tPerm = parseAlgorithm("z2 R U R' U' R' F R2 U' R' U' R U R' F'");
 const tPermState = applyAlgorithm(solvedState, tPerm);
 
-const uaPerm = parseAlgorithm("R U' R U R U R U' R' U' R2");
+const uaPerm = parseAlgorithm("z2 R U' R U R U R U' R' U' R2");
 const uaPermState = applyAlgorithm(solvedState, uaPerm);
 
-const hPerm = parseAlgorithm("M2 U M2 U2 M2 U M2");
+const hPerm = parseAlgorithm("z2 M2 U M2 U2 M2 U M2");
 // H-Perm uses M moves which aren't implemented yet, so use alternative
 const hPermAlt = parseAlgorithm("R2 U2 R U2 R2 U2 R2 U2 R U2 R2");
 const hPermState = applyAlgorithm(solvedState, hPermAlt);
 
-const jaPerm = parseAlgorithm("R' U L' U2 R U' R' U2 R L");
+const jaPerm = parseAlgorithm("z2 R' U L' U2 R U' R' U2 R L");
 const jaPermState = applyAlgorithm(solvedState, jaPerm);
 
 export default function CubeVisualizationDemo() {
@@ -66,11 +68,84 @@ export default function CubeVisualizationDemo() {
 
         <PageHeader
           title="Cube Visualization Demo"
-          subtitle="Interactive 2D SVG cube renderer showcase"
+          subtitle="Interactive 2D and 3D SVG cube renderer showcase"
         />
 
         <div className="space-y-12">
-          {/* Solved Cube - Full Net */}
+          {/* 3D View Section - NEW */}
+          <section className="space-y-4">
+            <div>
+              <h2 className="text-2xl font-semibold mb-2">3D Isometric View</h2>
+              <p className="text-muted-foreground">
+                Interactive 3D cube view using isometric projection. Click the buttons below to rotate
+                the cube and view it from different angles.
+              </p>
+            </div>
+            <div className="bg-card border rounded-lg p-6">
+              <CubeView3DWithControls state={solvedState} stickerSize={30} />
+            </div>
+          </section>
+
+          {/* 3D View Examples */}
+          <section className="space-y-4">
+            <div>
+              <h2 className="text-2xl font-semibold mb-2">3D View Examples</h2>
+              <p className="text-muted-foreground">
+                The 3D renderer showing different cube states from various angles.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Solved - Front */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">Solved (Front View)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={solvedState} view="front" stickerSize={25} />
+                </div>
+              </div>
+
+              {/* Sune - Front */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">Sune Pattern (Front)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={state2} view="front" stickerSize={25} />
+                </div>
+              </div>
+
+              {/* Scrambled - Front */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">Scrambled (Front)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={scrambledState} view="front" stickerSize={25} />
+                </div>
+              </div>
+
+              {/* T-Perm - Right */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">T-Perm (Right View)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={tPermState} view="right" stickerSize={25} />
+                </div>
+              </div>
+
+              {/* Solved - Top */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">Solved (Top View)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={solvedState} view="top" stickerSize={25} />
+                </div>
+              </div>
+
+              {/* Scrambled - Left */}
+              <div className="bg-card border rounded-lg p-4">
+                <h3 className="font-medium mb-3 text-center">Scrambled (Left View)</h3>
+                <div className="flex justify-center">
+                  <CubeView3D state={scrambledState} view="left" stickerSize={25} />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Cube Net View */}
           <section className="space-y-4">
             <div>
               <h2 className="text-2xl font-semibold mb-2">Cube Net View</h2>
@@ -256,18 +331,34 @@ export default function CubeVisualizationDemo() {
             <div>
               <h2 className="text-2xl font-semibold mb-2">Implementation Details</h2>
               <p className="text-muted-foreground">
-                The 2D renderer is built with pure SVG and supports:
+                The renderer is built with pure SVG and supports:
               </p>
             </div>
-            <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-              <li>Full cube state visualization (all 6 faces)</li>
-              <li>OLL/PLL case view (top face + surrounding edges)</li>
-              <li>Top face only view (for thumbnails)</li>
-              <li>Customizable sticker sizes and colors</li>
-              <li>Face labels for debugging</li>
-              <li>Efficient memoization for performance</li>
-              <li>Fully responsive and scalable (SVG)</li>
-            </ul>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold mb-2">2D Renderer</h3>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li>Full cube state visualization (all 6 faces)</li>
+                  <li>OLL/PLL case view (top face + surrounding edges)</li>
+                  <li>Top face only view (for thumbnails)</li>
+                  <li>Customizable sticker sizes and colors</li>
+                  <li>Face labels for debugging</li>
+                  <li>Fully responsive and scalable (SVG)</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold mb-2">3D Renderer</h3>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                  <li>Isometric projection (no dependencies)</li>
+                  <li>6 viewing angles (front, back, left, right, top, bottom)</li>
+                  <li>Automatic backface culling</li>
+                  <li>Depth sorting for correct layering</li>
+                  <li>Interactive view controls</li>
+                  <li>Efficient memoization for performance</li>
+                  <li>Zero bundle size increase (pure SVG)</li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
       </div>

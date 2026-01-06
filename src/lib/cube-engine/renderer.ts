@@ -26,6 +26,8 @@ export interface RenderOptions {
   borderWidth?: number;
   borderColor?: string;
   backgroundColor?: string;
+  /** Grayscale non-yellow stickers (for OLL cases) */
+  grayscaleNonYellow?: boolean;
 }
 
 /**
@@ -37,6 +39,7 @@ const DEFAULT_OPTIONS: Required<RenderOptions> = {
   borderWidth: 1,
   borderColor: "#000000",
   backgroundColor: "#F3F4F6", // gray-100
+  grayscaleNonYellow: false,
 };
 
 /**
@@ -82,7 +85,13 @@ function renderSticker(
   size: number,
   options: Required<RenderOptions>
 ): string {
-  const fill = COLOR_MAP[color];
+  let fill = COLOR_MAP[color];
+  
+  // Apply grayscale effect for non-yellow colors if option is enabled
+  if (options.grayscaleNonYellow && color !== 'yellow') {
+    fill = "#9CA3AF"; // gray-400
+  }
+  
   const stroke = options.borderColor;
   const strokeWidth = options.borderWidth;
 
@@ -387,4 +396,378 @@ export function renderCubeNet(state: CubeState): string {
   }
   
   return lines.join('\n');
+}
+
+/**
+ * 3D Isometric Renderer
+ * Renders cube in isometric 3D view using SVG
+ */
+
+/**
+ * 3D Render options
+ */
+export interface Render3DOptions extends RenderOptions {
+  view?: 'front' | 'back' | 'right' | 'left' | 'top' | 'bottom';
+}
+
+/**
+ * 2D Point
+ */
+interface Point2D {
+  x: number;
+  y: number;
+}
+
+/**
+ * 3D Point
+ */
+interface Point3D {
+  x: number;
+  y: number;
+  z: number;
+}
+
+/**
+ * Convert 3D point to 2D isometric projection
+ * Using standard isometric projection angles (30°)
+ */
+function projectIsometric(p: Point3D): Point2D {
+  // Isometric projection matrix
+  // x_screen = (x - z) * cos(30°)
+  // y_screen = y + (x + z) * sin(30°)
+  const cos30 = Math.sqrt(3) / 2; // ~0.866
+  const sin30 = 0.5;
+  
+  return {
+    x: (p.x - p.z) * cos30,
+    y: -p.y + (p.x + p.z) * sin30,
+  };
+}
+
+/**
+ * Rotate 3D point around Y axis (for different view angles)
+ */
+function rotateY(p: Point3D, angle: number): Point3D {
+  const cos = Math.cos(angle);
+  const sin = Math.sin(angle);
+  return {
+    x: p.x * cos + p.z * sin,
+    y: p.y,
+    z: -p.x * sin + p.z * cos,
+  };
+}
+
+/**
+ * Rotate 3D point around X axis
+ */
+function rotateX(p: Point3D, angle: number): Point3D {
+  const cos = Math.cos(angle);
+  const sin = Math.sin(angle);
+  return {
+    x: p.x,
+    y: p.y * cos - p.z * sin,
+    z: p.y * sin + p.z * cos,
+  };
+}
+
+/**
+ * Rotate 3D point around Z axis
+ */
+function rotateZ(p: Point3D, angle: number): Point3D {
+  const cos = Math.cos(angle);
+  const sin = Math.sin(angle);
+  return {
+    x: p.x * cos - p.y * sin,
+    y: p.x * sin + p.y * cos,
+    z: p.z,
+  };
+}
+
+/**
+ * Apply view rotation to point
+ */
+function applyViewRotation(p: Point3D, view: string): Point3D {
+  const PI = Math.PI;
+  switch (view) {
+    case 'front':
+      return p; // Default view (Front face visible)
+    case 'back':
+      return rotateY(p, PI); // 180° around Y
+    case 'right':
+      return rotateY(p, -PI / 2); // -90° around Y
+    case 'left':
+      return rotateY(p, PI / 2); // 90° around Y
+    case 'top':
+      return rotateX(p, -PI / 2); // -90° around X
+    case 'bottom':
+      return rotateX(p, PI / 2); // 90° around X
+    default:
+      return p;
+  }
+}
+
+/**
+ * Calculate face normal vector (for visibility check)
+ */
+function getFaceNormal(face: string, view: string): Point3D {
+  const normals: Record<string, Point3D> = {
+    U: { x: 0, y: 1, z: 0 },   // Up
+    D: { x: 0, y: -1, z: 0 },  // Down
+    F: { x: 0, y: 0, z: 1 },   // Front
+    B: { x: 0, y: 0, z: -1 },  // Back
+    L: { x: -1, y: 0, z: 0 },  // Left
+    R: { x: 1, y: 0, z: 0 },   // Right
+  };
+  
+  const normal = normals[face];
+  return applyViewRotation(normal, view);
+}
+
+/**
+ * Check if face is visible from camera (backface culling)
+ * Camera is at (0, 0, +infinity) looking toward -Z
+ * In isometric view, we show 3 faces typically
+ */
+function isFaceVisible(face: string, view: string): boolean {
+  const normal = getFaceNormal(face, view);
+  // Face is visible if normal has positive Z component (facing camera)
+  // OR positive Y component (top faces in isometric view)
+  // This allows us to see 3 faces of the cube in isometric view
+  return normal.z > -0.3 || normal.y > 0.3;
+}
+
+/**
+ * Get Z-depth for face (for sorting)
+ */
+function getFaceDepth(face: string, view: string): number {
+  const center = getFaceCenter(face);
+  const rotated = applyViewRotation(center, view);
+  return rotated.z;
+}
+
+/**
+ * Get center position of a face in 3D space
+ */
+function getFaceCenter(face: string): Point3D {
+  const centers: Record<string, Point3D> = {
+    U: { x: 0, y: 1.5, z: 0 },
+    D: { x: 0, y: -1.5, z: 0 },
+    F: { x: 0, y: 0, z: 1.5 },
+    B: { x: 0, y: 0, z: -1.5 },
+    L: { x: -1.5, y: 0, z: 0 },
+    R: { x: 1.5, y: 0, z: 0 },
+  };
+  return centers[face];
+}
+
+/**
+ * Render a 3x3 face in isometric view
+ */
+function render3DFace(
+  face: FaceState,
+  faceName: FaceName,
+  view: string,
+  stickerSize: number,
+  options: Required<RenderOptions>
+): string {
+  if (!isFaceVisible(faceName, view)) {
+    return ''; // Skip backfaces
+  }
+
+  const stickers: string[] = [];
+  const { stickerGap } = options;
+  
+  // Calculate 3D positions for each sticker
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 3; col++) {
+      const index = row * 3 + col;
+      const color = face[index];
+      
+      // Get 3D position based on face
+      const pos3D = getSticker3DPosition(faceName, row, col);
+      const rotated = applyViewRotation(pos3D, view);
+      const pos2D = projectIsometric(rotated);
+      
+      // Get sticker quad corners in 3D
+      const corners3D = getStickerCorners(faceName, row, col);
+      const corners2D = corners3D
+        .map(p => applyViewRotation(p, view))
+        .map(p => projectIsometric(p));
+      
+      // Scale to pixel coordinates
+      const scale = stickerSize / (1 - stickerGap / stickerSize);
+      const scaledCorners = corners2D.map(p => ({
+        x: p.x * scale,
+        y: p.y * scale,
+      }));
+      
+      // Render as polygon
+      stickers.push(render3DSticker(color, scaledCorners, options));
+    }
+  }
+  
+  return stickers.join('\n');
+}
+
+/**
+ * Get 3D position of sticker center
+ */
+function getSticker3DPosition(
+  face: FaceName,
+  row: number,
+  col: number
+): Point3D {
+  // Offset from face center (-1, 0, 1 for each axis)
+  const offset = (i: number) => (i - 1);
+  
+  switch (face) {
+    case 'U': // Top face (Y = 1.5)
+      return { x: offset(col), y: 1.5, z: -offset(row) };
+    case 'D': // Bottom face (Y = -1.5)
+      return { x: offset(col), y: -1.5, z: offset(row) };
+    case 'F': // Front face (Z = 1.5)
+      return { x: offset(col), y: -offset(row), z: 1.5 };
+    case 'B': // Back face (Z = -1.5)
+      return { x: -offset(col), y: -offset(row), z: -1.5 };
+    case 'L': // Left face (X = -1.5)
+      return { x: -1.5, y: -offset(row), z: offset(col) };
+    case 'R': // Right face (X = 1.5)
+      return { x: 1.5, y: -offset(row), z: -offset(col) };
+    default:
+      return { x: 0, y: 0, z: 0 };
+  }
+}
+
+/**
+ * Get 4 corners of a sticker in 3D space (clockwise from top-left)
+ */
+function getStickerCorners(
+  face: FaceName,
+  row: number,
+  col: number
+): Point3D[] {
+  const half = 0.45; // Half sticker size (with small gap)
+  const center = getSticker3DPosition(face, row, col);
+  
+  // Define corners relative to face orientation
+  switch (face) {
+    case 'U': // Top face
+      return [
+        { x: center.x - half, y: center.y, z: center.z - half }, // TL
+        { x: center.x + half, y: center.y, z: center.z - half }, // TR
+        { x: center.x + half, y: center.y, z: center.z + half }, // BR
+        { x: center.x - half, y: center.y, z: center.z + half }, // BL
+      ];
+    case 'D': // Bottom face
+      return [
+        { x: center.x - half, y: center.y, z: center.z - half },
+        { x: center.x + half, y: center.y, z: center.z - half },
+        { x: center.x + half, y: center.y, z: center.z + half },
+        { x: center.x - half, y: center.y, z: center.z + half },
+      ];
+    case 'F': // Front face
+      return [
+        { x: center.x - half, y: center.y - half, z: center.z },
+        { x: center.x + half, y: center.y - half, z: center.z },
+        { x: center.x + half, y: center.y + half, z: center.z },
+        { x: center.x - half, y: center.y + half, z: center.z },
+      ];
+    case 'B': // Back face
+      return [
+        { x: center.x - half, y: center.y - half, z: center.z },
+        { x: center.x + half, y: center.y - half, z: center.z },
+        { x: center.x + half, y: center.y + half, z: center.z },
+        { x: center.x - half, y: center.y + half, z: center.z },
+      ];
+    case 'L': // Left face
+      return [
+        { x: center.x, y: center.y - half, z: center.z - half },
+        { x: center.x, y: center.y - half, z: center.z + half },
+        { x: center.x, y: center.y + half, z: center.z + half },
+        { x: center.x, y: center.y + half, z: center.z - half },
+      ];
+    case 'R': // Right face
+      return [
+        { x: center.x, y: center.y - half, z: center.z - half },
+        { x: center.x, y: center.y - half, z: center.z + half },
+        { x: center.x, y: center.y + half, z: center.z + half },
+        { x: center.x, y: center.y + half, z: center.z - half },
+      ];
+    default:
+      return [];
+  }
+}
+
+/**
+ * Render a 3D sticker as SVG polygon
+ */
+function render3DSticker(
+  color: FaceColor,
+  corners: Point2D[],
+  options: Required<RenderOptions>
+): string {
+  const fill = COLOR_MAP[color];
+  const stroke = options.borderColor;
+  const strokeWidth = options.borderWidth;
+  
+  // Create points string for polygon
+  const points = corners.map(p => `${p.x},${p.y}`).join(' ');
+  
+  return `<polygon
+    points="${points}"
+    fill="${fill}"
+    stroke="${stroke}"
+    stroke-width="${strokeWidth}"
+  />`;
+}
+
+/**
+ * Render cube in isometric 3D view
+ */
+export function renderCube3D(
+  state: CubeState,
+  options: Render3DOptions = {}
+): string {
+  const opts = { ...DEFAULT_OPTIONS, ...options };
+  const view = options.view || 'front';
+  const { stickerSize, backgroundColor } = opts;
+  
+  // Determine which faces to render (back-to-front order)
+  const faces: FaceName[] = ['U', 'D', 'F', 'B', 'L', 'R'];
+  
+  // Sort faces by depth (back to front) for proper layering
+  const sortedFaces = faces
+    .filter(face => isFaceVisible(face, view))
+    .sort((a, b) => getFaceDepth(a, view) - getFaceDepth(b, view));
+  
+  // Render each visible face
+  const renderedFaces = sortedFaces.map(face =>
+    render3DFace(state[face], face, view, stickerSize, opts)
+  );
+  
+  // Calculate SVG dimensions
+  const scale = stickerSize / 0.9;
+  const width = 6 * scale;
+  const height = 5 * scale;
+  const padding = scale * 0.5;
+  
+  // Center the cube in the viewport
+  const offsetX = width / 2 + padding;
+  const offsetY = height / 2 + padding;
+  
+  return `<svg
+    width="${width + padding * 2}"
+    height="${height + padding * 2}"
+    viewBox="0 0 ${width + padding * 2} ${height + padding * 2}"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      width="100%"
+      height="100%"
+      fill="${backgroundColor}"
+    />
+    <g transform="translate(${offsetX}, ${offsetY})">
+      ${renderedFaces.join('\n')}
+    </g>
+  </svg>`;
 }
