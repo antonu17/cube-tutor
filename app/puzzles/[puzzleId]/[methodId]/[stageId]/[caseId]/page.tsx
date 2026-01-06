@@ -2,12 +2,10 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
-import { AlgorithmNotation, AlgorithmMetadata, CubeView, AlgorithmAnimation } from "@/src/components/cube";
+import { AlgorithmNotation, AlgorithmMetadata, AlgorithmAnimation } from "@/src/components/cube";
 import { Badge } from "@/src/components/ui/badge";
 import { Separator } from "@/src/components/ui/separator";
 import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
-import { createSolvedState } from "@/src/lib/cube-engine/state";
-import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
 import { parseAlgorithm, invertAlgorithm } from "@/src/lib/cube-engine/parser";
 
 interface CasePageProps {
@@ -90,27 +88,20 @@ export default async function CasePage({ params }: CasePageProps) {
     notFound();
   }
 
-  // Generate cube states for visualization
+  // Generate setup moves for animation
   // If setupMoves exist, use them. Otherwise, use inverse of primary algorithm.
-  const solvedState = createSolvedState();
-  let caseState = null;
   let effectiveSetupMoves: string | undefined = algorithmCase.setupMoves;
   
-  try {
-    if (algorithmCase.setupMoves) {
-      // Use provided setup moves
-      const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
-      caseState = applyAlgorithm(solvedState, setupAlgorithm);
-    } else {
+  if (!algorithmCase.setupMoves) {
+    try {
       // Use inverse of primary algorithm to create case state
       const primaryMoves = parseAlgorithm(algorithmCase.primaryAlg.notation);
       const inverseMoves = invertAlgorithm(primaryMoves);
-      caseState = applyAlgorithm(solvedState, inverseMoves);
       // Store inverse notation for animation component
       effectiveSetupMoves = inverseMoves.map(m => m.notation).join(' ');
+    } catch (error) {
+      console.error("Failed to generate setup moves:", error);
     }
-  } catch (error) {
-    console.error("Failed to generate case state:", error);
   }
 
   return (
@@ -154,23 +145,6 @@ export default async function CasePage({ params }: CasePageProps) {
               <code className="block rounded-lg bg-muted px-4 py-3 font-mono text-sm">
                 {algorithmCase.setupMoves}
               </code>
-            </div>
-          </>
-        )}
-
-        {caseState && (
-          <>
-            <Separator />
-            <div>
-              <h2 className="text-xl font-semibold mb-4">Case Visualization</h2>
-              <p className="text-sm text-muted-foreground mb-4">
-                {algorithmCase.setupMoves 
-                  ? "This is what the case looks like after applying the setup moves:"
-                  : "This is what the case looks like before applying the algorithm:"}
-              </p>
-              <div className="flex justify-center bg-card border rounded-lg p-6">
-                <CubeView state={caseState} mode="case" options={{ stickerSize: 25 }} />
-              </div>
             </div>
           </>
         )}
