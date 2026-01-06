@@ -1,30 +1,44 @@
-# Cube Tutor - MVP Implementation Plan
+# Cube Tutor - Implementation Plan
 
 **Project:** Cube Tutor - Rubik's Cube Algorithm Learning Platform  
-**Version:** MVP (Text Mode)  
-**Estimated Duration:** 3-4 weeks (part-time)  
-**Last Updated:** 2026-01-05  
-**Progress Update:** 2026-01-05 - ~80-85% MVP Complete
+**Version:** V1 (Visualization)  
+**Estimated Duration:** MVP (4-6 weeks) + V1 (2-3 weeks)  
+**Last Updated:** 2026-01-06  
+**Progress Update:** MVP Complete ✅ | V1 70% Complete 🔄 (3D visualization remaining)
 
 ---
 
 ## Overview
 
-This plan breaks down the MVP development into 6 phases with specific, actionable tasks. Each task includes estimated time, dependencies, and completion criteria.
+This plan breaks down development into phases with specific, actionable tasks. Each task includes estimated time, dependencies, and completion criteria.
 
 **Tech Stack:**
-- Next.js 14 (App Router) + TypeScript
+- Next.js 15 (App Router) + TypeScript
 - Bun (package manager)
-- Tailwind CSS + shadcn/ui
+- Tailwind CSS v4 + shadcn/ui
+- Vitest (unit tests) + Playwright (E2E tests)
 - Docker (deployment)
 - No database (JSON files)
 
-**Scope:**
-- Beginner method (~10-15 algorithms)
+**Development Phases:**
+- **MVP (Phases 0-6):** ✅ COMPLETE - Text-based algorithm reference
+- **V1 (Phase 7):** 🔄 IN PROGRESS - Visual cube representations (2D ✅, 3D ⏭️)
+- **V2:** User accounts, progress tracking, F2L algorithms
+- **V3:** Mobile apps (iOS/Android)
+
+**MVP Scope (Complete):**
+- Beginner method (9 algorithms)
 - CFOP OLL (57 cases)
 - CFOP PLL (21 cases)
-- Text-only interface (no 3D/graphics)
+- Algorithm browser and detail pages
 - Mobile-responsive design
+- Copy-to-clipboard functionality
+- Comprehensive SEO and accessibility
+
+**V1 Scope (In Progress):**
+- 2D SVG cube visualization ✅
+- Algorithm animation player ✅
+- 3D cube visualization ⏭️ (per project spec)
 
 ---
 
@@ -1328,13 +1342,142 @@ This plan breaks down the MVP development into 6 phases with specific, actionabl
 - [ ] Add algorithm comparison tool
 - [ ] Add 2-Look OLL/PLL for intermediate learners
 
-### V1: Graphics & Visualization (2-3 weeks)
-- [ ] Implement 2D cube diagram renderer (SVG)
-- [ ] Create case thumbnails for all cases
-- [ ] Integrate Three.js + React Three Fiber
-- [ ] Build 3D cube viewer
-- [ ] Implement animation player
-- [ ] Add play/pause/step controls
+---
+
+## Phase 7: V1 - Visualization (2-3 weeks) 🔄 IN PROGRESS
+
+**Duration:** 2-3 weeks (part-time)  
+**Goal:** Add visual cube representations and algorithm animations  
+**Dependencies:** Phase 6 (MVP Complete)  
+**Status:** 🔄 ~70% COMPLETE - 2D visualization done, 3D remaining  
+**Updated:** 2026-01-06
+
+**Summary:**
+- ✅ 2D SVG renderer implemented
+- ✅ Algorithm animation with playback controls
+- ✅ Case visualizations integrated into UI
+- ⏭️ 3D renderer still needed (per project spec)
+
+### Tasks
+
+#### 7.1: 2D Cube Renderer (SVG) ✅ COMPLETED
+- [x] Implement `renderCubeSVG()` for full cube net
+- [x] Implement `renderTopFaceSVG()` for top face only
+- [x] Implement `renderCaseViewSVG()` for OLL/PLL view
+- [x] Create `CubeNet` React component
+- [x] Create `CubeView` React component with mode support
+- [x] Add memoization for performance
+- [x] Test with various cube states
+
+**Estimated Time:** 8-10 hours  
+**Actual Time:** ~10 hours  
+**Completion Criteria:** 2D SVG renderer working for all views ✅  
+**Status:** ✅ COMPLETED - 2026-01-06
+
+#### 7.2: Algorithm Animation Player ✅ COMPLETED
+- [x] Create `AlgorithmAnimation` component
+- [x] Implement step-by-step state generation
+- [x] Add playback controls (play, pause, step, reset)
+- [x] Add move highlighting in notation
+- [x] Support setup moves
+- [x] Add configurable animation speed
+- [x] Test with various algorithms
+
+**Estimated Time:** 6-8 hours  
+**Actual Time:** ~6 hours  
+**Completion Criteria:** Interactive animation player working ✅  
+**Status:** ✅ COMPLETED - 2026-01-06
+
+#### 7.3: Integrate Visualizations into UI ✅ COMPLETED
+- [x] Add cube visualization to case detail pages
+- [x] Add visual previews to case cards
+- [x] Add animation player to case detail pages
+- [x] Export components from index
+- [x] Update CaseCard to client component
+- [x] Test across all pages
+
+**Estimated Time:** 4-6 hours  
+**Actual Time:** ~4 hours  
+**Completion Criteria:** Visualizations integrated throughout app ✅  
+**Status:** ✅ COMPLETED - 2026-01-06
+
+#### 7.4: 3D Cube Renderer ⏭️ TODO
+- [ ] Research 3D rendering approach:
+  - Option A: Three.js + React Three Fiber (full 3D, larger bundle)
+  - Option B: Isometric SVG projection (lighter weight, matches 2D approach)
+  - Option C: CSS 3D transforms (native, good performance)
+- [ ] Choose approach based on performance/bundle size tradeoff
+- [ ] Implement 3D cube renderer
+- [ ] Add face visibility detection
+- [ ] Add sticker positioning for 3D view
+- [ ] Test rendering performance
+
+**Estimated Time:** 10-12 hours  
+**Completion Criteria:** 3D cube renders correctly in isometric/perspective view  
+**Status:** ⏭️ TODO - Per project spec requirement
+
+#### 7.5: 3D View Controls ⏭️ TODO
+- [ ] Add view angle selection (front, back, top, isometric)
+- [ ] Add rotation controls (if using Three.js approach)
+- [ ] Add zoom controls (optional)
+- [ ] Make controls accessible (keyboard support)
+- [ ] Test on mobile devices
+
+**Estimated Time:** 4-6 hours  
+**Completion Criteria:** Users can view cube from multiple angles  
+**Status:** ⏭️ TODO
+
+#### 7.6: Integrate 3D View into UI ⏭️ TODO
+- [ ] Add 3D view option to `CubeView` component
+- [ ] Add view mode toggle (2D vs 3D) to case detail pages
+- [ ] Update demo page with 3D examples
+- [ ] Test performance across devices
+- [ ] Ensure mobile responsiveness
+
+**Estimated Time:** 3-4 hours  
+**Completion Criteria:** 3D view available alongside 2D view  
+**Status:** ⏭️ TODO
+
+#### 7.7: Performance Optimization ⏭️ TODO
+- [ ] Measure bundle size impact of 3D library (if used)
+- [ ] Lazy load 3D components if needed
+- [ ] Optimize 3D rendering performance
+- [ ] Test on low-end devices
+- [ ] Ensure Lighthouse scores remain high (>90)
+
+**Estimated Time:** 2-3 hours  
+**Completion Criteria:** Performance remains excellent with 3D view  
+**Status:** ⏭️ TODO
+
+#### 7.8: Documentation & Testing ⏭️ TODO
+- [ ] Update README with 3D features
+- [ ] Add 3D view to demo page
+- [ ] Write unit tests for 3D renderer
+- [ ] Update E2E tests if needed
+- [ ] Document 3D rendering approach
+
+**Estimated Time:** 2-3 hours  
+**Completion Criteria:** Documentation complete, tests passing  
+**Status:** ⏭️ TODO
+
+### Phase 7 Completion Checklist
+- [x] 2D SVG renderer implemented (3 modes)
+- [x] Algorithm animation player working
+- [x] Visualizations integrated into case cards
+- [x] Visualizations integrated into case detail pages
+- [ ] 3D cube renderer implemented ⏭️
+- [ ] 3D view controls added ⏭️
+- [ ] 3D view integrated into UI ⏭️
+- [ ] Performance optimized with 3D ⏭️
+- [ ] Documentation updated ⏭️
+- [ ] All tests passing ⏭️
+
+**Phase 7 Total Time:** 39-52 hours (5-7 days)  
+**Actual Time So Far:** ~20 hours (2.5 days)  
+**Remaining Time:** ~20-30 hours (2.5-4 days)  
+**Status:** 🔄 ~70% COMPLETE - 3D visualization needed to complete V1
+
+---
 
 ### V2: User Accounts & Progress (2-3 weeks)
 - [ ] Setup Supabase database
@@ -1357,21 +1500,28 @@ This plan breaks down the MVP development into 6 phases with specific, actionabl
 
 ## Summary: Timeline & Effort
 
-| Phase | Duration | Hours | Focus |
-|-------|----------|-------|-------|
-| Phase 0: Setup | 2-3 days | 6-8h | Project initialization, tooling |
-| Phase 1: Cube Engine | 3-4 days | 24-30h | Core logic, algorithm execution |
-| Phase 2: Data Collection | 5-6 days | 35-45h | Collecting & structuring algorithms |
-| Phase 3: UI Components | 4-5 days | 28-36h | Building React components |
-| Phase 4: Pages & Routing | 3-4 days | 17-24h | Next.js pages, navigation |
-| Phase 5: Testing & Polish | 3-5 days | 26-36h | Testing, optimization, bug fixing |
-| Phase 6: Deployment | 2-3 days | 14-24h | Production deployment |
-| **TOTAL** | **22-30 days** | **150-203h** | **~3-4 weeks (full-time) or 5-7 weeks (part-time)** |
+| Phase | Duration | Hours | Focus | Status |
+|-------|----------|-------|-------|--------|
+| Phase 0: Setup | 2-3 days | 6-8h | Project initialization, tooling | ✅ Complete |
+| Phase 1: Cube Engine | 3-4 days | 24-30h | Core logic, algorithm execution | ✅ Complete |
+| Phase 2: Data Collection | 5-6 days | 35-45h | Collecting & structuring algorithms | ✅ Complete |
+| Phase 3: UI Components | 4-5 days | 28-36h | Building React components | ✅ Complete |
+| Phase 4: Pages & Routing | 3-4 days | 17-24h | Next.js pages, navigation | ✅ Complete |
+| Phase 5: Testing & Polish | 3-5 days | 26-36h | Testing, optimization, bug fixing | ✅ Complete |
+| Phase 6: Deployment | 2-3 days | 14-24h | Production deployment | ✅ Complete |
+| **MVP TOTAL** | **22-30 days** | **150-203h** | **MVP Complete** | ✅ **100%** |
+| Phase 7: V1 Visualization | 5-7 days | 39-52h | 2D/3D rendering, animation | 🔄 **~70%** |
+| **V1 TOTAL** | **27-37 days** | **189-255h** | **V1 In Progress** | 🔄 **70%** |
 
-**Assumptions:**
-- Part-time work: 4-6 hours/day
-- Full-time work: 8 hours/day
-- Some parallelization possible (e.g., data collection while building components)
+**Current Status:**
+- MVP: ✅ 100% Complete (deployed)
+- V1: 🔄 70% Complete (2D ✅, 3D ⏭️)
+
+**Remaining Work:**
+- 3D cube renderer (~10-12 hours)
+- 3D view controls (~4-6 hours)
+- Integration and testing (~5-7 hours)
+- **Total:** ~20-25 hours (2.5-3 days)
 
 ---
 
@@ -1427,56 +1577,67 @@ This plan breaks down the MVP development into 6 phases with specific, actionabl
 
 ---
 
-## Progress Summary (2026-01-05)
+## Progress Summary (2026-01-06)
 
-### Overall MVP Status: ~60-65% Complete
+### Overall Status: MVP ✅ Complete | V1 🔄 70% Complete
 
-| Phase | Status | Progress | Critical Blockers |
-|-------|--------|----------|-------------------|
-| Phase 0: Setup | ✅ Complete | 100% | None |
-| Phase 1: Engine | ✅ Complete | 95% | None (renderer not needed for MVP) |
-| Phase 2: Data | ✅ Complete | 100% | **None - All 57 OLL cases added!** |
-| Phase 3: Components | ✅ Nearly done | 90% | Error states, polish |
-| Phase 4: Pages | ✅ Nearly done | 85% | SEO, 404 |
-| Phase 5: Testing | ❌ Not started | 15% | E2E tests, optimization |
-| Phase 6: Deployment | ❌ Not started | 0% | All Phase 5 tasks |
+| Phase | Status | Progress | Notes |
+|-------|--------|----------|-------|
+| **MVP Phases (0-6)** | ✅ Complete | 100% | All features implemented, deployed |
+| Phase 0: Setup | ✅ Complete | 100% | Tools configured |
+| Phase 1: Engine | ✅ Complete | 100% | 98 unit tests passing |
+| Phase 2: Data | ✅ Complete | 100% | 87 algorithms collected |
+| Phase 3: Components | ✅ Complete | 100% | All UI components built |
+| Phase 4: Pages | ✅ Complete | 100% | All routes working |
+| Phase 5: Testing | ✅ Complete | 100% | 128 tests passing (98 unit + 30 E2E) |
+| Phase 6: Deployment | ✅ Complete | 100% | Production build verified |
+| **Phase 7: V1 Visualization** | 🔄 In Progress | **70%** | **3D renderer remaining** |
+| 7.1: 2D Renderer | ✅ Complete | 100% | SVG renderer with 3 modes |
+| 7.2: Animation | ✅ Complete | 100% | Interactive playback |
+| 7.3: UI Integration | ✅ Complete | 100% | Cases and cards |
+| 7.4: 3D Renderer | ⏭️ TODO | 0% | **Blocking V1 completion** |
+| 7.5: 3D Controls | ⏭️ TODO | 0% | Depends on 7.4 |
+| 7.6: 3D Integration | ⏭️ TODO | 0% | Depends on 7.4 |
+| 7.7: Optimization | ⏭️ TODO | 0% | Final performance check |
+| 7.8: Documentation | ⏭️ TODO | 0% | Update docs with 3D |
 
-### Time to MVP Completion: 24-38 hours
+### V1 Completion Requirements
 
-**High Priority (Required for MVP):**
-1. ~~Complete OLL data (37 cases)~~ ✅ DONE - 8-12 hours
-2. Add error handling UI components - 4-6 hours
-3. E2E testing setup - 4-6 hours
+**Completed (70%):**
+- ✅ 2D SVG cube visualization (full net, case view, top face)
+- ✅ Algorithm animation with step-by-step playback
+- ✅ Visual previews on case cards
+- ✅ Case visualization on detail pages
+- ✅ Playback controls (play, pause, step, reset)
+- ✅ Production build passing
 
-**Medium Priority (Quality gates):**
-4. Performance optimization - 4-6 hours
-5. Accessibility audit - 3-4 hours
-6. SEO & metadata - 3-4 hours
+**Remaining (30%):**
+- ⏭️ 3D cube renderer (isometric or perspective view)
+- ⏭️ 3D view controls (rotation, angle selection)
+- ⏭️ 3D integration into UI (toggle 2D/3D)
+- ⏭️ Performance optimization with 3D
+- ⏭️ Documentation updates
 
-**Low Priority (Deployment):**
-7. Docker & deployment - 8-12 hours
+**Time to V1 Completion:** ~20-25 hours (2.5-3 days part-time)
 
-### Next Steps:
-1. ✅ Update implementation plan with current status
-2. ⏭️ Complete OLL data collection (highest impact)
-3. ⏭️ Add missing UI components and error states
-4. ⏭️ Setup E2E testing framework
-5. ⏭️ Performance and accessibility audits
-6. ⏭️ Final deployment setup
+### Next Steps
 
----
+1. **Phase 7.4**: Implement 3D cube renderer
+   - Choose rendering approach (Three.js, isometric SVG, or CSS 3D)
+   - Build 3D visualization matching 2D quality
+   - Estimated: 10-12 hours
 
-## Next Steps
+2. **Phase 7.5-7.6**: Add 3D controls and integrate
+   - View angle controls
+   - 2D/3D toggle in UI
+   - Estimated: 6-8 hours
 
-**Ready to start implementation?**
-
-1. **Review this plan** - Any questions or concerns?
-2. **Confirm priorities** - Focus on MVP as outlined?
-3. **Start Phase 0** - Initialize project and configure tools
-
-Let me know when you're ready to proceed! 🚀
+3. **Phase 7.7-7.8**: Testing and documentation
+   - Performance optimization
+   - Update docs and demo
+   - Estimated: 4-5 hours
 
 ---
 
 *Plan created: 2026-01-05*  
-*Last updated: 2026-01-05*
+*Last updated: 2026-01-06*
