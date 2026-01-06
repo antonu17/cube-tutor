@@ -271,12 +271,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped (dot case)",
-      "Headlights on front and back"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' R U2' F R' F' R2' U2' R'",
     "primaryAlg": {
       "notation": "R U2 R2 F R F' U2 R' F R F'",
       "moves": [
@@ -338,7 +332,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped (dot case)",
+      "Headlights on front and back"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' R U2' F R' F' R2' U2' R'"
   },
   {
     "id": "oll-2",
@@ -612,12 +612,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "Two adjacent corners oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "f U R U' R' f' F U R U' R' F'",
     "primaryAlg": {
       "notation": "y' R U' R2 D' r U r' D R2 U R'",
       "moves": [
@@ -684,7 +678,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "Two adjacent corners oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "f U R U' R' f' F U R U' R' F'"
   },
   {
     "id": "oll-3",
@@ -953,12 +953,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "Two diagonal corners oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U f U R U' R' f' y",
     "primaryAlg": {
       "notation": "y R' F2 R2 U2 R' F R U2 R2 F2 R",
       "moves": [
@@ -1025,7 +1019,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "Two diagonal corners oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F' U f U R U' R' f' y"
   },
   {
     "id": "oll-4",
@@ -1324,12 +1324,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "Two diagonal corners oriented (mirror of OLL 3)"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U' f U R U' R' f' y",
     "primaryAlg": {
       "notation": "y' R' F2 R2 U2 R' F' R U2 R2 F2 R",
       "moves": [
@@ -1396,7 +1390,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "Two diagonal corners oriented (mirror of OLL 3)"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F' U' f U R U' R' f' y"
   },
   {
     "id": "oll-5",
@@ -1590,12 +1590,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Square shape",
-      "No headlights"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U' R U' R' U2' r",
     "primaryAlg": {
       "notation": "r' U2 R U R' U r",
       "moves": [
@@ -1637,7 +1631,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Square shape",
+      "No headlights"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U' R U' R' U2' r"
   },
   {
     "id": "oll-6",
@@ -1856,12 +1856,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Square shape",
-      "No headlights"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U R' U R U2' r'",
     "primaryAlg": {
       "notation": "r U2 R' U' R U' r'",
       "moves": [
@@ -1903,14 +1897,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Square shape",
+      "No headlights"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U R' U R U2' r'"
   },
   {
     "id": "oll-7",
     "name": "OLL 7",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -2107,12 +2107,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U2' R' U' R U' r'",
     "primaryAlg": {
       "notation": "r U R' U R U2 r'",
       "moves": [
@@ -2154,14 +2148,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small L shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U2' R' U' R U' r'"
   },
   {
     "id": "oll-8",
     "name": "OLL 8",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -2343,12 +2343,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U r y2'",
     "primaryAlg": {
       "notation": "y2 r' U' R U' R' U2 r",
       "moves": [
@@ -2395,7 +2389,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small L shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U2' R U R' U r y2'"
   },
   {
     "id": "oll-9",
@@ -2654,12 +2654,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Fish shape",
-      "Diagonal pattern"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R2' F' R U R U' R' y'",
     "primaryAlg": {
       "notation": "y R U R' U' R' F R2 U R' U' F'",
       "moves": [
@@ -2726,7 +2720,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Diagonal pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R2' F' R U R U' R' y'"
   },
   {
     "id": "oll-10",
@@ -2990,12 +2990,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Fish shape",
-      "Diagonal pattern"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U2' R' F R' F' R U' R U' R'",
     "primaryAlg": {
       "notation": "R U R' U R' F R F' R U2 R'",
       "moves": [
@@ -3057,14 +3051,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Diagonal pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R U2' R' F R' F' R U' R U' R'"
   },
   {
     "id": "oll-11",
     "name": "OLL 11",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -3306,11 +3306,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small lightning bolt"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "M U' R U2' R' U' R U' R2' r",
     "primaryAlg": {
       "notation": "r' R2 U R' U R U2 R' U M'",
       "moves": [
@@ -3367,14 +3362,19 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small lightning bolt"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "M U' R U2' R' U' R U' R2' r"
   },
   {
     "id": "oll-12",
     "name": "OLL 12",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -3636,11 +3636,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small lightning bolt"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U' F U R U' R' F'",
     "primaryAlg": {
       "notation": "y' M' R' U' R U' R' U2 R U' M",
       "moves": [
@@ -3702,7 +3697,12 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small lightning bolt"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F' U' F U R U' R' F'"
   },
   {
     "id": "oll-13",
@@ -3951,12 +3951,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Knight move pattern",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F' U' F r U' r' U r U r'",
     "primaryAlg": {
       "notation": "F U R U2 R' U' R U R' F'",
       "moves": [
@@ -4013,7 +4007,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Knight move pattern",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F' U' F r U' r' U r U r'"
   },
   {
     "id": "oll-14",
@@ -4262,12 +4262,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Knight move pattern",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U F' R' F R U' R' F' R",
     "primaryAlg": {
       "notation": "R' F R U R' F' R F U' F'",
       "moves": [
@@ -4324,7 +4318,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Knight move pattern",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U F' R' F R U' R' F' R"
   },
   {
     "id": "oll-15",
@@ -4568,12 +4568,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Knight move pattern",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U' r U' R' U R r' U r",
     "primaryAlg": {
       "notation": "r' U' r R' U' R U r' U r",
       "moves": [
@@ -4630,7 +4624,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Knight move pattern",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U' r U' R' U R r' U r"
   },
   {
     "id": "oll-16",
@@ -4884,12 +4884,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Knight move pattern",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U r' U R U' R' r U' r'",
     "primaryAlg": {
       "notation": "r U r' R U R' U' r U' r'",
       "moves": [
@@ -4946,7 +4940,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Knight move pattern",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U r' U R U' R' r U' r'"
   },
   {
     "id": "oll-17",
@@ -5220,12 +5220,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "All corners oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' R U2' F R' F' R U' R U' R'",
     "primaryAlg": {
       "notation": "R U R' U R' F R F' U2 R' F R F'",
       "moves": [
@@ -5297,7 +5291,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "All corners oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' R U2' F R' F' R U' R U' R'"
   },
   {
     "id": "oll-18",
@@ -5591,12 +5591,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "Dot case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U r2' U2' R' U' R U' r'",
     "primaryAlg": {
       "notation": "y R U2 R2 F R F' U2 M' U R U' r'",
       "moves": [
@@ -5668,7 +5662,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "Dot case"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U2' R U R' U r2' U2' R' U' R U' r'"
   },
   {
     "id": "oll-19",
@@ -5932,12 +5932,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All edges flipped",
-      "Wide H pattern"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' R M U R U' R' U' M'",
     "primaryAlg": {
       "notation": "y S' R U R' S U' R' F R F'",
       "moves": [
@@ -5999,15 +5993,21 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All edges flipped",
+      "Wide H pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' R M U R U' R' U' M'"
   },
   {
     "id": "oll-20",
     "name": "OLL 20",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
-    "difficulty": 2,
+    "category": "dot",
+    "difficulty": 1,
     "algorithms": [
       {
         "notation": "r U R' U' M2 U R U' R' U' M'",
@@ -6258,12 +6258,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "Most common OLL"
-    ],
-    "probability": 0.037,
-    "setupMoves": "r U R' U' M2' U R U' R' U' M'",
     "primaryAlg": {
       "notation": "r U R' U' M2 U R U' R' U' M'",
       "moves": [
@@ -6325,14 +6319,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Dot case",
+      "No edges oriented"
+    ],
+    "probability": 0.037,
+    "setupMoves": "r U R' U' M2' U R U' R' U' M'"
   },
   {
     "id": "oll-21",
     "name": "OLL 21",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -6609,12 +6609,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "H case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U R' U R U' R' U R U2' R' y'",
     "primaryAlg": {
       "notation": "R U R' U R U' R' U R U2 R'",
       "moves": [
@@ -6676,14 +6670,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "H case"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R U R' U R U' R' U R U2' R' y'"
   },
   {
     "id": "oll-22",
     "name": "OLL 22",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -6920,12 +6920,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "Pi case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R' U2' R2' U R2' U R2' U2' R'",
     "primaryAlg": {
       "notation": "R U2 R2 U' R2 U' R2 U2 R",
       "moves": [
@@ -6977,14 +6971,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "Pi case"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R' U2' R2' U R2' U R2' U2' R'"
   },
   {
     "id": "oll-23",
     "name": "OLL 23",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -7251,12 +7251,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "Headlights on right"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U2' R D R' U2' R D' R2'",
     "primaryAlg": {
       "notation": "R2 D R' U2 R D' R' U2 R'",
       "moves": [
@@ -7308,14 +7302,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "Headlights on right"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R U2' R D R' U2' R D' R2'"
   },
   {
     "id": "oll-24",
     "name": "OLL 24",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -7537,12 +7537,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "T case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' r U R U' r'",
     "primaryAlg": {
       "notation": "r U R' U' r' F R F'",
       "moves": [
@@ -7589,14 +7583,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "T case"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' r U R U' r'"
   },
   {
     "id": "oll-25",
     "name": "OLL 25",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -7808,12 +7808,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "T case (mirror)"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R' F' r U R U' r' F y'",
     "primaryAlg": {
       "notation": "R U2 R D R' U2 R D' R2",
       "moves": [
@@ -7865,14 +7859,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "T case (mirror)"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R' F' r U R U' r' F y'"
   },
   {
     "id": "oll-26",
     "name": "OLL 26",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -8059,12 +8059,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "Antisune"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U R' U R U2' R' y'",
     "primaryAlg": {
       "notation": "y R U2 R' U' R U' R'",
       "moves": [
@@ -8111,14 +8105,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "Antisune"
+    ],
+    "probability": 0.0278,
+    "setupMoves": "R U R' U R U2' R' y'"
   },
   {
     "id": "oll-27",
     "name": "OLL 27",
     "method": "cfop",
     "stage": "oll",
-    "category": "line",
+    "category": "ocll",
     "difficulty": 2,
     "algorithms": [
       {
@@ -8305,12 +8305,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line across top",
-      "Sune"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U2' R' U' R U' R'",
     "primaryAlg": {
       "notation": "R U R' U R U2 R'",
       "moves": [
@@ -8352,14 +8346,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Line across top",
+      "Sune"
+    ],
+    "probability": 0.0278,
+    "setupMoves": "R U2' R' U' R U' R'"
   },
   {
     "id": "oll-28",
     "name": "OLL 28",
     "method": "cfop",
     "stage": "oll",
-    "category": "square",
+    "category": "ocll",
     "difficulty": 3,
     "algorithms": [
       {
@@ -8566,12 +8566,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Square shape",
-      "Headlights on left"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U R' U' M' U R U' r'",
     "primaryAlg": {
       "notation": "r U R' U' M U R U' R'",
       "moves": [
@@ -8623,14 +8617,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Square shape",
+      "Headlights on left"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R U R' U' M' U R U' r'"
   },
   {
     "id": "oll-29",
     "name": "OLL 29",
     "method": "cfop",
     "stage": "oll",
-    "category": "fish",
+    "category": "awkward",
     "difficulty": 3,
     "algorithms": [
       {
@@ -8902,12 +8902,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Fish shape",
-      "Two opposite edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "M F R' F' R U R U' R' U' M'",
     "primaryAlg": {
       "notation": "r2 D' r U r' D r2 U' r' U' r",
       "moves": [
@@ -8969,7 +8963,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Diagonal pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "M F R' F' R U R U' R' U' M'"
   },
   {
     "id": "oll-30",
@@ -8977,7 +8977,7 @@
     "method": "cfop",
     "stage": "oll",
     "category": "awkward",
-    "difficulty": 4,
+    "difficulty": 3,
     "algorithms": [
       {
         "notation": "y' r' D' r U' r' D r2 U' r' U r U r'",
@@ -9253,12 +9253,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Awkward shape",
-      "Two adjacent edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U2' R' U R U2' R' U' F' y2'",
     "primaryAlg": {
       "notation": "y' r' D' r U' r' D r2 U' r' U r U r'",
       "moves": [
@@ -9335,7 +9329,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Diagonal pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U2' R' U R U2' R' U' F' y2'"
   },
   {
     "id": "oll-31",
@@ -9579,12 +9579,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "P shape",
-      "Three edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R' F R U R' U' F' U R",
     "primaryAlg": {
       "notation": "R' U' F U R U' R' F' R",
       "moves": [
@@ -9636,7 +9630,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "P shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R' F R U R' U' F' U R"
   },
   {
     "id": "oll-32",
@@ -9880,12 +9880,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "P shape",
-      "Three edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "f R' F' R U R U' R' S'",
     "primaryAlg": {
       "notation": "S R U R' U' R' F R f'",
       "moves": [
@@ -9937,7 +9931,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "P shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "f R' F' R U R U' R' S'"
   },
   {
     "id": "oll-33",
@@ -10151,12 +10151,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "T shape",
-      "Three edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' R U R U' R'",
     "primaryAlg": {
       "notation": "R U R' U' R' F R F'",
       "moves": [
@@ -10203,7 +10197,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "T shape",
+      "Headlights on back"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' R U R U' R'"
   },
   {
     "id": "oll-34",
@@ -10467,12 +10467,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "C shape",
-      "Two opposite edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R' U' R' F' R U R2' U' R' y2'",
     "primaryAlg": {
       "notation": "y f R f' U' r' U' R U M'",
       "moves": [
@@ -10529,7 +10523,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "C shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R' U' R' F' R U R2' U' R' y2'"
   },
   {
     "id": "oll-35",
@@ -10783,11 +10783,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Fish shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R U2' R' F R' F' R2' U2' R'",
     "primaryAlg": {
       "notation": "R U2 R2 F R F' R U2 R'",
       "moves": [
@@ -10839,7 +10834,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Lightning bolt"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R U2' R' F R' F' R2' U2' R'"
   },
   {
     "id": "oll-36",
@@ -11138,12 +11139,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "W shape",
-      "Two adjacent edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F' L F L' U' L' U' L U L' U L y2'",
     "primaryAlg": {
       "notation": "y R U R2 F' U' F U R2 U2 R'",
       "moves": [
@@ -11205,7 +11200,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "W shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F' L F L' U' L' U' L U L' U L y2'"
   },
   {
     "id": "oll-37",
@@ -11424,11 +11425,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Fish shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R U' R' U R U R' F'",
     "primaryAlg": {
       "notation": "F R' F' R U R U' R'",
       "moves": [
@@ -11475,7 +11471,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Fish shape",
+      "Diagonal corners"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R U' R' U R U R' F'"
   },
   {
     "id": "oll-38",
@@ -11754,12 +11756,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "W shape",
-      "Two adjacent edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' R U R U R' U' R U' R'",
     "primaryAlg": {
       "notation": "R U R' U R U' R' U' R' F R F'",
       "moves": [
@@ -11826,14 +11822,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "W shape",
+      "Two edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' R U R U R' U' R U' R'"
   },
   {
     "id": "oll-39",
     "name": "OLL 39",
     "method": "cfop",
     "stage": "oll",
-    "category": "big-lightning",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -12070,11 +12072,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Big lightning bolt"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "L U F' U' L' U L F L' y'",
     "primaryAlg": {
       "notation": "y' R U R' F' U' F U R U2 R'",
       "moves": [
@@ -12136,14 +12133,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Big lightning bolt",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "L U F' U' L' U L F L' y'"
   },
   {
     "id": "oll-40",
     "name": "OLL 40",
     "method": "cfop",
     "stage": "oll",
-    "category": "big-lightning",
+    "category": "lightning",
     "difficulty": 3,
     "algorithms": [
       {
@@ -12380,11 +12383,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Big lightning bolt"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R' U' F U R U' R' F' R y'",
     "primaryAlg": {
       "notation": "y R' F R U R' U' F' U R",
       "moves": [
@@ -12441,7 +12439,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Big lightning bolt",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R' U' F U R U' R' F' R y'"
   },
   {
     "id": "oll-41",
@@ -12449,7 +12453,7 @@
     "method": "cfop",
     "stage": "oll",
     "category": "awkward",
-    "difficulty": 4,
+    "difficulty": 3,
     "algorithms": [
       {
         "notation": "y2 R U R' U R U2 R' F R U R' U' F'",
@@ -12700,11 +12704,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Awkward shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' R U2' R' U' R U' R' y2'",
     "primaryAlg": {
       "notation": "y2 R U R' U R U2 R' F R U R' U' F'",
       "moves": [
@@ -12781,7 +12780,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Awkward shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F' R U2' R' U' R U' R' y2'"
   },
   {
     "id": "oll-42",
@@ -12789,7 +12794,7 @@
     "method": "cfop",
     "stage": "oll",
     "category": "awkward",
-    "difficulty": 4,
+    "difficulty": 3,
     "algorithms": [
       {
         "notation": "R' U' R U' R' U2 R F R U R' U' F'",
@@ -13070,11 +13075,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Awkward shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' R' U2' R U R' U R",
     "primaryAlg": {
       "notation": "R' U' R U' R' U2 R F R U R' U' F'",
       "moves": [
@@ -13146,7 +13146,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Awkward shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F' R' U2' R U R' U R"
   },
   {
     "id": "oll-43",
@@ -13315,12 +13321,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "P shape",
-      "Three edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "f' U' L' U L f",
     "primaryAlg": {
       "notation": "y R' U' F' U F R",
       "moves": [
@@ -13362,7 +13362,13 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "P shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "f' U' L' U L f"
   },
   {
     "id": "oll-44",
@@ -13536,12 +13542,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "P shape",
-      "Three edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "f U R U' R' f'",
     "primaryAlg": {
       "notation": "f R U R' U' f'",
       "moves": [
@@ -13578,15 +13578,21 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "P shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "f U R U' R' f'"
   },
   {
     "id": "oll-45",
     "name": "OLL 45",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
-    "difficulty": 2,
+    "category": "t-shape",
+    "difficulty": 3,
     "algorithms": [
       {
         "notation": "F R U R' U' F'",
@@ -13752,12 +13758,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape in corner",
-      "Easy case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' F'",
     "primaryAlg": {
       "notation": "F R U R' U' F'",
       "moves": [
@@ -13794,15 +13794,21 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "T shape",
+      "Headlights on front"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' F'"
   },
   {
     "id": "oll-46",
     "name": "OLL 46",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
-    "difficulty": 2,
+    "category": "c-shape",
+    "difficulty": 3,
     "algorithms": [
       {
         "notation": "R' U' R' F R F' U R",
@@ -14043,12 +14049,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape in corner",
-      "Mirror of 45"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "R' U' F R' F' R U R",
     "primaryAlg": {
       "notation": "R' U' R' F R F' U R",
       "moves": [
@@ -14095,14 +14095,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "C shape",
+      "Diagonal pattern"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "R' U' F R' F' R U R"
   },
   {
     "id": "oll-47",
     "name": "OLL 47",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -14364,12 +14370,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F' U' L' U L U' L' U L F",
     "primaryAlg": {
       "notation": "y' F R' F' R U2 R U' R' U R U2 R'",
       "moves": [
@@ -14441,14 +14441,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "L shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F' U' L' U L U' L' U L F"
   },
   {
     "id": "oll-48",
     "name": "OLL 48",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -14700,12 +14706,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F U R U' R' U R U' R' F'",
     "primaryAlg": {
       "notation": "F R U R' U' R U R' U' F'",
       "moves": [
@@ -14762,14 +14762,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "L shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F U R U' R' U R U' R' F'"
   },
   {
     "id": "oll-49",
     "name": "OLL 49",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -14996,12 +15002,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U r2' U' r2' U' r2' U r' y2'",
     "primaryAlg": {
       "notation": "y2 r U' r2 U r2 U r2 U' r",
       "moves": [
@@ -15058,14 +15058,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "L shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U r2' U' r2' U' r2' U r' y2'"
   },
   {
     "id": "oll-50",
     "name": "OLL 50",
     "method": "cfop",
     "stage": "oll",
-    "category": "l-shape",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -15312,12 +15318,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "L shape",
-      "Two edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U' r2' U r2' U r2' U' r",
     "primaryAlg": {
       "notation": "r' U r2 U' r2 U' r2 U r'",
       "moves": [
@@ -15369,14 +15369,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "L shape",
+      "Three edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U' r2' U r2' U r2' U' r"
   },
   {
     "id": "oll-51",
     "name": "OLL 51",
     "method": "cfop",
     "stage": "oll",
-    "category": "i-shape",
+    "category": "line",
     "difficulty": 3,
     "algorithms": [
       {
@@ -15628,12 +15634,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Line shape vertically",
-      "I case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "f U R U' R' U R U' R' f'",
     "primaryAlg": {
       "notation": "y2 F U R U' R' U R U' R' F'",
       "moves": [
@@ -15695,14 +15695,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "I shape",
+      "Four edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "f U R U' R' U R U' R' f'"
   },
   {
     "id": "oll-52",
     "name": "OLL 52",
     "method": "cfop",
     "stage": "oll",
-    "category": "i-shape",
+    "category": "line",
     "difficulty": 3,
     "algorithms": [
       {
@@ -15944,12 +15950,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "I shape",
-      "Four edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R U R' d R' U' R U' R'",
     "primaryAlg": {
       "notation": "y2 R' F' U' F U' R U R' U R",
       "moves": [
@@ -16011,14 +16011,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "I shape",
+      "Four edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R U R' d R' U' R U' R'"
   },
   {
     "id": "oll-53",
     "name": "OLL 53",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -16285,11 +16291,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small L shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U' R U R' U r",
     "primaryAlg": {
       "notation": "r' U' R U' R' U R U' R' U2 r",
       "moves": [
@@ -16351,14 +16352,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small L",
+      "Four edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r' U2' R U R' U' R U R' U r"
   },
   {
     "id": "oll-54",
     "name": "OLL 54",
     "method": "cfop",
     "stage": "oll",
-    "category": "small-l",
+    "category": "big-l",
     "difficulty": 3,
     "algorithms": [
       {
@@ -16640,11 +16647,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "Small L shape"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U2' R' U' R U R' U' R U' r'",
     "primaryAlg": {
       "notation": "r U R' U R U' R' U R U2 r'",
       "moves": [
@@ -16706,14 +16708,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "Small L",
+      "Four edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U2' R' U' R U R' U' R U' r'"
   },
   {
     "id": "oll-55",
     "name": "OLL 55",
     "method": "cfop",
     "stage": "oll",
-    "category": "i-shape",
+    "category": "line",
     "difficulty": 3,
     "algorithms": [
       {
@@ -17000,12 +17008,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "I shape",
-      "Four edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "F R' F' U2' R U R' U R2' U2' R'",
     "primaryAlg": {
       "notation": "y R' F U R U' R2 F' R2 U R' U' R",
       "moves": [
@@ -17077,14 +17079,20 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "I shape",
+      "All edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "F R' F' U2' R U R' U R2' U2' R'"
   },
   {
     "id": "oll-56",
     "name": "OLL 56",
     "method": "cfop",
     "stage": "oll",
-    "category": "i-shape",
+    "category": "line",
     "difficulty": 3,
     "algorithms": [
       {
@@ -17376,12 +17384,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "I shape",
-      "Four edges oriented"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U r' R U R' U' R U R' U' r U' r'",
     "primaryAlg": {
       "notation": "r U r' U R U' R' U R U' R' r U' r'",
       "moves": [
@@ -17458,15 +17460,21 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "I shape",
+      "All edges oriented"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U r' R U R' U' R U R' U' r U' r'"
   },
   {
     "id": "oll-57",
     "name": "OLL 57",
     "method": "cfop",
     "stage": "oll",
-    "category": "corners-oriented",
-    "difficulty": 3,
+    "category": "ocll",
+    "difficulty": 1,
     "algorithms": [
       {
         "notation": "R U R' U' M' U R U' r'",
@@ -17682,12 +17690,6 @@
         "recommended": false
       }
     ],
-    "recognitionHints": [
-      "All corners oriented",
-      "Last edge case"
-    ],
-    "probability": 0.0185,
-    "setupMoves": "r U R' U' M U R U' R'",
     "primaryAlg": {
       "notation": "R U R' U' M' U R U' r'",
       "moves": [
@@ -17739,6 +17741,12 @@
       ],
       "source": "SpeedCubeDB",
       "recommended": true
-    }
+    },
+    "recognitionHints": [
+      "All corners oriented",
+      "Cross on top"
+    ],
+    "probability": 0.0185,
+    "setupMoves": "r U R' U' M U R U' R'"
   }
 ]
