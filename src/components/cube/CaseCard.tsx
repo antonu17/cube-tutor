@@ -7,7 +7,7 @@ import { Badge } from "@/src/components/ui/badge";
 import { CubeView } from "./CubeView";
 import { createSolvedState } from "@/src/lib/cube-engine/state";
 import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
-import { parseAlgorithm } from "@/src/lib/cube-engine/parser";
+import { parseAlgorithm, invertAlgorithm } from "@/src/lib/cube-engine/parser";
 import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseCardProps {
@@ -37,19 +37,27 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
  * CaseCard component for displaying algorithm case information in a card format
  */
 export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCardProps) {
-  // Generate cube state from setup moves (memoized for performance)
-  const setupState = useMemo(() => {
-    if (!algorithmCase.setupMoves) return null;
-    
+  // Generate cube state for visualization (memoized for performance)
+  // Use setup moves if available, otherwise use inverse of primary algorithm
+  const caseState = useMemo(() => {
     try {
       const solvedState = createSolvedState();
-      const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
-      return applyAlgorithm(solvedState, setupAlgorithm);
+      
+      if (algorithmCase.setupMoves) {
+        // Use provided setup moves
+        const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
+        return applyAlgorithm(solvedState, setupAlgorithm);
+      } else {
+        // Use inverse of primary algorithm to create case state
+        const primaryMoves = parseAlgorithm(algorithmCase.primaryAlg.notation);
+        const inverseMoves = invertAlgorithm(primaryMoves);
+        return applyAlgorithm(solvedState, inverseMoves);
+      }
     } catch (error) {
-      console.error("Failed to parse setup moves:", error);
+      console.error("Failed to generate case state:", error);
       return null;
     }
-  }, [algorithmCase.setupMoves]);
+  }, [algorithmCase.setupMoves, algorithmCase.primaryAlg.notation]);
 
   return (
     <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
@@ -64,10 +72,10 @@ export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCar
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
-            {/* Cube visualization */}
-            {setupState && (
+            {/* Cube visualization - top view thumbnail */}
+            {caseState && (
               <div className="flex justify-center bg-muted/50 rounded-lg py-3">
-                <CubeView state={setupState} mode="case" options={{ stickerSize: 15 }} />
+                <CubeView state={caseState} mode="top" options={{ stickerSize: 20 }} />
               </div>
             )}
             
