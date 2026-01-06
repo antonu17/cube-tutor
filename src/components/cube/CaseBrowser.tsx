@@ -1,4 +1,5 @@
 import { CategorySection } from "./CategorySection";
+import { CategoryNav } from "./CategoryNav";
 import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseBrowserProps {
@@ -35,17 +36,23 @@ export function CaseBrowser({
   }
 
   return (
-    <div className="space-y-8">
-      {categoryEntries.map(([key, category]) => (
-        <CategorySection
-          key={key}
-          puzzleId={puzzleId}
-          methodId={methodId}
-          stageId={stageId}
-          category={category}
-          categoryKey={key}
-        />
-      ))}
+    <div>
+      {/* Navigation */}
+      <CategoryNav categories={categories} />
+      
+      {/* Category sections */}
+      <div className="space-y-8 p-4">
+        {categoryEntries.map(([key, category]) => (
+          <CategorySection
+            key={key}
+            puzzleId={puzzleId}
+            methodId={methodId}
+            stageId={stageId}
+            category={category}
+            categoryKey={key}
+          />
+        ))}
+      </div>
     </div>
   );
 }

@@ -22,9 +22,10 @@ export function CategorySection({
   methodId,
   stageId,
   category,
+  categoryKey,
 }: CategorySectionProps) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" id={`category-${categoryKey}`}>
       {/* Category header */}
       <div className="border-b pb-2">
         <div className="flex items-center justify-between">
