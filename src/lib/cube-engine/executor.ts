@@ -62,27 +62,51 @@ function applyBasicMove(state: CubeState, moveBase: string): void {
     case "B":
       applyB(state);
       break;
-    // Slice and rotation moves - implement later if needed
-    case "M":
-    case "E":
-    case "S":
-    case "x":
-    case "y":
-    case "z":
-    // Wide moves - implement later if needed
-    case "Rw":
-    case "Lw":
-    case "Uw":
-    case "Dw":
-    case "Fw":
-    case "Bw":
+    // Wide moves (lowercase or w suffix)
     case "r":
+    case "Rw":
+      applyRw(state);
+      break;
     case "l":
+    case "Lw":
+      applyLw(state);
+      break;
     case "u":
+    case "Uw":
+      applyUw(state);
+      break;
     case "d":
+    case "Dw":
+      applyDw(state);
+      break;
     case "f":
+    case "Fw":
+      applyFw(state);
+      break;
     case "b":
-      throw new Error(`Move '${moveBase}' not yet implemented`);
+    case "Bw":
+      applyBw(state);
+      break;
+    // Slice moves
+    case "M":
+      applyM(state);
+      break;
+    case "E":
+      applyE(state);
+      break;
+    case "S":
+      applyS(state);
+      break;
+    // Cube rotations
+    case "x":
+      applyX(state);
+      break;
+    case "y":
+      applyY(state);
+      break;
+    case "z":
+      applyZ(state);
+      break;
     default:
       throw new Error(`Unknown move: ${moveBase}`);
   }
@@ -281,6 +305,189 @@ function applyB(state: CubeState): void {
   state.L[0] = temp[0];
   state.L[3] = temp[1];
   state.L[6] = temp[2];
+}
+
+/**
+ * Apply Rw move (right two layers clockwise)
+ * Equivalent to R + M'
+ */
+function applyRw(state: CubeState): void {
+  applyR(state);
+  // M' = M three times
+  applyM(state);
+  applyM(state);
+  applyM(state);
+}
+
+/**
+ * Apply Lw move (left two layers clockwise)
+ * Equivalent to L + M
+ */
+function applyLw(state: CubeState): void {
+  applyL(state);
+  applyM(state);
+}
+
+/**
+ * Apply Uw move (upper two layers clockwise)
+ * Equivalent to U + E'
+ */
+function applyUw(state: CubeState): void {
+  applyU(state);
+  // E' = E three times
+  applyE(state);
+  applyE(state);
+  applyE(state);
+}
+
+/**
+ * Apply Dw move (down two layers clockwise)
+ * Equivalent to D + E
+ */
+function applyDw(state: CubeState): void {
+  applyD(state);
+  applyE(state);
+}
+
+/**
+ * Apply Fw move (front two layers clockwise)
+ * Equivalent to F + S
+ */
+function applyFw(state: CubeState): void {
+  applyF(state);
+  applyS(state);
+}
+
+/**
+ * Apply Bw move (back two layers clockwise)
+ * Equivalent to B + S'
+ */
+function applyBw(state: CubeState): void {
+  applyB(state);
+  // S' = S three times
+  applyS(state);
+  applyS(state);
+  applyS(state);
+}
+
+/**
+ * Apply M move (middle slice, between L and R, follows L direction)
+ * Moves the middle vertical slice without rotating a face
+ */
+function applyM(state: CubeState): void {
+  // Cycle: F[1,4,7] -> D[1,4,7] -> B[7,4,1] -> U[1,4,7] -> F[1,4,7]
+  const temp = [state.F[1], state.F[4], state.F[7]];
+
+  state.F[1] = state.U[1];
+  state.F[4] = state.U[4];
+  state.F[7] = state.U[7];
+
+  state.U[1] = state.B[7];
+  state.U[4] = state.B[4];
+  state.U[7] = state.B[1];
+
+  state.B[7] = state.D[1];
+  state.B[4] = state.D[4];
+  state.B[1] = state.D[7];
+
+  state.D[1] = temp[0];
+  state.D[4] = temp[1];
+  state.D[7] = temp[2];
+}
+
+/**
+ * Apply E move (equatorial slice, between U and D, follows D direction)
+ * Moves the middle horizontal slice without rotating a face
+ */
+function applyE(state: CubeState): void {
+  // Cycle: F[3,4,5] -> R[3,4,5] -> B[3,4,5] -> L[3,4,5] -> F[3,4,5]
+  const temp = [state.F[3], state.F[4], state.F[5]];
+
+  state.F[3] = state.L[3];
+  state.F[4] = state.L[4];
+  state.F[5] = state.L[5];
+
+  state.L[3] = state.B[3];
+  state.L[4] = state.B[4];
+  state.L[5] = state.B[5];
+
+  state.B[3] = state.R[3];
+  state.B[4] = state.R[4];
+  state.B[5] = state.R[5];
+
+  state.R[3] = temp[0];
+  state.R[4] = temp[1];
+  state.R[5] = temp[2];
+}
+
+/**
+ * Apply S move (standing slice, between F and B, follows F direction)
+ * Moves the middle slice parallel to F without rotating a face
+ */
+function applyS(state: CubeState): void {
+  // Cycle: U[3,4,5] -> R[1,4,7] -> D[5,4,3] -> L[7,4,1] -> U[3,4,5]
+  const temp = [state.U[3], state.U[4], state.U[5]];
+
+  state.U[3] = state.L[7];
+  state.U[4] = state.L[4];
+  state.U[5] = state.L[1];
+
+  state.L[7] = state.D[5];
+  state.L[4] = state.D[4];
+  state.L[1] = state.D[3];
+
+  state.D[5] = state.R[1];
+  state.D[4] = state.R[4];
+  state.D[3] = state.R[7];
+
+  state.R[1] = temp[0];
+  state.R[4] = temp[1];
+  state.R[7] = temp[2];
+}
+
+/**
+ * Apply x rotation (rotate entire cube on R axis)
+ * Equivalent to R + M' + L'
+ */
+function applyX(state: CubeState): void {
+  applyR(state);
+  // M' = M three times
+  applyM(state);
+  applyM(state);
+  applyM(state);
+  // L' = L three times
+  applyL(state);
+  applyL(state);
+  applyL(state);
+}
+
+/**
+ * Apply y rotation (rotate entire cube on U axis)
+ * Equivalent to U + E' + D'
+ */
+function applyY(state: CubeState): void {
+  applyU(state);
+  // E' = E three times
+  applyE(state);
+  applyE(state);
+  applyE(state);
+  // D' = D three times
+  applyD(state);
+  applyD(state);
+  applyD(state);
+}
+
+/**
+ * Apply z rotation (rotate entire cube on F axis)
+ * Equivalent to F + S + B'
+ */
+function applyZ(state: CubeState): void {
+  applyF(state);
+  applyS(state);
+  // B' = B three times
+  applyB(state);
+  applyB(state);
+  applyB(state);
 }
 
 /**
