@@ -32,6 +32,11 @@ export function applyMove(state: CubeState, move: Move): CubeState {
       applyBasicMove(newState, move.base);
       applyBasicMove(newState, move.base);
       break;
+    case "2'":
+      // 180° counterclockwise (same as 180° clockwise, do 2 times)
+      applyBasicMove(newState, move.base);
+      applyBasicMove(newState, move.base);
+      break;
   }
 
   return newState;

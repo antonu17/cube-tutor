@@ -12,7 +12,7 @@ const BASE_MOVES = ["U", "D", "F", "B", "L", "R", "M", "E", "S", "x", "y", "z"] 
 const WIDE_MOVES = ["Uw", "Dw", "Fw", "Bw", "Lw", "Rw", "u", "d", "f", "b", "l", "r"] as const;
 
 // Valid modifiers
-const MODIFIERS: MoveModifier[] = ["", "'", "2"];
+const MODIFIERS: MoveModifier[] = ["", "'", "2", "2'"];
 
 /**
  * Parse a single move string into a Move object
@@ -130,6 +130,9 @@ export function invertMove(move: Move): Move {
       break;
     case "2":
       newModifier = "2"; // 180° moves are their own inverse
+      break;
+    case "2'":
+      newModifier = "2"; // 180° counterclockwise inverts to 180° clockwise
       break;
     default:
       throw new Error(`Invalid modifier: ${move.modifier}`);

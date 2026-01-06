@@ -35,8 +35,8 @@ export function CaseBrowser({
   }
 
   return (
-    <div className="space-y-4">
-      {categoryEntries.map(([key, category], index) => (
+    <div className="space-y-8">
+      {categoryEntries.map(([key, category]) => (
         <CategorySection
           key={key}
           puzzleId={puzzleId}
@@ -44,7 +44,6 @@ export function CaseBrowser({
           stageId={stageId}
           category={category}
           categoryKey={key}
-          defaultOpen={index === 0}
         />
       ))}
     </div>

@@ -57,7 +57,7 @@ export interface CubeState {
 // ============================================================================
 
 export type BaseMoveType = "U" | "D" | "F" | "B" | "L" | "R" | "M" | "E" | "S" | "x" | "y" | "z";
-export type MoveModifier = "" | "'" | "2";
+export type MoveModifier = "" | "'" | "2" | "2'";
 export type WideMove = "Uw" | "Dw" | "Fw" | "Bw" | "Lw" | "Rw" | "u" | "d" | "f" | "b" | "l" | "r";
 
 /**
