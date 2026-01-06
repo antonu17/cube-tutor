@@ -8,7 +8,7 @@ import { Separator } from "@/src/components/ui/separator";
 import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
 import { createSolvedState } from "@/src/lib/cube-engine/state";
 import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
-import { parseAlgorithm } from "@/src/lib/cube-engine/parser";
+import { parseAlgorithm, invertAlgorithm } from "@/src/lib/cube-engine/parser";
 
 interface CasePageProps {
   params: Promise<{ puzzleId: string; methodId: string; stageId: string; caseId: string }>;
@@ -90,17 +90,27 @@ export default async function CasePage({ params }: CasePageProps) {
     notFound();
   }
 
-  // Generate cube state from setup moves (if available)
-  let setupState = null;
-  let solvedState = null;
-  if (algorithmCase.setupMoves) {
-    try {
-      solvedState = createSolvedState();
+  // Generate cube states for visualization
+  // If setupMoves exist, use them. Otherwise, use inverse of primary algorithm.
+  const solvedState = createSolvedState();
+  let caseState = null;
+  let effectiveSetupMoves: string | undefined = algorithmCase.setupMoves;
+  
+  try {
+    if (algorithmCase.setupMoves) {
+      // Use provided setup moves
       const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
-      setupState = applyAlgorithm(solvedState, setupAlgorithm);
-    } catch (error) {
-      console.error("Failed to parse setup moves:", error);
+      caseState = applyAlgorithm(solvedState, setupAlgorithm);
+    } else {
+      // Use inverse of primary algorithm to create case state
+      const primaryMoves = parseAlgorithm(algorithmCase.primaryAlg.notation);
+      const inverseMoves = invertAlgorithm(primaryMoves);
+      caseState = applyAlgorithm(solvedState, inverseMoves);
+      // Store inverse notation for animation component
+      effectiveSetupMoves = inverseMoves.map(m => m.notation).join(' ');
     }
+  } catch (error) {
+    console.error("Failed to generate case state:", error);
   }
 
   return (
@@ -148,25 +158,27 @@ export default async function CasePage({ params }: CasePageProps) {
           </>
         )}
 
-        {setupState && solvedState && (
+        {caseState && (
           <>
             <Separator />
             <div>
               <h2 className="text-xl font-semibold mb-4">Case Visualization</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                This shows the case state after applying setup moves to a solved cube:
+                {algorithmCase.setupMoves 
+                  ? "This shows the case state after applying setup moves to a solved cube:"
+                  : "This shows what the case looks like before applying the algorithm:"}
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex flex-col items-center">
-                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Before Setup (Solved)</h3>
+                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Solved State</h3>
                   <div className="bg-card border rounded-lg p-6">
                     <CubeView state={solvedState} mode="case" options={{ stickerSize: 25 }} />
                   </div>
                 </div>
                 <div className="flex flex-col items-center">
-                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">After Setup (Case State)</h3>
+                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Case State</h3>
                   <div className="bg-card border rounded-lg p-6">
-                    <CubeView state={setupState} mode="case" options={{ stickerSize: 25 }} />
+                    <CubeView state={caseState} mode="case" options={{ stickerSize: 25 }} />
                   </div>
                 </div>
               </div>
@@ -180,11 +192,11 @@ export default async function CasePage({ params }: CasePageProps) {
           <div>
             <h2 className="text-xl font-semibold mb-4">Algorithm Animation</h2>
             <p className="text-sm text-muted-foreground mb-4">
-              Watch the algorithm solve the case step by step. The animation starts from the case state (after setup) and ends with a solved cube:
+              Watch the algorithm solve the case step by step. The animation starts from the case state and ends with a solved cube:
             </p>
             <AlgorithmAnimation
               notation={algorithmCase.primaryAlg.notation}
-              setupMoves={algorithmCase.setupMoves}
+              setupMoves={effectiveSetupMoves}
               mode="case"
             />
           </div>
