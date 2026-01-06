@@ -165,22 +165,11 @@ export default async function CasePage({ params }: CasePageProps) {
               <h2 className="text-xl font-semibold mb-4">Case Visualization</h2>
               <p className="text-sm text-muted-foreground mb-4">
                 {algorithmCase.setupMoves 
-                  ? "This shows the case state after applying setup moves to a solved cube:"
-                  : "This shows what the case looks like before applying the algorithm:"}
+                  ? "This is what the case looks like after applying the setup moves:"
+                  : "This is what the case looks like before applying the algorithm:"}
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="flex flex-col items-center">
-                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Solved State</h3>
-                  <div className="bg-card border rounded-lg p-6">
-                    <CubeView state={solvedState} mode="case" options={{ stickerSize: 25 }} />
-                  </div>
-                </div>
-                <div className="flex flex-col items-center">
-                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Case State</h3>
-                  <div className="bg-card border rounded-lg p-6">
-                    <CubeView state={caseState} mode="case" options={{ stickerSize: 25 }} />
-                  </div>
-                </div>
+              <div className="flex justify-center bg-card border rounded-lg p-6">
+                <CubeView state={caseState} mode="case" options={{ stickerSize: 25 }} />
               </div>
             </div>
           </>
