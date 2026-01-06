@@ -258,22 +258,22 @@ export function renderCaseViewSVG(
   // Top: Back face top row (above U)
   const backX = centerX;
   const backY = padding;
-  const backRow = renderTopRow(state.B, backX, backY, opts);
+  const backRow = renderAdjacentStickers(state.B, 'B', backX, backY, opts);
   
   // Left: Left face right column (left of U)
   const leftX = padding;
   const leftY = centerY;
-  const leftCol = renderRightCol(state.L, leftX, leftY, opts);
+  const leftCol = renderAdjacentStickers(state.L, 'L', leftX, leftY, opts);
   
   // Right: Right face left column (right of U)
   const rightX = centerX + faceSize + spacing;
   const rightY = centerY;
-  const rightCol = renderLeftCol(state.R, rightX, rightY, opts);
+  const rightCol = renderAdjacentStickers(state.R, 'R', rightX, rightY, opts);
   
   // Bottom: Front face top row (below U)
   const frontX = centerX;
   const frontY = centerY + faceSize + spacing;
-  const frontRow = renderTopRow(state.F, frontX, frontY, opts);
+  const frontRow = renderAdjacentStickers(state.F, 'F', frontX, frontY, opts);
 
   // Calculate SVG dimensions
   const width = padding * 2 + edgeSize + spacing + faceSize + spacing + edgeSize;
@@ -299,63 +299,30 @@ export function renderCaseViewSVG(
 }
 
 /**
- * Render just the top row of a face (for case view)
+ * Render the 3 stickers from a face that are adjacent to the U face.
+ * All faces (F, B, L, R) share their top row (indices 0, 1, 2) with the U face.
+ * F/B faces render horizontally, L/R faces render vertically.
+ * R/B faces need reversed order (2, 1, 0) due to their orientation.
  */
-function renderTopRow(
+function renderAdjacentStickers(
   face: FaceState,
+  faceName: 'F' | 'B' | 'L' | 'R',
   x: number,
   y: number,
   options: Required<RenderOptions>
 ): string {
   const { stickerSize, stickerGap } = options;
   const stickers: string[] = [];
-
-  for (let col = 0; col < 3; col++) {
-    const color = face[col]; // Top row: indices 0, 1, 2
-    const stickerX = x + col * (stickerSize + stickerGap);
-    stickers.push(renderSticker(color, stickerX, y, stickerSize, options));
-  }
-
-  return stickers.join("\n");
-}
-
-/**
- * Render just the left column of a face (for case view)
- */
-function renderLeftCol(
-  face: FaceState,
-  x: number,
-  y: number,
-  options: Required<RenderOptions>
-): string {
-  const { stickerSize, stickerGap } = options;
-  const stickers: string[] = [];
-
-  for (let row = 0; row < 3; row++) {
-    const color = face[row * 3]; // Left column: indices 0, 3, 6
-    const stickerY = y + row * (stickerSize + stickerGap);
-    stickers.push(renderSticker(color, x, stickerY, stickerSize, options));
-  }
-
-  return stickers.join("\n");
-}
-
-/**
- * Render just the right column of a face (for case view)
- */
-function renderRightCol(
-  face: FaceState,
-  x: number,
-  y: number,
-  options: Required<RenderOptions>
-): string {
-  const { stickerSize, stickerGap } = options;
-  const stickers: string[] = [];
-
-  for (let row = 0; row < 3; row++) {
-    const color = face[row * 3 + 2]; // Right column: indices 2, 5, 8
-    const stickerY = y + row * (stickerSize + stickerGap);
-    stickers.push(renderSticker(color, x, stickerY, stickerSize, options));
+  const isHorizontal = faceName === 'F' || faceName === 'B';
+  const shouldReverse = faceName === 'R' || faceName === 'B';
+  
+  // All adjacent faces share their top row with U face
+  for (let i = 0; i < 3; i++) {
+    const index = shouldReverse ? 2 - i : i; // Reverse for Right and Back
+    const color = face[index];
+    const stickerX = isHorizontal ? x + i * (stickerSize + stickerGap) : x;
+    const stickerY = isHorizontal ? y : y + i * (stickerSize + stickerGap);
+    stickers.push(renderSticker(color, stickerX, stickerY, stickerSize, options));
   }
 
   return stickers.join("\n");
