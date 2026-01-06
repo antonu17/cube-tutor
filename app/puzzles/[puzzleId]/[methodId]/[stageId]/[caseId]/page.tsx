@@ -92,9 +92,10 @@ export default async function CasePage({ params }: CasePageProps) {
 
   // Generate cube state from setup moves (if available)
   let setupState = null;
+  let solvedState = null;
   if (algorithmCase.setupMoves) {
     try {
-      const solvedState = createSolvedState();
+      solvedState = createSolvedState();
       const setupAlgorithm = parseAlgorithm(algorithmCase.setupMoves);
       setupState = applyAlgorithm(solvedState, setupAlgorithm);
     } catch (error) {
@@ -132,16 +133,42 @@ export default async function CasePage({ params }: CasePageProps) {
           </div>
         )}
 
-        {setupState && (
+        {algorithmCase.setupMoves && (
+          <>
+            <Separator />
+            <div>
+              <h2 className="text-xl font-semibold mb-2">Setup Moves</h2>
+              <p className="text-sm text-muted-foreground mb-3">
+                Apply these moves to a solved cube to create this case:
+              </p>
+              <code className="block rounded-lg bg-muted px-4 py-3 font-mono text-sm">
+                {algorithmCase.setupMoves}
+              </code>
+            </div>
+          </>
+        )}
+
+        {setupState && solvedState && (
           <>
             <Separator />
             <div>
               <h2 className="text-xl font-semibold mb-4">Case Visualization</h2>
               <p className="text-sm text-muted-foreground mb-4">
-                This is what the case looks like after applying the setup moves:
+                This shows the case state after applying setup moves to a solved cube:
               </p>
-              <div className="flex justify-center bg-card border rounded-lg p-6">
-                <CubeView state={setupState} mode="case" options={{ stickerSize: 25 }} />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col items-center">
+                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">Before Setup (Solved)</h3>
+                  <div className="bg-card border rounded-lg p-6">
+                    <CubeView state={solvedState} mode="case" options={{ stickerSize: 25 }} />
+                  </div>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h3 className="text-sm font-medium mb-3 text-muted-foreground">After Setup (Case State)</h3>
+                  <div className="bg-card border rounded-lg p-6">
+                    <CubeView state={setupState} mode="case" options={{ stickerSize: 25 }} />
+                  </div>
+                </div>
               </div>
             </div>
           </>
@@ -153,7 +180,7 @@ export default async function CasePage({ params }: CasePageProps) {
           <div>
             <h2 className="text-xl font-semibold mb-4">Algorithm Animation</h2>
             <p className="text-sm text-muted-foreground mb-4">
-              Watch how the algorithm transforms the cube step by step:
+              Watch the algorithm solve the case step by step. The animation starts from the case state (after setup) and ends with a solved cube:
             </p>
             <AlgorithmAnimation
               notation={algorithmCase.primaryAlg.notation}
@@ -201,21 +228,6 @@ export default async function CasePage({ params }: CasePageProps) {
                     <li key={index}>{hint}</li>
                   ))}
                 </ul>
-              </div>
-            </>
-          )}
-
-          {algorithmCase.setupMoves && (
-            <>
-              <Separator />
-              <div>
-                <h2 className="text-xl font-semibold mb-4">Setup Moves</h2>
-                <p className="text-sm text-muted-foreground mb-2">
-                  Apply these moves to a solved cube to create this case:
-                </p>
-                <code className="block rounded-lg bg-muted px-4 py-3 font-mono text-sm">
-                  {algorithmCase.setupMoves}
-                </code>
               </div>
             </>
           )}
