@@ -276,7 +276,69 @@
       "Headlights on front and back"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' R U2' F R' F' R2' U2' R'"
+    "setupMoves": "F R' F' R U2' F R' F' R2' U2' R'",
+    "primaryAlg": {
+      "notation": "R U2 R2 F R F' U2 R' F R F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-2",
@@ -555,7 +617,74 @@
       "Two adjacent corners oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "f U R U' R' f' F U R U' R' F'"
+    "setupMoves": "f U R U' R' f' F U R U' R' F'",
+    "primaryAlg": {
+      "notation": "y' R U' R2 D' r U r' D R2 U R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-3",
@@ -829,7 +958,74 @@
       "Two diagonal corners oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U f U R U' R' f' y"
+    "setupMoves": "F U R U' R' F' U f U R U' R' f' y",
+    "primaryAlg": {
+      "notation": "y R' F2 R2 U2 R' F R U2 R2 F2 R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "2",
+          "notation": "F2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "2",
+          "notation": "F2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-4",
@@ -1133,7 +1329,74 @@
       "Two diagonal corners oriented (mirror of OLL 3)"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U' f U R U' R' f' y"
+    "setupMoves": "F U R U' R' F' U' f U R U' R' f' y",
+    "primaryAlg": {
+      "notation": "y' R' F2 R2 U2 R' F' R U2 R2 F2 R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "2",
+          "notation": "F2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "2",
+          "notation": "F2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-5",
@@ -1332,7 +1595,49 @@
       "No headlights"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U' R U' R' U2' r"
+    "setupMoves": "r' U' R U' R' U2' r",
+    "primaryAlg": {
+      "notation": "r' U2 R U R' U r",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-6",
@@ -1556,7 +1861,49 @@
       "No headlights"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U R' U R U2' r'"
+    "setupMoves": "r U R' U R U2' r'",
+    "primaryAlg": {
+      "notation": "r U2 R' U' R U' r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-7",
@@ -1765,7 +2112,49 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U2' R' U' R U' r'"
+    "setupMoves": "r U2' R' U' R U' r'",
+    "primaryAlg": {
+      "notation": "r U R' U R U2 r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-8",
@@ -1959,7 +2348,54 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U r y2'"
+    "setupMoves": "r' U2' R U R' U r y2'",
+    "primaryAlg": {
+      "notation": "y2 r' U' R U' R' U2 r",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-9",
@@ -2223,7 +2659,74 @@
       "Diagonal pattern"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R2' F' R U R U' R' y'"
+    "setupMoves": "F U R U' R2' F' R U R U' R' y'",
+    "primaryAlg": {
+      "notation": "y R U R' U' R' F R2 U R' U' F'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-10",
@@ -2492,7 +2995,69 @@
       "Diagonal pattern"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U2' R' F R' F' R U' R U' R'"
+    "setupMoves": "R U2' R' F R' F' R U' R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U R' F R F' R U2 R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-11",
@@ -2745,7 +3310,64 @@
       "Small lightning bolt"
     ],
     "probability": 0.0185,
-    "setupMoves": "M U' R U2' R' U' R U' R2' r"
+    "setupMoves": "M U' R U2' R' U' R U' R2' r",
+    "primaryAlg": {
+      "notation": "r' R2 U R' U R U2 R' U M'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-12",
@@ -3018,7 +3640,69 @@
       "Small lightning bolt"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' U' F U R U' R' F'"
+    "setupMoves": "F U R U' R' F' U' F U R U' R' F'",
+    "primaryAlg": {
+      "notation": "y' M' R' U' R U' R' U2 R U' M",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "",
+          "notation": "M"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-13",
@@ -3272,7 +3956,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F' U' F r U' r' U r U r'"
+    "setupMoves": "F' U' F r U' r' U r U r'",
+    "primaryAlg": {
+      "notation": "F U R U2 R' U' R U R' F'",
+      "moves": [
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-14",
@@ -3526,7 +4267,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U F' R' F R U' R' F' R"
+    "setupMoves": "F U F' R' F R U' R' F' R",
+    "primaryAlg": {
+      "notation": "R' F R U R' F' R F U' F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-15",
@@ -3775,7 +4573,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U' r U' R' U R r' U r"
+    "setupMoves": "r' U' r U' R' U R r' U r",
+    "primaryAlg": {
+      "notation": "r' U' r R' U' R U r' U r",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-16",
@@ -4034,7 +4889,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U r' U R U' R' r U' r'"
+    "setupMoves": "r U r' U R U' R' r U' r'",
+    "primaryAlg": {
+      "notation": "r U r' R U R' U' r U' r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-17",
@@ -4313,7 +5225,79 @@
       "All corners oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' R U2' F R' F' R U' R U' R'"
+    "setupMoves": "F R' F' R U2' F R' F' R U' R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U R' F R F' U2 R' F R F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-18",
@@ -4612,7 +5596,79 @@
       "Dot case"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U r2' U2' R' U' R U' r'"
+    "setupMoves": "r' U2' R U R' U r2' U2' R' U' R U' r'",
+    "primaryAlg": {
+      "notation": "y R U2 R2 F R F' U2 M' U R U' r'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-19",
@@ -4881,7 +5937,69 @@
       "Wide H pattern"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' R M U R U' R' U' M'"
+    "setupMoves": "F R' F' R M U R U' R' U' M'",
+    "primaryAlg": {
+      "notation": "y S' R U R' S U' R' F R F'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "S",
+          "modifier": "'",
+          "notation": "S'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "S",
+          "modifier": "",
+          "notation": "S"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-20",
@@ -5145,7 +6263,69 @@
       "Most common OLL"
     ],
     "probability": 0.037,
-    "setupMoves": "r U R' U' M2' U R U' R' U' M'"
+    "setupMoves": "r U R' U' M2' U R U' R' U' M'",
+    "primaryAlg": {
+      "notation": "r U R' U' M2 U R U' R' U' M'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-21",
@@ -5434,7 +6614,69 @@
       "H case"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U R' U R U' R' U R U2' R' y'"
+    "setupMoves": "R U R' U R U' R' U R U2' R' y'",
+    "primaryAlg": {
+      "notation": "R U R' U R U' R' U R U2 R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-22",
@@ -5683,7 +6925,59 @@
       "Pi case"
     ],
     "probability": 0.0185,
-    "setupMoves": "R' U2' R2' U R2' U R2' U2' R'"
+    "setupMoves": "R' U2' R2' U R2' U R2' U2' R'",
+    "primaryAlg": {
+      "notation": "R U2 R2 U' R2 U' R2 U2 R",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-23",
@@ -5962,7 +7256,59 @@
       "Headlights on right"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U2' R D R' U2' R D' R2'"
+    "setupMoves": "R U2' R D R' U2' R D' R2'",
+    "primaryAlg": {
+      "notation": "R2 D R' U2 R D' R' U2 R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-24",
@@ -6196,7 +7542,54 @@
       "T case"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' r U R U' r'"
+    "setupMoves": "F R' F' r U R U' r'",
+    "primaryAlg": {
+      "notation": "r U R' U' r' F R F'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-25",
@@ -6420,7 +7813,59 @@
       "T case (mirror)"
     ],
     "probability": 0.0185,
-    "setupMoves": "R' F' r U R U' r' F y'"
+    "setupMoves": "R' F' r U R U' r' F y'",
+    "primaryAlg": {
+      "notation": "R U2 R D R' U2 R D' R2",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-26",
@@ -6619,7 +8064,54 @@
       "Antisune"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U R' U R U2' R' y'"
+    "setupMoves": "R U R' U R U2' R' y'",
+    "primaryAlg": {
+      "notation": "y R U2 R' U' R U' R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-27",
@@ -6818,7 +8310,49 @@
       "Sune"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U2' R' U' R U' R'"
+    "setupMoves": "R U2' R' U' R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U R U2 R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-28",
@@ -7037,7 +8571,59 @@
       "Headlights on left"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U R' U' M' U R U' r'"
+    "setupMoves": "R U R' U' M' U R U' r'",
+    "primaryAlg": {
+      "notation": "r U R' U' M U R U' R'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "",
+          "notation": "M"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-29",
@@ -7321,7 +8907,69 @@
       "Two opposite edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "M F R' F' R U R U' R' U' M'"
+    "setupMoves": "M F R' F' R U R U' R' U' M'",
+    "primaryAlg": {
+      "notation": "r2 D' r U r' D r2 U' r' U' r",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-30",
@@ -7610,7 +9258,84 @@
       "Two adjacent edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U2' R' U R U2' R' U' F' y2'"
+    "setupMoves": "F U R U2' R' U R U2' R' U' F' y2'",
+    "primaryAlg": {
+      "notation": "y' r' D' r U' r' D r2 U' r' U r U r'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-31",
@@ -7859,7 +9584,59 @@
       "Three edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "R' F R U R' U' F' U R"
+    "setupMoves": "R' F R U R' U' F' U R",
+    "primaryAlg": {
+      "notation": "R' U' F U R U' R' F' R",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-32",
@@ -8108,7 +9885,59 @@
       "Three edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "f R' F' R U R U' R' S'"
+    "setupMoves": "f R' F' R U R U' R' S'",
+    "primaryAlg": {
+      "notation": "S R U R' U' R' F R f'",
+      "moves": [
+        {
+          "base": "S",
+          "modifier": "",
+          "notation": "S"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "f",
+          "modifier": "'",
+          "notation": "f'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-33",
@@ -8327,7 +10156,54 @@
       "Three edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' R U R U' R'"
+    "setupMoves": "F R' F' R U R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U' R' F R F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-34",
@@ -8596,7 +10472,64 @@
       "Two opposite edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R' U' R' F' R U R2' U' R' y2'"
+    "setupMoves": "F U R' U' R' F' R U R2' U' R' y2'",
+    "primaryAlg": {
+      "notation": "y f R f' U' r' U' R U M'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "f",
+          "modifier": "",
+          "notation": "f"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "f",
+          "modifier": "'",
+          "notation": "f'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-35",
@@ -8854,7 +10787,59 @@
       "Fish shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "R U2' R' F R' F' R2' U2' R'"
+    "setupMoves": "R U2' R' F R' F' R2' U2' R'",
+    "primaryAlg": {
+      "notation": "R U2 R2 F R F' R U2 R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-36",
@@ -9158,7 +11143,69 @@
       "Two adjacent edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F' L F L' U' L' U' L U L' U L y2'"
+    "setupMoves": "F' L F L' U' L' U' L U L' U L y2'",
+    "primaryAlg": {
+      "notation": "y R U R2 F' U' F U R2 U2 R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-37",
@@ -9381,7 +11428,54 @@
       "Fish shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R U' R' U R U R' F'"
+    "setupMoves": "F R U' R' U R U R' F'",
+    "primaryAlg": {
+      "notation": "F R' F' R U R U' R'",
+      "moves": [
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-38",
@@ -9665,7 +11759,74 @@
       "Two adjacent edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' R U R U R' U' R U' R'"
+    "setupMoves": "F R' F' R U R U R' U' R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U R U' R' U' R' F R F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-39",
@@ -9913,7 +12074,69 @@
       "Big lightning bolt"
     ],
     "probability": 0.0185,
-    "setupMoves": "L U F' U' L' U L F L' y'"
+    "setupMoves": "L U F' U' L' U L F L' y'",
+    "primaryAlg": {
+      "notation": "y' R U R' F' U' F U R U2 R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-40",
@@ -10161,7 +12384,64 @@
       "Big lightning bolt"
     ],
     "probability": 0.0185,
-    "setupMoves": "R' U' F U R U' R' F' R y'"
+    "setupMoves": "R' U' F U R U' R' F' R y'",
+    "primaryAlg": {
+      "notation": "y R' F R U R' U' F' U R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-41",
@@ -10424,7 +12704,84 @@
       "Awkward shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' R U2' R' U' R U' R' y2'"
+    "setupMoves": "F U R U' R' F' R U2' R' U' R U' R' y2'",
+    "primaryAlg": {
+      "notation": "y2 R U R' U R U2 R' F R U R' U' F'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-42",
@@ -10717,7 +13074,79 @@
       "Awkward shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F' R' U2' R U R' U R"
+    "setupMoves": "F U R U' R' F' R' U2' R U R' U R",
+    "primaryAlg": {
+      "notation": "R' U' R U' R' U2 R F R U R' U' F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-43",
@@ -10891,7 +13320,49 @@
       "Three edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "f' U' L' U L f"
+    "setupMoves": "f' U' L' U L f",
+    "primaryAlg": {
+      "notation": "y R' U' F' U F R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-44",
@@ -11070,7 +13541,44 @@
       "Three edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "f U R U' R' f'"
+    "setupMoves": "f U R U' R' f'",
+    "primaryAlg": {
+      "notation": "f R U R' U' f'",
+      "moves": [
+        {
+          "base": "f",
+          "modifier": "",
+          "notation": "f"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "f",
+          "modifier": "'",
+          "notation": "f'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-45",
@@ -11249,7 +13757,44 @@
       "Easy case"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' F'"
+    "setupMoves": "F U R U' R' F'",
+    "primaryAlg": {
+      "notation": "F R U R' U' F'",
+      "moves": [
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-46",
@@ -11503,7 +14048,54 @@
       "Mirror of 45"
     ],
     "probability": 0.0185,
-    "setupMoves": "R' U' F R' F' R U R"
+    "setupMoves": "R' U' F R' F' R U R",
+    "primaryAlg": {
+      "notation": "R' U' R' F R F' U R",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-47",
@@ -11777,7 +14369,79 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F' U' L' U L U' L' U L F"
+    "setupMoves": "F' U' L' U L U' L' U L F",
+    "primaryAlg": {
+      "notation": "y' F R' F' R U2 R U' R' U R U2 R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "'",
+          "notation": "y'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-48",
@@ -12041,7 +14705,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F U R U' R' U R U' R' F'"
+    "setupMoves": "F U R U' R' U R U' R' F'",
+    "primaryAlg": {
+      "notation": "F R U R' U' R U R' U' F'",
+      "moves": [
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-49",
@@ -12280,7 +15001,64 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U r2' U' r2' U' r2' U r' y2'"
+    "setupMoves": "r' U r2' U' r2' U' r2' U r' y2'",
+    "primaryAlg": {
+      "notation": "y2 r U' r2 U r2 U r2 U' r",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-50",
@@ -12539,7 +15317,59 @@
       "Two edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U' r2' U r2' U r2' U' r"
+    "setupMoves": "r U' r2' U r2' U r2' U' r",
+    "primaryAlg": {
+      "notation": "r' U r2 U' r2 U' r2 U r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "2",
+          "notation": "r2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-51",
@@ -12803,7 +15633,69 @@
       "I case"
     ],
     "probability": 0.0185,
-    "setupMoves": "f U R U' R' U R U' R' f'"
+    "setupMoves": "f U R U' R' U R U' R' f'",
+    "primaryAlg": {
+      "notation": "y2 F U R U' R' U R U' R' F'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-52",
@@ -13057,7 +15949,69 @@
       "Four edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R U R' d R' U' R U' R'"
+    "setupMoves": "F R U R' d R' U' R U' R'",
+    "primaryAlg": {
+      "notation": "y2 R' F' U' F U' R U R' U R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-53",
@@ -13335,7 +16289,69 @@
       "Small L shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "r' U2' R U R' U' R U R' U r"
+    "setupMoves": "r' U2' R U R' U' R U R' U r",
+    "primaryAlg": {
+      "notation": "r' U' R U' R' U R U' R' U2 r",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-54",
@@ -13628,7 +16644,69 @@
       "Small L shape"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U2' R' U' R U R' U' R U' r'"
+    "setupMoves": "r U2' R' U' R U R' U' R U' r'",
+    "primaryAlg": {
+      "notation": "r U R' U R U' R' U R U2 r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-55",
@@ -13927,7 +17005,79 @@
       "Four edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "F R' F' U2' R U R' U R2' U2' R'"
+    "setupMoves": "F R' F' U2' R U R' U R2' U2' R'",
+    "primaryAlg": {
+      "notation": "y R' F U R U' R2 F' R2 U R' U' R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-56",
@@ -14231,7 +17381,84 @@
       "Four edges oriented"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U r' R U R' U' R U R' U' r U' r'"
+    "setupMoves": "r U r' R U R' U' R U R' U' r U' r'",
+    "primaryAlg": {
+      "notation": "r U r' U R U' R' U R U' R' r U' r'",
+      "moves": [
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   },
   {
     "id": "oll-57",
@@ -14460,6 +17687,58 @@
       "Last edge case"
     ],
     "probability": 0.0185,
-    "setupMoves": "r U R' U' M U R U' R'"
+    "setupMoves": "r U R' U' M U R U' R'",
+    "primaryAlg": {
+      "notation": "R U R' U' M' U R U' r'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    }
   }
 ]
