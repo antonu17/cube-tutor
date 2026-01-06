@@ -29,11 +29,11 @@ interface PhaseCardProps {
  */
 function getPhaseState(phaseId: string) {
   const solved = createSolvedState();
-  
+
   // Create representative states for each phase
   const phaseStates: Record<string, string> = {
     // Cross: solved cross on bottom
-    cross: "x2",
+    cross: "R' U2' R2' U R2' U R2' U2' R' y",
     // F2L: cross + some F2L pairs
     f2l: "x2 R U R' U'",
     // OLL: F2L solved, yellow on top (pre-OLL state)
@@ -41,10 +41,10 @@ function getPhaseState(phaseId: string) {
     // PLL: OLL solved, needs permutation
     pll: "z2 R U R' U' R' F R2 U' R' U' R U R' F'",
   };
-  
+
   const algorithm = phaseStates[phaseId] || "";
   if (!algorithm) return solved;
-  
+
   try {
     const moves = parseAlgorithm(algorithm);
     return applyAlgorithm(solved, moves);
@@ -65,7 +65,7 @@ export function PhaseCard({
 }: PhaseCardProps) {
   // Generate cube state for this phase
   const cubeState = useMemo(() => getPhaseState(phase.id), [phase.id]);
-  
+
   return (
     <Link href={`/puzzles/${puzzleId}/${methodId}/${phase.id}`}>
       <Card className="h-full transition-colors hover:bg-accent">
@@ -73,13 +73,13 @@ export function PhaseCard({
           <div className="flex items-start gap-4">
             {/* 3D Cube Thumbnail */}
             <div className="flex-shrink-0">
-              <CubeView3D 
-                state={cubeState} 
+              <CubeView3D
+                state={cubeState}
                 view="front"
                 stickerSize={8}
               />
             </div>
-            
+
             {/* Phase Info */}
             <div className="flex-1 min-w-0">
               <div className="flex items-center justify-between mb-2">

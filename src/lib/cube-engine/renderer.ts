@@ -428,19 +428,22 @@ interface Point3D {
 }
 
 /**
- * Convert 3D point to 2D isometric projection
- * Using standard isometric projection angles (30°)
+ * Convert 3D point to 2D isometric projection with minimal perspective
+ * Using mostly isometric with tiny perspective hint
  */
 function projectIsometric(p: Point3D): Point2D {
-  // Isometric projection matrix
-  // x_screen = (x - z) * cos(30°)
-  // y_screen = y + (x + z) * sin(30°)
+  // Apply isometric projection angles first
   const cos30 = Math.sqrt(3) / 2; // ~0.866
   const sin30 = 0.5;
   
+  // Add just 2% perspective based on Z depth
+  // Positive Z (front) = larger, Negative Z (back) = smaller
+  const perspectiveAmount = 0.02;
+  const scale = 1 + (p.z * perspectiveAmount);
+  
   return {
-    x: (p.x - p.z) * cos30,
-    y: -p.y + (p.x + p.z) * sin30,
+    x: (p.x - p.z) * cos30 * scale,
+    y: (-p.y + (p.x + p.z) * sin30) * scale,
   };
 }
 
@@ -525,15 +528,20 @@ function getFaceNormal(face: string, view: string): Point3D {
 
 /**
  * Check if face is visible from camera (backface culling)
- * Camera is at (0, 0, +infinity) looking toward -Z
- * In isometric view, we show 3 faces typically
+ * In isometric view, camera looks from above and to the front-right
+ * A face is visible if its normal points generally toward the camera
  */
 function isFaceVisible(face: string, view: string): boolean {
   const normal = getFaceNormal(face, view);
-  // Face is visible if normal has positive Z component (facing camera)
-  // OR positive Y component (top faces in isometric view)
-  // This allows us to see 3 faces of the cube in isometric view
-  return normal.z > -0.3 || normal.y > 0.3;
+  
+  // For isometric view looking from front-right-top angle
+  // Camera is positioned at approximately (1, 1, 1) looking toward origin
+  // So camera direction (toward camera) is roughly (1, 1, 1) normalized
+  const cameraDir = { x: 0.577, y: 0.577, z: 0.577 }; // normalized (1,1,1)
+  const dotProduct = normal.x * cameraDir.x + normal.y * cameraDir.y + normal.z * cameraDir.z;
+  
+  // Face is visible if it's facing toward the camera (positive dot product)
+  return dotProduct > 0.01;
 }
 
 /**
@@ -621,17 +629,25 @@ function getSticker3DPosition(
   const offset = (i: number) => (i - 1);
   
   switch (face) {
-    case 'U': // Top face (Y = 1.5)
-      return { x: offset(col), y: 1.5, z: -offset(row) };
-    case 'D': // Bottom face (Y = -1.5)
-      return { x: offset(col), y: -1.5, z: offset(row) };
-    case 'F': // Front face (Z = 1.5)
+    case 'U': // Top face (Y = 1.5) - looking DOWN at it from above
+      // Row 0 = back edge, Row 2 = front edge
+      // Col 0 = left edge, Col 2 = right edge
+      return { x: offset(col), y: 1.5, z: offset(row) };
+    case 'D': // Bottom face (Y = -1.5) - looking UP at it from below
+      // Row 0 = front edge, Row 2 = back edge (inverted from U)
+      return { x: offset(col), y: -1.5, z: -offset(row) };
+    case 'F': // Front face (Z = 1.5) - looking at it from front
+      // Row 0 = top, Row 2 = bottom
+      // Col 0 = left, Col 2 = right
       return { x: offset(col), y: -offset(row), z: 1.5 };
-    case 'B': // Back face (Z = -1.5)
+    case 'B': // Back face (Z = -1.5) - looking at it from behind
+      // Columns are mirrored when viewed from behind
       return { x: -offset(col), y: -offset(row), z: -1.5 };
-    case 'L': // Left face (X = -1.5)
+    case 'L': // Left face (X = -1.5) - looking at it from the left
+      // Col 0 = back edge, Col 2 = front edge
       return { x: -1.5, y: -offset(row), z: offset(col) };
-    case 'R': // Right face (X = 1.5)
+    case 'R': // Right face (X = 1.5) - looking at it from the right
+      // Col 0 = front edge, Col 2 = back edge (mirrored from L)
       return { x: 1.5, y: -offset(row), z: -offset(col) };
     default:
       return { x: 0, y: 0, z: 0 };
@@ -716,6 +732,7 @@ function render3DSticker(
   return `<polygon
     points="${points}"
     fill="${fill}"
+    fill-opacity="1"
     stroke="${stroke}"
     stroke-width="${strokeWidth}"
   />`;
@@ -745,11 +762,11 @@ export function renderCube3D(
     render3DFace(state[face], face, view, stickerSize, opts)
   );
   
-  // Calculate SVG dimensions
+  // Calculate SVG dimensions with extra padding to prevent cropping
   const scale = stickerSize / 0.9;
   const width = 6 * scale;
   const height = 5 * scale;
-  const padding = scale * 0.5;
+  const padding = scale * 1.2; // Increased from 0.5 to 1.2
   
   // Center the cube in the viewport
   const offsetX = width / 2 + padding;
