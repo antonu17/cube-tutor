@@ -71,7 +71,7 @@ export function CaseListItem({ puzzleId, methodId, stageId, algorithmCase }: Cas
 
   return (
     <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
-      <div className="flex items-center gap-4 p-3 rounded-lg border bg-card hover:bg-accent transition-colors">
+      <div className="flex items-start gap-4 p-3 rounded-lg border bg-card hover:bg-accent transition-colors">
         {/* Cube visualization */}
         {caseState && (
           <div className="flex-shrink-0">
@@ -86,31 +86,57 @@ export function CaseListItem({ puzzleId, methodId, stageId, algorithmCase }: Cas
           </div>
         )}
 
-        {/* Case info */}
+        {/* Case info and algorithms */}
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center gap-2 mb-2">
             <h4 className="font-semibold text-sm">{algorithmCase.name}</h4>
             <Badge variant={difficultyColors[algorithmCase.difficulty]} className="text-xs">
               {difficultyLabels[algorithmCase.difficulty]}
             </Badge>
+            {algorithmCase.primaryAlg && (
+              <span className="text-xs text-muted-foreground">
+                {algorithmCase.primaryAlg.moves.length} moves
+              </span>
+            )}
           </div>
           
+          {/* Primary algorithm */}
           {algorithmCase.primaryAlg && (
-            <code className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
-              {algorithmCase.primaryAlg.notation}
-            </code>
+            <div className="mb-1">
+              <code className="text-xs font-mono bg-muted px-2 py-0.5 rounded">
+                {algorithmCase.primaryAlg.notation}
+              </code>
+            </div>
+          )}
+
+          {/* Additional algorithms */}
+          {algorithmCase.algorithms && algorithmCase.algorithms.length > 1 && (
+            <div className="space-y-1 mt-2">
+              {algorithmCase.algorithms.slice(1, 3).map((alg, index) => (
+                <div key={index}>
+                  <code className="text-xs font-mono bg-muted/50 px-2 py-0.5 rounded text-muted-foreground">
+                    {alg.notation}
+                  </code>
+                </div>
+              ))}
+              {algorithmCase.algorithms.length > 3 && (
+                <div className="text-xs text-muted-foreground">
+                  +{algorithmCase.algorithms.length - 3} more alg{algorithmCase.algorithms.length - 3 > 1 ? 's' : ''}
+                </div>
+              )}
+            </div>
           )}
         </div>
 
-        {/* Meta info */}
-        <div className="flex-shrink-0 text-right text-xs text-muted-foreground">
-          {algorithmCase.primaryAlg && (
-            <div>{algorithmCase.primaryAlg.moves.length} moves</div>
-          )}
-          {algorithmCase.algorithms && algorithmCase.algorithms.length > 1 && (
-            <div className="text-xs">+{algorithmCase.algorithms.length - 1} alg{algorithmCase.algorithms.length - 1 > 1 ? 's' : ''}</div>
-          )}
-        </div>
+        {/* Setup moves on the right */}
+        {algorithmCase.setupMoves && (
+          <div className="flex-shrink-0 text-right">
+            <div className="text-xs text-muted-foreground mb-1">Setup:</div>
+            <code className="text-xs font-mono bg-muted/50 px-2 py-0.5 rounded text-muted-foreground block">
+              {algorithmCase.setupMoves}
+            </code>
+          </div>
+        )}
       </div>
     </Link>
   );
