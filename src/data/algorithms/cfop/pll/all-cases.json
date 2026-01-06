@@ -1,288 +1,10 @@
 [
   {
-    "id": "pll-ua",
-    "name": "Ua Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "edges-only",
-    "difficulty": 2,
-    "algorithms": [
-      {
-        "notation": "R U' R U R U R U' R' U' R2",
-        "moves": [
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "2",
-            "notation": "R2"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Three edges need to cycle",
-      "One edge already solved"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-ub",
-    "name": "Ub Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "edges-only",
-    "difficulty": 2,
-    "algorithms": [
-      {
-        "notation": "R2 U R U R' U' R' U' R' U R'",
-        "moves": [
-          {
-            "base": "R",
-            "modifier": "2",
-            "notation": "R2"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Three edges need to cycle",
-      "Mirror of Ua"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-h",
-    "name": "H Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "edges-only",
-    "difficulty": 2,
-    "algorithms": [
-      {
-        "notation": "M2 U M2 U2 M2 U M2",
-        "moves": [
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "All four edges swapped",
-      "Two opposite edge swaps"
-    ],
-    "probability": 0.0238
-  },
-  {
-    "id": "pll-z",
-    "name": "Z Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "edges-only",
-    "difficulty": 3,
-    "algorithms": [
-      {
-        "notation": "M' U M2 U M2 U M' U2 M2",
-        "moves": [
-          {
-            "base": "M",
-            "modifier": "'",
-            "notation": "M'"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "M",
-            "modifier": "'",
-            "notation": "M'"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "M",
-            "modifier": "2",
-            "notation": "M2"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Diagonal edge swap",
-      "Headlights on opposite sides"
-    ],
-    "probability": 0.0238
-  },
-  {
     "id": "pll-aa",
     "name": "Aa Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "corners-only",
+    "category": "adjacent-swap",
     "difficulty": 3,
     "algorithms": [
       {
@@ -346,20 +68,269 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "y' x L2 D2 L' U' L D2 L' U L'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "'",
+            "notation": "y'"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "L",
+            "modifier": "2",
+            "notation": "L2"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "l' U R' D2 R U' R' D2 R2 x'",
+        "moves": [
+          {
+            "base": "l",
+            "modifier": "'",
+            "notation": "l'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y x' R2 D2 R' U' R D2 R' U R' x",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "x R' U R' D2 R U' R' D2 R2 x'",
+      "moves": [
+        {
+          "base": "x",
+          "modifier": "",
+          "notation": "x"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "2",
+          "notation": "D2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "2",
+          "notation": "D2"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "x",
+          "modifier": "'",
+          "notation": "x'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
       "Three corners cycle",
       "Headlights on left"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "x R2' D2' R U R' D2' R U' R x'"
   },
   {
     "id": "pll-ab",
     "name": "Ab Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "corners-only",
+    "category": "adjacent-swap",
     "difficulty": 3,
     "algorithms": [
       {
@@ -423,25 +394,294 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "y' x L U' L D2 L' U L D2 L2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "'",
+            "notation": "y'"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "L",
+            "modifier": "2",
+            "notation": "L2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y x' R U' R D2 R' U R D2 R2 x",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "2",
+            "notation": "D2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R' B' R U' R D R' U R D' R2 B R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "B",
+            "modifier": "'",
+            "notation": "B'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "B",
+            "modifier": "",
+            "notation": "B"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "x R2 D2 R U R' D2 R U' R x'",
+      "moves": [
+        {
+          "base": "x",
+          "modifier": "",
+          "notation": "x"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "2",
+          "notation": "D2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "2",
+          "notation": "D2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "x",
+          "modifier": "'",
+          "notation": "x'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
       "Three corners cycle",
       "Headlights on right"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "x R' U R' D2' R U' R' D2' R2' x'"
   },
   {
     "id": "pll-e",
     "name": "E Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "corners-only",
-    "difficulty": 4,
+    "category": "diagonal-swap",
+    "difficulty": 3,
     "algorithms": [
       {
-        "notation": "x' R U' R' D R U R' D' R U R' D R U' R' D' x",
+        "notation": "y x' R U' R' D R U R' D' R U R' D R U' R' D' x",
         "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
           {
             "base": "x",
             "modifier": "'",
@@ -535,34 +775,14 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Both diagonal corner swaps",
-      "No headlights"
-    ],
-    "probability": 0.0238
-  },
-  {
-    "id": "pll-t",
-    "name": "T Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "adjacent-swap",
-    "difficulty": 2,
-    "algorithms": [
+      },
       {
-        "notation": "R U R' U' R' F R2 U' R' U' R U R' F'",
+        "notation": "y R' U' R' D' R U' R' D R U R' D' R U R' D R2",
         "moves": [
           {
-            "base": "R",
+            "base": "y",
             "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
+            "notation": "y"
           },
           {
             "base": "R",
@@ -580,10 +800,82 @@
             "notation": "R'"
           },
           {
-            "base": "F",
-            "modifier": "",
-            "notation": "F"
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
           },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 U F' R' U R U' R' U R U' R' U R U' F U' R2",
+        "moves": [
           {
             "base": "R",
             "modifier": "2",
@@ -591,23 +883,18 @@
           },
           {
             "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
             "modifier": "'",
-            "notation": "U'"
+            "notation": "F'"
           },
           {
             "base": "R",
             "modifier": "'",
             "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
           },
           {
             "base": "U",
@@ -616,24 +903,279 @@
           },
           {
             "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
             "modifier": "'",
             "notation": "R'"
           },
           {
-            "base": "F",
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
             "modifier": "'",
-            "notation": "F'"
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
           }
         ],
         "source": "SpeedCubeDB",
-        "recommended": true
+        "recommended": false
+      },
+      {
+        "notation": "y x' L' U L D' L' U' L D L' U' L D' L' U L D",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "y x' R U' R' D R U R' D' R U R' D R U' R' D' x",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "x",
+          "modifier": "'",
+          "notation": "x'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "x",
+          "modifier": "",
+          "notation": "x"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "Headlights on left",
-      "One of the easiest PLLs"
+      "All corners and edges swap",
+      "No headlights"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "x' D R U R' D' R U' R' D R U' R' D' R U R' x y'"
   },
   {
     "id": "pll-f",
@@ -644,8 +1186,13 @@
     "difficulty": 3,
     "algorithms": [
       {
-        "notation": "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+        "notation": "y R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
         "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
           {
             "base": "R",
             "modifier": "'",
@@ -739,34 +1286,19 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Headlights on back",
-      "Opposite corners swap"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-ja",
-    "name": "Ja Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "adjacent-swap",
-    "difficulty": 2,
-    "algorithms": [
+      },
       {
-        "notation": "x R2 F R F' R U2 r' U r U2 x'",
+        "notation": "y R' F R f' R' F R2 U R' U' R' F' R2 U R' S",
         "moves": [
           {
-            "base": "x",
+            "base": "y",
             "modifier": "",
-            "notation": "x"
+            "notation": "y"
           },
           {
             "base": "R",
-            "modifier": "2",
-            "notation": "R2"
+            "modifier": "'",
+            "notation": "R'"
           },
           {
             "base": "F",
@@ -779,106 +1311,9 @@
             "notation": "R"
           },
           {
-            "base": "F",
+            "base": "f",
             "modifier": "'",
-            "notation": "F'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "r",
-            "modifier": "'",
-            "notation": "r'"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "r",
-            "modifier": "",
-            "notation": "r"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "x",
-            "modifier": "'",
-            "notation": "x'"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Headlights on left",
-      "Common PLL"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-jb",
-    "name": "Jb Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "adjacent-swap",
-    "difficulty": 2,
-    "algorithms": [
-      {
-        "notation": "R U R' F' R U R' U' R' F R2 U' R' U'",
-        "moves": [
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "F",
-            "modifier": "'",
-            "notation": "F'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
+            "notation": "f'"
           },
           {
             "base": "R",
@@ -894,180 +1329,6 @@
             "base": "R",
             "modifier": "2",
             "notation": "R2"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Headlights on right",
-      "Mirror of Ja"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-ra",
-    "name": "Ra Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "adjacent-swap",
-    "difficulty": 3,
-    "algorithms": [
-      {
-        "notation": "R U' R' U' R U R D R' U' R D' R' U2 R' U'",
-        "moves": [
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "D",
-            "modifier": "",
-            "notation": "D"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "D",
-            "modifier": "'",
-            "notation": "D'"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "'",
-            "notation": "U'"
-          }
-        ],
-        "source": "SpeedCubeDB",
-        "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Headlights on back",
-      "R perm family"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-rb",
-    "name": "Rb Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "adjacent-swap",
-    "difficulty": 3,
-    "algorithms": [
-      {
-        "notation": "R' U2 R U2 R' F R U R' U' R' F' R2 U'",
-        "moves": [
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "U",
-            "modifier": "2",
-            "notation": "U2"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "F",
-            "modifier": "",
-            "notation": "F"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
           },
           {
             "base": "U",
@@ -1101,26 +1362,298 @@
           },
           {
             "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
             "modifier": "'",
-            "notation": "U'"
+            "notation": "R'"
+          },
+          {
+            "base": "S",
+            "modifier": "",
+            "notation": "S"
           }
         ],
         "source": "SpeedCubeDB",
-        "recommended": true
+        "recommended": false
+      },
+      {
+        "notation": "R' U R U' R2 F' U' F U R F R' F' R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R2 F R F' R' U' F' U F R2 U R' U' R",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "y R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "Headlights on back",
-      "Mirror of Ra"
+      "Adjacent corner swap",
+      "Two adjacent edges swap"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "R' U' R U' R' U R U R2' F' R U R U' R' F U R y'"
   },
   {
     "id": "pll-ga",
     "name": "Ga Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "diagonal-swap",
+    "category": "adjacent-swap",
     "difficulty": 4,
     "algorithms": [
       {
@@ -1204,22 +1737,448 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "R2 u R' U R' U' R u' R2 F' U F",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R U R' F' R U R' U' R' F R U' R' F R2 U' R' U' R U R' F'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 u R' U R' U' R u' R2 y' R' U R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "y",
+            "modifier": "'",
+            "notation": "y'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "R2 U R' U R' U' R U' R2 D U' R' U R D'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "No headlights",
-      "G perm family"
+      "Adjacent corner swap",
+      "Three edges cycle"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "R' U' R D' U R2' U R' U R U' R U' R2' D"
   },
   {
     "id": "pll-gb",
     "name": "Gb Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "diagonal-swap",
+    "category": "adjacent-swap",
     "difficulty": 4,
     "algorithms": [
+      {
+        "notation": "D R' U' R U D' R2 U R' U R U' R U' R2",
+        "moves": [
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
       {
         "notation": "R' U' R U D' R2 U R' U R U' R U' R2 D",
         "moves": [
@@ -1300,21 +2259,243 @@
           }
         ],
         "source": "SpeedCubeDB",
-        "recommended": true
+        "recommended": false
+      },
+      {
+        "notation": "y F' U' F R2 u R' U R U' R u' R2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R' d' F R2 u R' U R U' R u' R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "d",
+            "modifier": "'",
+            "notation": "d'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "D R' U' R U D' R2 U R' U R U' R U' R2",
+      "moves": [
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "No headlights",
-      "G perm family"
+      "Adjacent corner swap",
+      "Three edges cycle"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "R2' U R' U R' U' R U' R2' D U' R' U R D'"
   },
   {
     "id": "pll-gc",
     "name": "Gc Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "diagonal-swap",
+    "category": "adjacent-swap",
     "difficulty": 4,
     "algorithms": [
       {
@@ -1398,20 +2579,339 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "y2 R2 F2 R U2 R U2 R' F R U R' U' R' F R2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "D R2 U' R U' R U R' U R2 D' U R U' R'",
+        "moves": [
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 u' R U' R U R' u R2 f R' f'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "R2 U' R U' R U R' U R2 D' U R U' R' D",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "No headlights",
-      "G perm family"
+      "Adjacent corner swap",
+      "Three edges cycle"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "D' R U R' U' D R2' U' R U' R' U R' U R2'"
   },
   {
     "id": "pll-gd",
     "name": "Gd Perm",
     "method": "cfop",
     "stage": "pll",
-    "category": "diagonal-swap",
+    "category": "adjacent-swap",
     "difficulty": 4,
     "algorithms": [
       {
@@ -1495,29 +2995,19 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "No headlights",
-      "G perm family"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-v",
-    "name": "V Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "diagonal-swap",
-    "difficulty": 3,
-    "algorithms": [
+      },
       {
-        "notation": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+        "notation": "D' R U R' U' D R2 U' R U' R' U R' U R2",
         "moves": [
           {
-            "base": "R",
+            "base": "D",
             "modifier": "'",
-            "notation": "R'"
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
           },
           {
             "base": "U",
@@ -1535,9 +3025,168 @@
             "notation": "U'"
           },
           {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R U R' y' R2 u' R U' R' U R' u R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "y",
+            "modifier": "'",
+            "notation": "y'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R2 F' R U R U' R' F' R U2 R' U2 R' F2 R2",
+        "moves": [
+          {
             "base": "y",
             "modifier": "",
             "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
           },
           {
             "base": "R",
@@ -1548,6 +3197,778 @@
             "base": "F",
             "modifier": "'",
             "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "R U R' U' D R2 U' R U' R' U R' U R2 D'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "Three edges cycle"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "R2' U' R U' R U R' U R2' D' U R U' R' D"
+  },
+  {
+    "id": "pll-h",
+    "name": "H Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "M2 U' M2 U2 M2 U' M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "M2 U M2 U2 M2 U M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 S2 R2 U' R2 S2 R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "S",
+            "modifier": "2",
+            "notation": "S2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "S",
+            "modifier": "2",
+            "notation": "S2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "M2 U2 M2 U M2 U2 M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "M2 U' M2 U2 M2 U' M2",
+      "moves": [
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "All edges need to swap",
+      "Two opposite edge pairs swap"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "M2' U' M2' U2' M2' U' M2'"
+  },
+  {
+    "id": "pll-ja",
+    "name": "Ja Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "y2 x R2 F R F' R U2 r' U r U2 x'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "x",
+            "modifier": "",
+            "notation": "x"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "x",
+            "modifier": "'",
+            "notation": "x'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "y R' U L' U2 R U' R' U2 R L",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "L' U' L F L' U' L U L F' L2 U L",
+        "moves": [
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "2",
+            "notation": "L2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R U' L' U R' U2 L U' L' U2 L",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "y2 x R2 F R F' R U2 r' U r U2 x'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "x",
+          "modifier": "",
+          "notation": "x"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "r",
+          "modifier": "'",
+          "notation": "r'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "r",
+          "modifier": "",
+          "notation": "r"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "x",
+          "modifier": "'",
+          "notation": "x'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "Three edges cycle"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "L' R' U2' R U R' U2' L U' R y'"
+  },
+  {
+    "id": "pll-jb",
+    "name": "Jb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' F' R U R' U' R' F R2 U' R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
           },
           {
             "base": "R",
@@ -1563,68 +3984,23 @@
             "base": "R",
             "modifier": "'",
             "notation": "R'"
-          },
-          {
-            "base": "U",
-            "modifier": "",
-            "notation": "U"
-          },
-          {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "F",
-            "modifier": "",
-            "notation": "F"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "F",
-            "modifier": "",
-            "notation": "F"
           }
         ],
         "source": "SpeedCubeDB",
         "recommended": true
-      }
-    ],
-    "recognitionHints": [
-      "Headlights on front",
-      "V pattern"
-    ],
-    "probability": 0.0476
-  },
-  {
-    "id": "pll-y",
-    "name": "Y Perm",
-    "method": "cfop",
-    "stage": "pll",
-    "category": "diagonal-swap",
-    "difficulty": 3,
-    "algorithms": [
+      },
       {
-        "notation": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+        "notation": "R U2 R' U' R U2 L' U R' U' L",
         "moves": [
           {
-            "base": "F",
-            "modifier": "",
-            "notation": "F"
-          },
-          {
             "base": "R",
             "modifier": "",
             "notation": "R"
           },
           {
             "base": "U",
-            "modifier": "'",
-            "notation": "U'"
+            "modifier": "2",
+            "notation": "U2"
           },
           {
             "base": "R",
@@ -1643,23 +4019,13 @@
           },
           {
             "base": "U",
-            "modifier": "",
-            "notation": "U"
+            "modifier": "2",
+            "notation": "U2"
           },
           {
-            "base": "R",
+            "base": "L",
             "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "F",
-            "modifier": "'",
-            "notation": "F'"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
+            "notation": "L'"
           },
           {
             "base": "U",
@@ -1677,35 +4043,217 @@
             "notation": "U'"
           },
           {
-            "base": "R",
-            "modifier": "'",
-            "notation": "R'"
-          },
-          {
-            "base": "F",
+            "base": "L",
             "modifier": "",
-            "notation": "F"
-          },
-          {
-            "base": "R",
-            "modifier": "",
-            "notation": "R"
-          },
-          {
-            "base": "F",
-            "modifier": "'",
-            "notation": "F'"
+            "notation": "L"
           }
         ],
         "source": "SpeedCubeDB",
-        "recommended": true
+        "recommended": false
+      },
+      {
+        "notation": "r' F R F' r U2 R' U R U2 R'",
+        "moves": [
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "L' U R U' L U2 R' U R U2 R'",
+        "moves": [
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "R U R' F' R U R' U' R' F R2 U' R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "Headlights on left and right",
-      "Y pattern"
+      "Adjacent corner swap",
+      "Three edges cycle"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "R U R2' F' R U R U' R' F R U' R'"
   },
   {
     "id": "pll-na",
@@ -1713,7 +4261,7 @@
     "method": "cfop",
     "stage": "pll",
     "category": "diagonal-swap",
-    "difficulty": 3,
+    "difficulty": 4,
     "algorithms": [
       {
         "notation": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
@@ -1826,13 +4374,402 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "F' R U R' U' R' F R2 F U' R' U' R U F' R'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R F U' R' U R U F' R2 F' R U R U' R' F",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "r' D r U2 r' D r U2 r' D r U2 r' D r U2 r' D r",
+        "moves": [
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "R U R' U R U R' F' R U R' U' R' F R2 U' R' U2 R U' R'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "No headlights",
-      "N perm - blocks on sides"
+      "Diagonal corner swap",
+      "All edges swap"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "R U R' U2' R U R2' F' R U R U' R' F R U' R' U' R U' R'"
   },
   {
     "id": "pll-nb",
@@ -1840,7 +4777,7 @@
     "method": "cfop",
     "stage": "pll",
     "category": "diagonal-swap",
-    "difficulty": 3,
+    "difficulty": 4,
     "algorithms": [
       {
         "notation": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
@@ -1933,12 +4870,3426 @@
         ],
         "source": "SpeedCubeDB",
         "recommended": true
+      },
+      {
+        "notation": "r' D' F r U' r' F' D r2 U r' U' r' F r F'",
+        "moves": [
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "r",
+            "modifier": "2",
+            "notation": "r2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "r",
+            "modifier": "'",
+            "notation": "r'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R' U L' U2 R U' L R' U L' U2 R U' L",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "L' U' L U' L' U' L F L' U' L U L F' L2 U L U2 L' U L",
+        "moves": [
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "2",
+            "notation": "L2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
       }
     ],
+    "primaryAlg": {
+      "notation": "R' U R U' R' F' U' F R U R' F R' F' R U' R",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
     "recognitionHints": [
-      "No headlights",
-      "N perm - blocks on corners"
+      "Diagonal corner swap",
+      "All edges swap"
     ],
-    "probability": 0.0476
+    "probability": 0.0476,
+    "setupMoves": "F r' F' r U r U' r2' D' F r U r' F' D r"
+  },
+  {
+    "id": "pll-ra",
+    "name": "Ra Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "y R U' R' U' R U R D R' U' R D' R' U2 R'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "y R U R' F' R U2 R' U2 R' F R U R U2 R'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "L U2 L' U2 L F' L' U' L U L F L2",
+        "moves": [
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "L",
+            "modifier": "2",
+            "notation": "L2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R U' R' U' R U R' U R' D' R U' R' D R2 U R'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "y R U' R' U' R U R D R' U' R D' R' U2 R'",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "",
+          "notation": "y"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "Three edges cycle"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "R U2' R D R' U R D' R' U' R' U R U R' y'"
+  },
+  {
+    "id": "pll-rb",
+    "name": "Rb Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U2 R U2 R' F R U R' U' R' F' R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "y R2 F R U R U' R' F' R U2 R' U2 R",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R' U2 R' D' R U' R' D R U R U' R' U' R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R' U R U R' U' R' D' R U R' D R U2 R",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "R' U2 R U2 R' F R U R' U' R' F' R2",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "Three edges cycle"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "R' U R U R' U' R' D' R U R' D R U2' R"
+  },
+  {
+    "id": "pll-t",
+    "name": "T Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "adjacent-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R U R' U' R' F R2 U' R' U' R U R' F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "l b d' L' U' F U2 L' U' L' U L U' f' S M r u E U' R'",
+        "moves": [
+          {
+            "base": "l",
+            "modifier": "",
+            "notation": "l"
+          },
+          {
+            "base": "b",
+            "modifier": "",
+            "notation": "b"
+          },
+          {
+            "base": "d",
+            "modifier": "'",
+            "notation": "d'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          },
+          {
+            "base": "S",
+            "modifier": "",
+            "notation": "S"
+          },
+          {
+            "base": "M",
+            "modifier": "",
+            "notation": "M"
+          },
+          {
+            "base": "r",
+            "modifier": "",
+            "notation": "r"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "E",
+            "modifier": "",
+            "notation": "E"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R U R' U' R' F R2 U' R' U F' L' U L",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "L",
+            "modifier": "'",
+            "notation": "L'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "L",
+            "modifier": "",
+            "notation": "L"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 u R2 u' R2 F2 u' F2 u F2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          },
+          {
+            "base": "u",
+            "modifier": "'",
+            "notation": "u'"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          },
+          {
+            "base": "u",
+            "modifier": "",
+            "notation": "u"
+          },
+          {
+            "base": "F",
+            "modifier": "2",
+            "notation": "F2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "R U R' U' R' F R2 U' R' U' R U R' F'",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "Two edges swap"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "F R U' R' U R U R2' F' R U R U' R'"
+  },
+  {
+    "id": "pll-ua",
+    "name": "Ua Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "y2 M2 U M U2 M' U M2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "",
+            "notation": "M"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "R U R' U R' U' R2 U' R' U R' U R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R2 U' S' U2 S U' R2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "S",
+            "modifier": "'",
+            "notation": "S'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "S",
+            "modifier": "",
+            "notation": "S"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y2 R U' R U R U R U' R' U' R2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "y2 M2 U M U2 M' U M2",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "M",
+          "modifier": "",
+          "notation": "M"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Three edges cycle clockwise",
+      "One edge solved",
+      "Headlights"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "M2' U' M' U2' M U' M2'"
+  },
+  {
+    "id": "pll-ub",
+    "name": "Ub Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "y2 M2 U' M U2 M' U' M2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "",
+            "notation": "M"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "R' U R' U' R' U' R' U R U R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2' U R U R' U' R3 U' R' U R'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2'",
+            "notation": "R2'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y2 R2 U R U R' U' R' U' R' U R'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "2",
+            "notation": "y2"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "y2 M2 U' M U2 M' U' M2",
+      "moves": [
+        {
+          "base": "y",
+          "modifier": "2",
+          "notation": "y2"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "",
+          "notation": "M"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Three edges cycle counter-clockwise",
+      "One edge solved",
+      "Headlights"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "M2' U M' U2' M U M2'"
+  },
+  {
+    "id": "pll-v",
+    "name": "V Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "R' U R' U' R D' R' D R' U D' R2 U' R2 D R2",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "R' U R U' R' f' U' R U2 R' U' R U' R' f R",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R' U R' U' y R' F' R2 U' R' U R' F R F",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y R U' R U R' D R D' R U' D R2 U R2 D' R2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "D",
+            "modifier": "",
+            "notation": "D"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "D",
+            "modifier": "'",
+            "notation": "D'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "R' U R' U' R D' R' D R' U D' R2 U' R2 D R2",
+      "moves": [
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "D",
+          "modifier": "'",
+          "notation": "D'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        },
+        {
+          "base": "D",
+          "modifier": "",
+          "notation": "D"
+        },
+        {
+          "base": "R",
+          "modifier": "2",
+          "notation": "R2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Adjacent corner swap",
+      "One edge solved"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "D2' R' U R D' R2' U' R' U R' U R' D' R U2' R'"
+  },
+  {
+    "id": "pll-y",
+    "name": "Y Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "diagonal-swap",
+    "difficulty": 3,
+    "algorithms": [
+      {
+        "notation": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "F R' F R2 U' R' U' R U R' F' R U R' U' F'",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "R2 U' R2 U' R2 U F U F' R2 F U' F'",
+        "moves": [
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "F R' F' R U R U' R2 U' R U R f' U' f",
+        "moves": [
+          {
+            "base": "F",
+            "modifier": "",
+            "notation": "F"
+          },
+          {
+            "base": "R",
+            "modifier": "'",
+            "notation": "R'"
+          },
+          {
+            "base": "F",
+            "modifier": "'",
+            "notation": "F'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "2",
+            "notation": "R2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "R",
+            "modifier": "",
+            "notation": "R"
+          },
+          {
+            "base": "f",
+            "modifier": "'",
+            "notation": "f'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "f",
+            "modifier": "",
+            "notation": "f"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
+      "moves": [
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "U",
+          "modifier": "",
+          "notation": "U"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "R",
+          "modifier": "'",
+          "notation": "R'"
+        },
+        {
+          "base": "F",
+          "modifier": "",
+          "notation": "F"
+        },
+        {
+          "base": "R",
+          "modifier": "",
+          "notation": "R"
+        },
+        {
+          "base": "F",
+          "modifier": "'",
+          "notation": "F'"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "Diagonal corner swap",
+      "Two edges swap"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "F R' F' R U R U' R' F R U' R' U R U R' F'"
+  },
+  {
+    "id": "pll-z",
+    "name": "Z Perm",
+    "method": "cfop",
+    "stage": "pll",
+    "category": "edges-only",
+    "difficulty": 2,
+    "algorithms": [
+      {
+        "notation": "M' U' M2 U' M2 U' M' U2 M2",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": true
+      },
+      {
+        "notation": "M2 U M2 U M' U2 M2 U2 M'",
+        "moves": [
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y M2 U' M2 U' M' U2 M2 U2 M'",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "'",
+            "notation": "U'"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      },
+      {
+        "notation": "y M' U M2 U M2 U M' U2 M2",
+        "moves": [
+          {
+            "base": "y",
+            "modifier": "",
+            "notation": "y"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          },
+          {
+            "base": "U",
+            "modifier": "",
+            "notation": "U"
+          },
+          {
+            "base": "M",
+            "modifier": "'",
+            "notation": "M'"
+          },
+          {
+            "base": "U",
+            "modifier": "2",
+            "notation": "U2"
+          },
+          {
+            "base": "M",
+            "modifier": "2",
+            "notation": "M2"
+          }
+        ],
+        "source": "SpeedCubeDB",
+        "recommended": false
+      }
+    ],
+    "primaryAlg": {
+      "notation": "M' U' M2 U' M2 U' M' U2 M2",
+      "moves": [
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        },
+        {
+          "base": "U",
+          "modifier": "'",
+          "notation": "U'"
+        },
+        {
+          "base": "M",
+          "modifier": "'",
+          "notation": "M'"
+        },
+        {
+          "base": "U",
+          "modifier": "2",
+          "notation": "U2"
+        },
+        {
+          "base": "M",
+          "modifier": "2",
+          "notation": "M2"
+        }
+      ],
+      "source": "SpeedCubeDB",
+      "recommended": true
+    },
+    "recognitionHints": [
+      "All edges need to swap diagonally",
+      "Two diagonal edge pairs swap"
+    ],
+    "probability": 0.0476,
+    "setupMoves": "M U2' M2' U2' M U' M2' U' M2'"
   }
 ]
