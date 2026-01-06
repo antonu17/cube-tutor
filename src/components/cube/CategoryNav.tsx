@@ -54,21 +54,23 @@ export function CategoryNav({ categories }: CategoryNavProps) {
     <>
       {/* Navigation bar */}
       <div className="sticky top-0 z-10 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
-        <div className="flex items-center gap-2 p-3 overflow-x-auto">
-          <span className="text-sm font-medium text-muted-foreground whitespace-nowrap">
+        <div className="p-3">
+          <div className="text-sm font-medium text-muted-foreground mb-2">
             Jump to:
-          </span>
-          {categoryEntries.map(([key, category]) => (
-            <Button
-              key={key}
-              variant="outline"
-              size="sm"
-              onClick={() => scrollToCategory(key)}
-              className="whitespace-nowrap"
-            >
-              {category.name}
-            </Button>
-          ))}
+          </div>
+          <div className="grid grid-cols-5 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2">
+            {categoryEntries.map(([key, category]) => (
+              <Button
+                key={key}
+                variant="outline"
+                size="sm"
+                onClick={() => scrollToCategory(key)}
+                className="text-xs h-8 px-2"
+              >
+                {category.name}
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
 
