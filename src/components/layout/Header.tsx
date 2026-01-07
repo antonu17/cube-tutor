@@ -1,5 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Container } from "./Container";
+
+// Dynamically import ThemeToggle to avoid SSR issues
+const ThemeToggle = dynamic(
+  () => import("@/src/components/theme").then((mod) => ({ default: mod.ThemeToggle })),
+  { ssr: false }
+);
 
 /**
  * Header component with site branding and navigation
@@ -28,6 +37,7 @@ export function Header() {
               </Link>
             </nav>
           </div>
+          <ThemeToggle />
         </div>
       </Container>
     </header>

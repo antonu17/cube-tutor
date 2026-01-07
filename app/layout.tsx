@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Ubuntu } from "next/font/google";
 import "./globals.css";
-import { Header, Footer } from "@/src/components/layout";
+import { AppLayout } from "@/src/components/layout";
+import { ThemeProvider } from "@/src/components/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +12,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const ubuntu = Ubuntu({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+  variable: "--font-ubuntu",
 });
 
 export const metadata: Metadata = {
@@ -54,15 +61,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${ubuntu.variable} antialiased`}
       >
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
+        <ThemeProvider>
+          <AppLayout>{children}</AppLayout>
+        </ThemeProvider>
       </body>
     </html>
   );

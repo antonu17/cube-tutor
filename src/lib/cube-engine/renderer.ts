@@ -250,9 +250,10 @@ export function renderCaseViewSVG(
   const opts = { ...DEFAULT_OPTIONS, ...options, stickerSize: 20 };
   const { stickerSize, stickerGap, backgroundColor } = opts;
   const faceSize = stickerSize * 3 + stickerGap * 2;
-  const edgeSize = stickerSize; // Single row/column thickness
-  const padding = 10;
-  const spacing = 4; // Gap between center face and edges
+  const sideEdgeWidth = stickerSize * 0.6; // Narrower sides (60% width)
+  const topBottomEdgeHeight = stickerSize * 0.6; // Shorter top/bottom (60% height)
+  const padding = 6;
+  const spacing = 2; // Gap between center face and edges
   
   // Layout (cross pattern):
   //        [B]
@@ -260,8 +261,8 @@ export function renderCaseViewSVG(
   //        [F]
   
   // Center: Top face (U)
-  const centerX = padding + edgeSize + spacing;
-  const centerY = padding + edgeSize + spacing;
+  const centerX = padding + sideEdgeWidth + spacing;
+  const centerY = padding + topBottomEdgeHeight + spacing;
   const topFace = renderFace(state.U, "U", centerX, centerY, opts, false);
   
   // Top: Back face top row (above U)
@@ -284,9 +285,9 @@ export function renderCaseViewSVG(
   const frontY = centerY + faceSize + spacing;
   const frontRow = renderAdjacentStickers(state.F, 'F', frontX, frontY, opts);
 
-  // Calculate SVG dimensions
-  const width = padding * 2 + edgeSize + spacing + faceSize + spacing + edgeSize;
-  const height = padding * 2 + edgeSize + spacing + faceSize + spacing + edgeSize;
+  // Calculate SVG dimensions (use narrower dimensions for all adjacent pieces)
+  const width = padding * 2 + sideEdgeWidth + spacing + faceSize + spacing + sideEdgeWidth;
+  const height = padding * 2 + topBottomEdgeHeight + spacing + faceSize + spacing + topBottomEdgeHeight;
 
   return `<svg
     width="${width}"
@@ -312,6 +313,8 @@ export function renderCaseViewSVG(
  * All faces (F, B, L, R) share their top row (indices 0, 1, 2) with the U face.
  * F/B faces render horizontally, L/R faces render vertically.
  * R/B faces need reversed order (2, 1, 0) due to their orientation.
+ * L/R faces are rendered smaller (rectangular) for better visualization.
+ * F/B faces are also rendered thinner (shorter height) for compact view.
  */
 function renderAdjacentStickers(
   face: FaceState,
@@ -325,16 +328,54 @@ function renderAdjacentStickers(
   const isHorizontal = faceName === 'F' || faceName === 'B';
   const shouldReverse = faceName === 'R' || faceName === 'B';
   
+  // Make side pieces smaller and rectangular
+  const isSide = faceName === 'L' || faceName === 'R';
+  const width = isSide ? stickerSize * 0.6 : stickerSize; // 60% width for L/R sides
+  const height = isSide ? stickerSize : stickerSize * 0.6; // 60% height for F/B top/bottom
+  
   // All adjacent faces share their top row with U face
   for (let i = 0; i < 3; i++) {
     const index = shouldReverse ? 2 - i : i; // Reverse for Right and Back
     const color = face[index];
     const stickerX = isHorizontal ? x + i * (stickerSize + stickerGap) : x;
     const stickerY = isHorizontal ? y : y + i * (stickerSize + stickerGap);
-    stickers.push(renderSticker(color, stickerX, stickerY, stickerSize, options));
+    stickers.push(renderRectangularSticker(color, stickerX, stickerY, width, height, options));
   }
 
   return stickers.join("\n");
+}
+
+/**
+ * Render a rectangular sticker (for side pieces)
+ */
+function renderRectangularSticker(
+  color: FaceColor,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  options: Required<RenderOptions>
+): string {
+  let fill = COLOR_MAP[color];
+  
+  // Apply grayscale effect for non-yellow colors if option is enabled
+  if (options.grayscaleNonYellow && color !== 'yellow') {
+    fill = "#9CA3AF"; // gray-400
+  }
+  
+  const stroke = options.borderColor;
+  const strokeWidth = options.borderWidth;
+
+  return `<rect
+    x="${x}"
+    y="${y}"
+    width="${width}"
+    height="${height}"
+    fill="${fill}"
+    stroke="${stroke}"
+    stroke-width="${strokeWidth}"
+    rx="2"
+  />`;
 }
 
 /**

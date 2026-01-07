@@ -2,11 +2,14 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
 import { Breadcrumbs } from "@/src/components/navigation";
-import { AlgorithmNotation, AlgorithmMetadata, AlgorithmAnimation } from "@/src/components/cube";
+import { AlgorithmNotation, AlgorithmMetadata, AlgorithmAnimation, CaseDescription } from "@/src/components/cube";
+import { CubeView } from "@/src/components/cube/CubeView";
 import { Badge } from "@/src/components/ui/badge";
 import { Separator } from "@/src/components/ui/separator";
 import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
 import { parseAlgorithm, invertAlgorithm } from "@/src/lib/cube-engine/parser";
+import { createSolvedState } from "@/src/lib/cube-engine/state";
+import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
 
 interface CasePageProps {
   params: Promise<{ puzzleId: string; methodId: string; stageId: string; caseId: string }>;
@@ -113,6 +116,17 @@ export default async function CasePage({ params }: CasePageProps) {
       : 'z2';
   }
 
+  // Generate cube state for thumbnail
+  let caseState = createSolvedState();
+  try {
+    if (effectiveSetupMoves) {
+      const setupAlgorithm = parseAlgorithm(effectiveSetupMoves);
+      caseState = applyAlgorithm(caseState, setupAlgorithm);
+    }
+  } catch (error) {
+    console.error("Failed to generate case state:", error);
+  }
+
   return (
     <Container className="py-10">
       <div className="flex flex-col gap-8">
@@ -143,79 +157,103 @@ export default async function CasePage({ params }: CasePageProps) {
           </div>
         )}
 
-        {algorithmCase.setupMoves && (
-          <>
-            <Separator />
+        {/* Main content with sidebar layout */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_340px] gap-8">
+          {/* Left column - Main content */}
+          <div className="space-y-8">
+            {/* Primary Algorithm */}
             <div>
-              <h2 className="text-xl font-semibold mb-2">Setup Moves</h2>
-              <p className="text-sm text-muted-foreground mb-3">
-                Apply these moves to a solved cube to create this case:
+              <h2 className="text-xl font-semibold mb-4">Primary Algorithm</h2>
+              <div className="space-y-4">
+                <AlgorithmNotation notation={algorithmCase.primaryAlg.notation} />
+                <AlgorithmMetadata algorithm={algorithmCase.primaryAlg} />
+              </div>
+            </div>
+
+            {/* Alternative Algorithms */}
+            {algorithmCase.algorithms.length > 1 && (
+              <>
+                <Separator />
+                <div>
+                  <h2 className="text-xl font-semibold mb-4">Alternative Algorithms</h2>
+                  <div className="space-y-6">
+                    {algorithmCase.algorithms
+                      .filter((alg) => alg.id !== algorithmCase.primaryAlg.id)
+                      .map((alg) => (
+                        <div key={alg.id} className="space-y-4">
+                          <AlgorithmNotation notation={alg.notation} />
+                          <AlgorithmMetadata algorithm={alg} />
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </>
+            )}
+
+            <Separator />
+
+            {/* Algorithm Animation */}
+            <div>
+              <h2 className="text-xl font-semibold mb-4">Algorithm Animation</h2>
+              <p className="text-sm text-muted-foreground mb-4">
+                Watch the algorithm solve the case step by step. The animation starts from the case state and ends with a solved cube:
               </p>
-              <code className="block rounded-lg bg-muted px-4 py-3 font-mono text-sm">
-                {algorithmCase.setupMoves}
-              </code>
-            </div>
-          </>
-        )}
-
-        <Separator />
-
-        <div className="space-y-8">
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Algorithm Animation</h2>
-            <p className="text-sm text-muted-foreground mb-4">
-              Watch the algorithm solve the case step by step. The animation starts from the case state and ends with a solved cube:
-            </p>
-            <AlgorithmAnimation
-              notation={algorithmCase.primaryAlg.notation}
-              setupMoves={effectiveSetupMoves}
-              mode="case"
-              stageId={stageId}
-            />
-          </div>
-
-          <Separator />
-
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Primary Algorithm</h2>
-            <div className="space-y-4">
-              <AlgorithmNotation notation={algorithmCase.primaryAlg.notation} />
-              <AlgorithmMetadata algorithm={algorithmCase.primaryAlg} />
+              <AlgorithmAnimation
+                notation={algorithmCase.primaryAlg.notation}
+                setupMoves={effectiveSetupMoves}
+                mode="case"
+                stageId={stageId}
+              />
             </div>
           </div>
 
-          {algorithmCase.algorithms.length > 1 && (
-            <>
-              <Separator />
-              <div>
-                <h2 className="text-xl font-semibold mb-4">Alternative Algorithms</h2>
+          {/* Right column - Sidebar */}
+          <div className="sticky top-4 self-start">
+            {/* Case Info Card */}
+            <div className="rounded-lg border bg-card p-6">
+              <div className="grid grid-cols-[140px_1fr] gap-6">
+                {/* Left: 2D Case Thumbnail */}
+                <div className="flex items-start justify-center pt-2">
+                  <CubeView 
+                    state={caseState} 
+                    mode={isOllOrPll ? "case" : "top"}
+                    options={{ 
+                      stickerSize: 20,
+                      grayscaleNonYellow: stageId === 'oll'
+                    }} 
+                  />
+                </div>
+
+                {/* Right: Setup Moves and Recognition */}
                 <div className="space-y-6">
-                  {algorithmCase.algorithms
-                    .filter((alg) => alg.id !== algorithmCase.primaryAlg.id)
-                    .map((alg) => (
-                      <div key={alg.id} className="space-y-4">
-                        <AlgorithmNotation notation={alg.notation} />
-                        <AlgorithmMetadata algorithm={alg} />
-                      </div>
-                    ))}
+                  {/* Setup Moves */}
+                  {algorithmCase.setupMoves && (
+                    <div>
+                      <h3 className="text-lg font-semibold mb-2">Setup Moves</h3>
+                      <p className="text-sm text-muted-foreground mb-3">
+                        Apply these moves to a solved cube to create this case:
+                      </p>
+                      <code className="block rounded-lg bg-muted px-3 py-2 text-sm">
+                        {algorithmCase.setupMoves}
+                      </code>
+                    </div>
+                  )}
+
+                  {/* Recognition Hints */}
+                  {algorithmCase.recognitionHints.length > 0 && (
+                    <div>
+                      <h3 className="text-lg font-semibold mb-3">Recognition Hints</h3>
+                      <ul className="list-disc list-inside space-y-2 text-sm text-muted-foreground">
+                        {algorithmCase.recognitionHints.map((hint, index) => (
+                          <li key={index}>{hint}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               </div>
-            </>
-          )}
-
-          {algorithmCase.recognitionHints.length > 0 && (
-            <>
-              <Separator />
-              <div>
-                <h2 className="text-xl font-semibold mb-4">Recognition Hints</h2>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  {algorithmCase.recognitionHints.map((hint, index) => (
-                    <li key={index}>{hint}</li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          )}
+            </div>
+          </div>
         </div>
       </div>
     </Container>
