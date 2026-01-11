@@ -50,7 +50,7 @@ export function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
       aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
       onClick={onToggle}
     >
-      <Menu className="h-10 w-10" style={{ width: '40px', height: '40px' }} />
+      <Menu className="h-6 w-6" style={{ width: '24px', height: '24px' }} />
     </Button>
   );
 }
