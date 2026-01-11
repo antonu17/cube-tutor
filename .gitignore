@@ -2,8 +2,8 @@
 node_modules/
 .pnp
 .pnp.js
-bun.lockb
 package-lock.json
+# bun.lock is tracked for reproducible builds
 
 # Testing
 coverage/
