@@ -1673,5 +1673,356 @@ This plan breaks down development into phases with specific, actionable tasks. E
 
 ---
 
+## Phase 8: Web UI Rewrite (1-2 weeks) ⏭️ READY TO START
+
+**Duration:** 1-2 weeks  
+**Goal:** Restructure UI to remove "methods" layer and simplify navigation  
+**Dependencies:** Phase 7 (V1 Visualization Complete)  
+**Status:** ⏭️ PLANNED - Detailed spec complete  
+**Updated:** 2026-01-11
+
+**Summary:**
+- Remove "methods" layer from URL and data structure
+- Flatten: Puzzle → Method → Stage → Case to Puzzle → Algorithm Set → Case
+- Add hamburger menu navigation
+- Add CubeView3D logo to header
+- Create algorithm overview page
+- Add practice section placeholders
+
+**Detailed Specification:** See `.opencode/plan/web-ui.md`
+
+### Information Architecture Changes
+
+**BEFORE:**
+```
+/puzzles/3x3x3/cfop/oll → Stage page
+/puzzles/3x3x3/cfop/oll/oll-21 → Case page
+```
+
+**AFTER:**
+```
+/puzzles/3x3x3/oll → Algorithm set page
+/puzzles/3x3x3/oll/oll-21 → Case page
+```
+
+**New Pages:**
+- `/learn/algorithms` - All algorithm sets grouped by puzzle
+- `/practice/trainer` - Placeholder
+- `/practice/timer` - Placeholder
+
+### Phase 8 Task Breakdown
+
+#### 8.1: Data Migration ⏭️ TODO
+- [ ] Create `src/data/algorithm-sets/` directory structure
+- [ ] Create data migration script
+- [ ] Migrate CFOP stages to individual algorithm set files:
+  - [ ] `oll.json` (from cfop.json + stage data)
+  - [ ] `pll.json`
+  - [ ] `f2l.json`
+- [ ] Migrate beginner method to `beginner.json`
+- [ ] Update `src/data/puzzles/3x3x3.json` schema
+- [ ] Rename algorithm directories:
+  - [ ] `cfop/oll/` → `oll/`
+  - [ ] `cfop/pll/` → `pll/`
+  - [ ] `beginner/all/` → `beginner/`
+- [ ] Validate all JSON files
+- [ ] Test data loading
+
+**Estimated Time:** 3-4 hours  
+**Completion Criteria:** All data migrated, validated, loads correctly
+
+#### 8.2: TypeScript Types & Data Loaders ⏭️ TODO
+- [ ] Update `src/types/data.ts`:
+  - [ ] Add `AlgorithmSet` interface
+  - [ ] Add `AlgorithmSetGroup` interface
+  - [ ] Update `Puzzle` interface
+  - [ ] Remove `MethodData` interface
+- [ ] Create `src/lib/data-loader/algorithm-sets.ts`:
+  - [ ] `loadAlgorithmSet(puzzleId, algSetId)`
+  - [ ] `loadAlgorithmSetsForPuzzle(puzzleId)`
+  - [ ] `loadAllAlgorithmSets()`
+  - [ ] `loadAlgorithmSetsByGroup(puzzleId)`
+- [ ] Update `src/lib/data-loader/algorithms.ts` for new paths
+- [ ] Remove `src/lib/data-loader/methods.ts`
+- [ ] Update `src/lib/data-loader/index.ts` exports
+- [ ] Write unit tests for new loaders
+
+**Estimated Time:** 4-5 hours  
+**Completion Criteria:** Types updated, loaders working, tests passing
+
+#### 8.3: Layout & Navigation Components ⏭️ TODO
+- [ ] Create `src/components/navigation/HamburgerMenu.tsx`:
+  - [ ] Side panel with slide animation
+  - [ ] Navigation menu (Learn, Practice, About)
+  - [ ] Backdrop overlay
+  - [ ] Close on backdrop click, ESC key
+  - [ ] Mobile responsive (280px width)
+- [ ] Update `src/components/layout/Header.tsx`:
+  - [ ] Add hamburger button (left side)
+  - [ ] Add CubeView3D logo (24x24px, solved state, front view)
+  - [ ] Remove inline nav links (Puzzles, About)
+  - [ ] Keep theme toggle (right side)
+  - [ ] Add spacer between logo and toggle
+- [ ] Update `src/components/layout/Container.tsx`:
+  - [ ] Verify max-width classes (1400px, 1200px, 992px, 768px)
+  - [ ] Add 2% horizontal padding
+- [ ] Test responsive behavior
+- [ ] Test hamburger menu on mobile/tablet/desktop
+
+**Estimated Time:** 5-6 hours  
+**Completion Criteria:** Header updated, hamburger menu working, responsive
+
+#### 8.4: Algorithm Set Components ⏭️ TODO
+- [ ] Rename `src/components/navigation/PhaseCard.tsx` → `AlgorithmSetCard.tsx`:
+  - [ ] Update prop names (phase → algorithmSet)
+  - [ ] Update URL generation (remove methodId)
+  - [ ] Keep CubeView3D thumbnail
+  - [ ] Update card content (show algorithm count)
+- [ ] Create `src/components/navigation/AlgorithmSetGroupCard.tsx`:
+  - [ ] Full-width container
+  - [ ] Title row (puzzle or method name)
+  - [ ] Content row (grid of AlgorithmSetCards)
+  - [ ] Responsive grid (2-4 columns)
+- [ ] Remove `src/components/navigation/MethodCard.tsx`
+- [ ] Update exports in `src/components/navigation/index.ts`
+- [ ] Update all component imports across the app
+
+**Estimated Time:** 3-4 hours  
+**Completion Criteria:** Components created, renamed, exports updated
+
+#### 8.5: Page Migration - New Pages ⏭️ TODO
+- [ ] Create `app/learn/algorithms/page.tsx`:
+  - [ ] Load all algorithm sets grouped by puzzle
+  - [ ] Display AlgorithmSetGroupCards
+  - [ ] Breadcrumbs (Home → Learn → Algorithms)
+  - [ ] SEO metadata
+- [ ] Create `app/practice/trainer/page.tsx`:
+  - [ ] Placeholder page with "Coming Soon" message
+  - [ ] Breadcrumbs
+  - [ ] SEO metadata
+- [ ] Create `app/practice/timer/page.tsx`:
+  - [ ] Placeholder page with "Coming Soon" message
+  - [ ] Breadcrumbs
+  - [ ] SEO metadata
+- [ ] Test all new pages render correctly
+
+**Estimated Time:** 3-4 hours  
+**Completion Criteria:** New pages created, loading correctly
+
+#### 8.6: Page Migration - Update Existing Pages ⏭️ TODO
+- [ ] Update `app/puzzles/[puzzleId]/page.tsx`:
+  - [ ] Load algorithm sets instead of methods
+  - [ ] Display AlgorithmSetCards (grouped by origin)
+  - [ ] Update breadcrumbs (Home → Puzzles → 3×3×3)
+  - [ ] Keep responsive grid layout
+- [ ] Rename route: `app/puzzles/[puzzleId]/[methodId]/[stageId]` → `app/puzzles/[puzzleId]/[algSetId]`
+  - [ ] Update data loading (loadAlgorithmSet)
+  - [ ] Update breadcrumbs (remove method level)
+  - [ ] Keep CaseBrowser component
+  - [ ] Update SEO metadata
+- [ ] Rename route: `app/puzzles/[puzzleId]/[methodId]/[stageId]/[caseId]` → `app/puzzles/[puzzleId]/[algSetId]/[caseId]`
+  - [ ] Update data loading
+  - [ ] Update breadcrumbs (remove method level)
+  - [ ] Keep CaseDetail component
+  - [ ] Update SEO metadata
+- [ ] Update `app/page.tsx`:
+  - [ ] Update "Practice Algorithms" card link → `/learn/algorithms`
+  - [ ] Update copy to reflect new structure
+- [ ] Update `app/not-found.tsx` if needed
+
+**Estimated Time:** 6-8 hours  
+**Completion Criteria:** All pages migrated, routes working
+
+#### 8.7: Breadcrumbs & Navigation Updates ⏭️ TODO
+- [ ] Update `src/components/navigation/Breadcrumbs.tsx`:
+  - [ ] Remove method level from path generation
+  - [ ] Update for new URL structure
+  - [ ] Test all breadcrumb paths
+- [ ] Update all internal links across the app:
+  - [ ] Search for old URLs with methodId
+  - [ ] Update to new structure
+  - [ ] Verify all links work
+- [ ] Add redirects for old URLs (optional):
+  - [ ] Create `middleware.ts` for URL redirects
+  - [ ] Redirect old method URLs to new alg set URLs
+
+**Estimated Time:** 2-3 hours  
+**Completion Criteria:** Breadcrumbs updated, all links working
+
+#### 8.8: E2E Test Updates ⏭️ TODO
+- [ ] Update E2E tests in `e2e/` directory:
+  - [ ] Update `homepage.spec.ts` for new links
+  - [ ] Update `methods.spec.ts` → rename to `algorithm-sets.spec.ts`
+  - [ ] Update `oll.spec.ts` for new URL structure
+  - [ ] Update `pll.spec.ts` for new URL structure
+  - [ ] Update `accessibility.spec.ts` for new components
+- [ ] Add new E2E tests:
+  - [ ] Test hamburger menu functionality
+  - [ ] Test `/learn/algorithms` page
+  - [ ] Test practice placeholder pages
+  - [ ] Test new navigation flows
+- [ ] Run all E2E tests
+- [ ] Fix any failing tests
+
+**Estimated Time:** 4-5 hours  
+**Completion Criteria:** All E2E tests updated and passing
+
+#### 8.9: Data Cleanup & Validation ⏭️ TODO
+- [ ] Remove old data files:
+  - [ ] Delete `src/data/methods/` directory
+  - [ ] Delete old algorithm directories (if renamed)
+- [ ] Verify data integrity:
+  - [ ] Run data validation script
+  - [ ] Check all algorithm counts match
+  - [ ] Verify all categories load correctly
+- [ ] Update data schemas in `src/data/schemas/`:
+  - [ ] Remove `method.schema.json`
+  - [ ] Create `algorithm-set.schema.json`
+- [ ] Update documentation:
+  - [ ] Update `src/data/README.md` (if exists)
+  - [ ] Document new data structure
+
+**Estimated Time:** 2-3 hours  
+**Completion Criteria:** Old files removed, data validated
+
+#### 8.10: Testing & Polish ⏭️ TODO
+- [ ] Manual testing:
+  - [ ] Test all navigation flows (home → algorithms → case)
+  - [ ] Test hamburger menu on mobile/tablet/desktop
+  - [ ] Test responsive behavior at all breakpoints
+  - [ ] Test breadcrumbs on all pages
+  - [ ] Test all internal links
+- [ ] Cross-browser testing:
+  - [ ] Chrome (desktop & mobile)
+  - [ ] Firefox (desktop & mobile)
+  - [ ] Safari (desktop & iOS)
+  - [ ] Edge (desktop)
+- [ ] Accessibility testing:
+  - [ ] Keyboard navigation (hamburger menu, links)
+  - [ ] Screen reader testing (hamburger menu labels)
+  - [ ] Run Lighthouse accessibility audit
+- [ ] Performance testing:
+  - [ ] Run Lighthouse performance audit
+  - [ ] Check bundle size impact
+  - [ ] Verify loading performance
+- [ ] Fix any issues found
+
+**Estimated Time:** 6-8 hours  
+**Completion Criteria:** All tests pass, no critical issues
+
+#### 8.11: Documentation Updates ⏭️ TODO
+- [ ] Update README.md:
+  - [ ] Update project description
+  - [ ] Document new URL structure
+  - [ ] Update screenshots (if any)
+  - [ ] Document new navigation
+- [ ] Update this implementation plan:
+  - [ ] Mark Phase 8 as complete
+  - [ ] Update progress summary
+- [ ] Create migration guide (optional):
+  - [ ] Document breaking changes
+  - [ ] List old vs new URLs
+  - [ ] Explain new data structure
+
+**Estimated Time:** 2-3 hours  
+**Completion Criteria:** Documentation up to date
+
+### Phase 8 Completion Checklist
+
+- [ ] All data migrated to `algorithm-sets/` structure
+- [ ] Old `methods/` directory removed
+- [ ] TypeScript types updated and working
+- [ ] Data loaders refactored and tested
+- [ ] Header with hamburger menu implemented
+- [ ] CubeView3D logo in header (24x24px)
+- [ ] Navigation side panel functional
+- [ ] `/learn/algorithms` page created
+- [ ] Practice placeholder pages created
+- [ ] All routes updated (no `[methodId]` in URLs)
+- [ ] Breadcrumbs display correct hierarchy
+- [ ] `AlgorithmSetCard` component working
+- [ ] `AlgorithmSetGroupCard` component working
+- [ ] `MethodCard` component removed
+- [ ] All internal links updated
+- [ ] E2E tests updated and passing (30+ tests)
+- [ ] Build succeeds with no errors
+- [ ] Responsive design verified
+- [ ] Documentation updated
+- [ ] Performance remains excellent (Lighthouse 90+)
+- [ ] Accessibility score 100/100
+
+**Phase 8 Total Time:** 40-55 hours (5-7 days, full-time)  
+**Phase 8 Status:** ⏭️ READY TO START
+
+---
+
+## Summary: Timeline & Effort
+
+| Phase | Duration | Hours | Focus | Status |
+|-------|----------|-------|-------|--------|
+| Phase 0: Setup | 2-3 days | 6-8h | Project initialization, tooling | ✅ Complete |
+| Phase 1: Cube Engine | 3-4 days | 24-30h | Core logic, algorithm execution | ✅ Complete |
+| Phase 2: Data Collection | 5-6 days | 35-45h | Collecting & structuring algorithms | ✅ Complete |
+| Phase 3: UI Components | 4-5 days | 28-36h | Building React components | ✅ Complete |
+| Phase 4: Pages & Routing | 3-4 days | 17-24h | Next.js pages, navigation | ✅ Complete |
+| Phase 5: Testing & Polish | 3-5 days | 26-36h | Testing, optimization, bug fixing | ✅ Complete |
+| Phase 6: Deployment | 2-3 days | 14-24h | Production deployment | ✅ Complete |
+| **MVP TOTAL** | **22-30 days** | **150-203h** | **MVP Complete** | ✅ **100%** |
+| Phase 7: V1 Visualization | 5-7 days | 39-52h | 2D/3D rendering, animation | 🔄 **~95%** |
+| **Phase 8: Web UI Rewrite** | **5-7 days** | **40-55h** | **Navigation & structure** | ⏭️ **Planned** |
+| **V1+UI TOTAL** | **32-44 days** | **229-310h** | **V1 + UI Rewrite** | 🔄 **In Progress** |
+
+**Current Status:**
+- MVP: ✅ 100% Complete (deployed)
+- V1: 🔄 95% Complete (2D ✅, 3D ✅, docs ⏭️)
+- Phase 8: ⏭️ Planned (detailed spec complete)
+
+**Remaining Work:**
+- V1 Documentation: ~2 hours
+- Phase 8 Web UI Rewrite: ~40-55 hours
+- **Total to completion:** ~42-57 hours (5-7 days)
+
+---
+
+## Progress Summary (2026-01-11)
+
+### Overall Status: MVP ✅ Complete | V1 🔄 95% | Phase 8 ⏭️ Planned
+
+| Phase | Status | Progress | Notes |
+|-------|--------|----------|-------|
+| **MVP Phases (0-6)** | ✅ Complete | 100% | All features implemented, deployed |
+| **Phase 7: V1 Visualization** | 🔄 In Progress | **95%** | **Documentation remaining** |
+| 7.1-7.7: Visualization | ✅ Complete | 100% | 2D/3D rendering, animation |
+| 7.8: Documentation | ⏭️ TODO | 0% | README update needed |
+| 7.9: OLL/PLL Enhancement | ✅ Complete | 100% | Z2 rotation + grayscale |
+| **Phase 8: Web UI Rewrite** | ⏭️ Planned | **0%** | **Detailed spec complete** |
+| 8.1: Data Migration | ⏭️ TODO | 0% | Algorithm sets restructure |
+| 8.2: Types & Loaders | ⏭️ TODO | 0% | Data layer refactor |
+| 8.3: Layout & Nav | ⏭️ TODO | 0% | Hamburger menu, header update |
+| 8.4: Components | ⏭️ TODO | 0% | AlgorithmSetCard, GroupCard |
+| 8.5: New Pages | ⏭️ TODO | 0% | /learn/algorithms, practice |
+| 8.6: Page Migration | ⏭️ TODO | 0% | Route restructure |
+| 8.7: Breadcrumbs | ⏭️ TODO | 0% | Navigation updates |
+| 8.8: E2E Tests | ⏭️ TODO | 0% | Test updates |
+| 8.9: Data Cleanup | ⏭️ TODO | 0% | Remove old files |
+| 8.10: Testing | ⏭️ TODO | 0% | Manual & automated testing |
+| 8.11: Documentation | ⏭️ TODO | 0% | README, migration guide |
+
+### Next Steps
+
+**Option A: Complete V1 First (Recommended)**
+1. Finish Phase 7.8: Documentation (~2 hours)
+2. Deploy V1 with visualization features
+3. Then start Phase 8: Web UI Rewrite
+
+**Option B: Start Web UI Rewrite Now**
+1. Begin Phase 8.1: Data Migration
+2. Complete V1 docs in parallel
+3. Full redesign with V1 features included
+
+**Recommendation:** Complete V1 documentation first to close out Phase 7, then tackle Phase 8 as a fresh milestone. This provides a clean deployment point and makes testing easier.
+
+---
+
 *Plan created: 2026-01-05*  
-*Last updated: 2026-01-06*
+*Last updated: 2026-01-11*
