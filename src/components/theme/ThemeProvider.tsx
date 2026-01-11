@@ -11,29 +11,25 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+function getInitialTheme(): Theme {
+  if (typeof window === 'undefined') return 'light';
+  
+  // Read from the class that was already set by the blocking script
+  const htmlClass = document.documentElement.className;
+  if (htmlClass === 'dark') return 'dark';
+  if (htmlClass === 'light') return 'light';
+  
+  // Fallback: read from localStorage
+  const stored = localStorage.getItem('theme');
+  return (stored as Theme) || 'light';
+}
+
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Initialize with light as default to match SSR
-    return "light";
-  });
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
 
-  // Load theme from localStorage on mount
+  // Apply theme to document when it changes
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) {
-      setTheme(stored);
-    } else {
-      // Default to system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
-    }
-  }, []);
-
-  // Apply theme to document
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
+    document.documentElement.className = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
 
