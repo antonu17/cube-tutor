@@ -19,9 +19,12 @@ function getInitialTheme(): Theme {
   if (htmlClass === 'dark') return 'dark';
   if (htmlClass === 'light') return 'light';
   
-  // Fallback: read from localStorage
+  // Fallback: check localStorage or system preference
   const stored = localStorage.getItem('theme');
-  return (stored as Theme) || 'light';
+  if (stored) return stored as Theme;
+  
+  // Default to system preference
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
