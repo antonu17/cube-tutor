@@ -43,3 +43,10 @@ code {
   font-size: 1.05em; /* 5% larger than surrounding text */
 }
 
+/* Cube view 3D - ensure SVG fits container */
+.cube-view-3d svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+

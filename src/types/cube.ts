@@ -88,7 +88,7 @@ export type CFOPStage = "cross" | "f2l" | "oll" | "pll";
 /**
  * OLL case shape categories
  */
-export type OLLShape = 
+export type OLLShape =
   | "dot"
   | "line"
   | "l-shape"

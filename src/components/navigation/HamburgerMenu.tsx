@@ -1,15 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/src/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/src/components/ui/sheet";
 
 interface MenuItem {
   label: string;
@@ -39,27 +32,46 @@ const menuItems: MenuItem[] = [
   },
 ];
 
+interface HamburgerMenuProps {
+  isOpen: boolean;
+  onToggle: () => void;
+}
+
 /**
- * HamburgerMenu component - Side navigation panel
+ * HamburgerMenu component - Hamburger icon button
  */
-export function HamburgerMenu() {
+export function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-9 w-9"
-          aria-label="Open navigation menu"
-        >
-          <Menu className="h-5 w-5" />
-        </Button>
-      </SheetTrigger>
-      <SheetContent side="left" className="w-[280px] sm:w-[320px]" showOverlay={false}>
-        <SheetHeader>
-          <SheetTitle>Navigation</SheetTitle>
-        </SheetHeader>
-        <nav className="flex flex-col gap-4 mt-8">
+    <Button
+      variant="ghost"
+      size="icon"
+      className="h-9 w-9"
+      aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+      onClick={onToggle}
+    >
+      <Menu className="h-5 w-5" />
+    </Button>
+  );
+}
+
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+/**
+ * Sidebar component - Navigation sidebar panel
+ */
+export function Sidebar({ isOpen, onClose }: SidebarProps) {
+  return (
+    <aside
+      className={`fixed left-0 top-14 bottom-0 z-40 w-[280px] sm:w-[320px] bg-background border-r transition-transform duration-200 ease-in-out ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+    >
+      <div className="h-full overflow-y-auto p-6">
+        <h2 className="font-semibold text-lg mb-6">Navigation</h2>
+        <nav className="flex flex-col gap-4">
           {menuItems.map((item) => (
             <div key={item.label} className="flex flex-col gap-2">
               {item.children ? (
@@ -72,6 +84,7 @@ export function HamburgerMenu() {
                       <Link
                         key={child.href}
                         href={child.href}
+                        onClick={onClose}
                         className="text-sm text-foreground/80 hover:text-foreground transition-colors py-1"
                       >
                         {child.label}
@@ -82,6 +95,7 @@ export function HamburgerMenu() {
               ) : (
                 <Link
                   href={item.href}
+                  onClick={onClose}
                   className="font-semibold text-sm text-foreground/80 hover:text-foreground transition-colors"
                 >
                   {item.label}
@@ -90,7 +104,7 @@ export function HamburgerMenu() {
             </div>
           ))}
         </nav>
-      </SheetContent>
-    </Sheet>
+      </div>
+    </aside>
   );
 }
