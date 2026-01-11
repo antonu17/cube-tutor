@@ -66,7 +66,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <aside
-      className={`fixed left-0 top-14 bottom-0 z-40 w-[280px] sm:w-[320px] border-r border-neutral-800 transition-transform duration-200 ease-in-out ${
+      className={`fixed left-0 top-[66px] bottom-0 z-40 w-[280px] sm:w-[320px] border-r border-neutral-800 transition-transform duration-200 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
       style={{ backgroundColor: '#1a1a1a', color: '#ededed' }}
