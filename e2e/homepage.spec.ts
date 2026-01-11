@@ -41,9 +41,9 @@ test.describe('Homepage', () => {
     await page.waitForURL('**/puzzles/3x3x3');
     await expect(page.url()).toContain('/puzzles/3x3x3');
     
-    // Click on CFOP method
-    await page.getByRole('link').filter({ hasText: 'CFOP' }).first().click();
-    await page.waitForURL('**/puzzles/3x3x3/cfop');
-    await expect(page.url()).toContain('/puzzles/3x3x3/cfop');
+    // Click on OLL algorithm set
+    await page.getByRole('link').filter({ hasText: 'OLL' }).first().click();
+    await page.waitForURL('**/puzzles/3x3x3/oll');
+    await expect(page.url()).toContain('/puzzles/3x3x3/oll');
   });
 });

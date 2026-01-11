@@ -35,7 +35,7 @@ test.describe('Accessibility', () => {
   });
 
   test('copy buttons should have accessible labels', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Check copy button has aria-label
     const copyButton = page.getByRole('button', { name: /copy/i });
@@ -59,7 +59,7 @@ test.describe('SEO', () => {
   });
 
   test('case detail page should have meta description', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     const metaDescription = page.locator('meta[name="description"]');
     await expect(metaDescription).toHaveAttribute('content', /.+/);

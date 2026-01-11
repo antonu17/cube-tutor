@@ -20,57 +20,44 @@ test.describe('Puzzle Selection Page', () => {
   });
 });
 
-test.describe('Method Selection Page', () => {
-  test('should display available methods', async ({ page }) => {
+test.describe('Algorithm Set Page', () => {
+  test('should display algorithm sets grouped by origin', async ({ page }) => {
     await page.goto('/puzzles/3x3x3');
     
-    // Check for CFOP and Beginner methods (use first() for multiple matches)
+    // Check for CFOP and Beginner groups (use first() for multiple matches)
     await expect(page.getByText(/CFOP/i).first()).toBeVisible();
     await expect(page.getByText(/Beginner/i).first()).toBeVisible();
   });
 
-  test('should navigate to CFOP method page', async ({ page }) => {
+  test('should display algorithm sets', async ({ page }) => {
     await page.goto('/puzzles/3x3x3');
     
-    // Click on CFOP method card
-    await page.getByRole('link').filter({ hasText: 'CFOP' }).first().click();
-    
-    // Should navigate to CFOP page
-    await page.waitForURL('**/puzzles/3x3x3/cfop');
-    await expect(page).toHaveURL('/puzzles/3x3x3/cfop');
-  });
-});
-
-test.describe('CFOP Method Page', () => {
-  test('should display CFOP stages', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop');
-    
-    // Check for CFOP stages (use first() for multiple matches)
+    // Check for algorithm sets (use first() for multiple matches)
     await expect(page.getByText(/Cross/i).first()).toBeVisible();
     await expect(page.getByText(/F2L/i).first()).toBeVisible();
     await expect(page.getByText(/OLL/i).first()).toBeVisible();
     await expect(page.getByText(/PLL/i).first()).toBeVisible();
   });
 
-  test('should navigate to OLL stage', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop');
+  test('should navigate to OLL algorithm set', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3');
     
-    // Click on OLL stage card
+    // Click on OLL algorithm set card
     await page.getByRole('link').filter({ hasText: 'OLL' }).first().click();
     
     // Should navigate to OLL page
-    await page.waitForURL('**/puzzles/3x3x3/cfop/oll');
-    await expect(page).toHaveURL('/puzzles/3x3x3/cfop/oll');
+    await page.waitForURL('**/puzzles/3x3x3/oll');
+    await expect(page).toHaveURL('/puzzles/3x3x3/oll');
   });
 
-  test('should navigate to PLL stage', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop');
+  test('should navigate to PLL algorithm set', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3');
     
-    // Click on PLL stage card
+    // Click on PLL algorithm set card
     await page.getByRole('link').filter({ hasText: 'PLL' }).first().click();
     
     // Should navigate to PLL page
-    await page.waitForURL('**/puzzles/3x3x3/cfop/pll');
-    await expect(page).toHaveURL('/puzzles/3x3x3/cfop/pll');
+    await page.waitForURL('**/puzzles/3x3x3/pll');
+    await expect(page).toHaveURL('/puzzles/3x3x3/pll');
   });
 });

@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('OLL Algorithm Page', () => {
-  test('should display OLL stage page', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll');
+  test('should display OLL algorithm set page', async ({ page }) => {
+    await page.goto('/puzzles/3x3x3/oll');
     
     // Check page title
     await expect(page.getByRole('heading', { name: /OLL/i }).first()).toBeVisible();
@@ -12,7 +12,7 @@ test.describe('OLL Algorithm Page', () => {
   });
 
   test('should display OLL cases grouped by category', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll');
+    await page.goto('/puzzles/3x3x3/oll');
     
     // Check for categories (dot, line, etc.)
     const caseCards = page.locator('[class*="card"]').or(page.getByText(/OLL \d+/));
@@ -20,21 +20,21 @@ test.describe('OLL Algorithm Page', () => {
   });
 
   test('should navigate to OLL case detail', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll');
+    await page.goto('/puzzles/3x3x3/oll');
     
     // Click on first OLL case link - use exact match for OLL 1
     const firstCaseLink = page.getByRole('link').filter({ hasText: 'OLL 1' }).first();
     await firstCaseLink.click();
     
     // Should navigate to case detail page
-    await page.waitForURL('**/puzzles/3x3x3/cfop/oll/oll-**');
-    await expect(page.url()).toMatch(/\/puzzles\/3x3x3\/cfop\/oll\/oll-\d+/);
+    await page.waitForURL('**/puzzles/3x3x3/oll/oll-**');
+    await expect(page.url()).toMatch(/\/puzzles\/3x3x3\/oll\/oll-\d+/);
   });
 });
 
 test.describe('OLL Case Detail Page', () => {
   test('should display case information', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Check for case heading
     await expect(page.getByRole('heading', { name: /OLL 1/i })).toBeVisible();
@@ -44,7 +44,7 @@ test.describe('OLL Case Detail Page', () => {
   });
 
   test('should display algorithm notation', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Look for algorithm notation (should contain cube move letters)
     const algorithmCode = page.locator('code');
@@ -53,7 +53,7 @@ test.describe('OLL Case Detail Page', () => {
   });
 
   test('should have copy button for algorithm', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Look for copy button
     const copyButton = page.getByRole('button', { name: /copy/i });
@@ -61,14 +61,14 @@ test.describe('OLL Case Detail Page', () => {
   });
 
   test('should display recognition hints', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Look for recognition hints section
     await expect(page.getByRole('heading', { name: /Recognition Hints/i })).toBeVisible();
   });
 
   test('should have breadcrumb navigation', async ({ page }) => {
-    await page.goto('/puzzles/3x3x3/cfop/oll/oll-1');
+    await page.goto('/puzzles/3x3x3/oll/oll-1');
     
     // Look for breadcrumb with Home link - simpler approach
     const homeLink = page.getByRole('link', { name: 'Home' });
