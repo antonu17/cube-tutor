@@ -32,11 +32,11 @@ export function Header({ isMenuOpen, onMenuToggle }: HeaderProps) {
         <div className="flex items-center gap-3">
           <HamburgerMenu isOpen={isMenuOpen} onToggle={onMenuToggle} />
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-8 h-8">
+            <div className="flex items-center justify-center w-10 h-10">
               <CubeView3D
                 state={solvedState}
                 view="front"
-                stickerSize={6}
+                stickerSize={8}
                 backgroundColor="#1a1a1a"
                 className="w-full h-full"
               />
