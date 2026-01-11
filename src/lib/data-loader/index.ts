@@ -1,10 +1,9 @@
 /**
  * Data Loader
- * Main exports for loading puzzle, method, algorithm set, and algorithm data
+ * Main exports for loading puzzle, algorithm set, and algorithm data
  */
 
 export { loadPuzzle, loadAllPuzzles } from "./puzzles";
-export { loadMethod, loadAllMethods } from "./methods"; // Keep for backward compatibility
 export { 
   loadAlgorithmSet, 
   loadAlgorithmSetsForPuzzle,

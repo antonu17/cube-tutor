@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { loadAllPuzzles } from '@/src/lib/data-loader/puzzles'
-import { loadAllMethods } from '@/src/lib/data-loader/methods'
+import { loadAlgorithmSetsForPuzzle } from '@/src/lib/data-loader/algorithm-sets'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cubetutor.com'
@@ -18,6 +18,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/learn/algorithms`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
   ]
 
   try {
@@ -31,31 +37,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
       })
 
-      // Add method pages
+      // Add algorithm set pages
       try {
-        const methods = await loadAllMethods(puzzle.id)
-        for (const method of methods) {
+        const algorithmSets = await loadAlgorithmSetsForPuzzle(puzzle.id)
+        for (const algSet of algorithmSets) {
           routes.push({
-            url: `${baseUrl}/puzzles/${puzzle.id}/${method.method}`,
+            url: `${baseUrl}/puzzles/${puzzle.id}/${algSet.id}`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
           })
-
-          // Add stage pages
-          if (method.stages) {
-            for (const stage of method.stages) {
-              routes.push({
-                url: `${baseUrl}/puzzles/${puzzle.id}/${method.method}/${stage.id}`,
-                lastModified: new Date(),
-                changeFrequency: 'monthly',
-                priority: 0.6,
-              })
-            }
-          }
         }
       } catch (error) {
-        console.error(`Error loading methods for puzzle ${puzzle.id}:`, error)
+        console.error(`Error loading algorithm sets for puzzle ${puzzle.id}:`, error)
       }
     }
   } catch (error) {
