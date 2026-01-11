@@ -45,7 +45,8 @@ export function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
     <Button
       variant="ghost"
       size="icon"
-      className="h-9 w-9"
+      className="h-9 w-9 hover:bg-neutral-700"
+      style={{ color: '#ededed' }}
       aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
       onClick={onToggle}
     >
@@ -65,9 +66,10 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <aside
-      className={`fixed left-0 top-14 bottom-0 z-40 w-[280px] sm:w-[320px] bg-background border-r transition-transform duration-200 ease-in-out ${
+      className={`fixed left-0 top-14 bottom-0 z-40 w-[280px] sm:w-[320px] border-r border-neutral-800 transition-transform duration-200 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       }`}
+      style={{ backgroundColor: '#1a1a1a', color: '#ededed' }}
     >
       <div className="h-full overflow-y-auto p-6">
         <h2 className="font-semibold text-lg mb-6">Navigation</h2>
@@ -76,7 +78,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div key={item.label} className="flex flex-col gap-2">
               {item.children ? (
                 <>
-                  <div className="font-semibold text-sm text-foreground/60">
+                  <div className="font-semibold text-sm opacity-60">
                     {item.label}
                   </div>
                   <div className="flex flex-col gap-1 ml-4">
@@ -85,7 +87,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         key={child.href}
                         href={child.href}
                         onClick={onClose}
-                        className="text-sm text-foreground/80 hover:text-foreground transition-colors py-1"
+                        className="text-sm opacity-80 hover:opacity-100 transition-opacity py-1"
                       >
                         {child.label}
                       </Link>
@@ -96,7 +98,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <Link
                   href={item.href}
                   onClick={onClose}
-                  className="font-semibold text-sm text-foreground/80 hover:text-foreground transition-colors"
+                  className="font-semibold text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
                   {item.label}
                 </Link>

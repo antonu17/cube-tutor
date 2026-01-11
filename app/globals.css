@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+/* Prevent theme flash - body has fixed dark background */
+html {
+  background-color: #1a1a1a;
+  color-scheme: dark;
+}
+
+html.dark {
+  background-color: #1a1a1a;
+  color-scheme: dark;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -24,7 +35,7 @@
   --color-cube-red: #b71234;
   --color-cube-orange: #ff5800;
   --color-cube-gray: #333333;
-  
+
   /* Cube UI colors */
   --color-cube-border: #000000;
   --color-cube-highlight: #fbbf24;
@@ -49,4 +60,3 @@ code {
   height: 100%;
   display: block;
 }
-

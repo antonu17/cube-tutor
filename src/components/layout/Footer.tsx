@@ -8,11 +8,11 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t border-neutral-800" style={{ backgroundColor: '#1a1a1a', color: '#ededed' }}>
       <Container>
         <div className="flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-8">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm opacity-60">
               © {currentYear} Cube Tutor. Algorithm data from SpeedCubeDB.
             </p>
           </div>
@@ -21,7 +21,7 @@ export function Footer() {
               href="https://github.com/antonu17/cube-tutor"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm opacity-60 hover:opacity-100 transition-opacity"
             >
               GitHub
             </Link>
@@ -29,7 +29,7 @@ export function Footer() {
               href="https://www.speedcubedb.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm opacity-60 hover:opacity-100 transition-opacity"
             >
               SpeedCubeDB
             </Link>

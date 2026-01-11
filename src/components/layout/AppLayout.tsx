@@ -14,7 +14,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
     <div className="flex min-h-screen flex-col">
       <Header isMenuOpen={isSidebarOpen} onMenuToggle={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 bg-background text-foreground">{children}</main>
       <Footer />
     </div>
   );
