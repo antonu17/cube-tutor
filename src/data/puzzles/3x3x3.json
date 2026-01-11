@@ -1,6 +1,8 @@
 {
+  "id": "3x3x3",
   "type": "3x3",
   "name": "3×3×3 Rubik's Cube",
   "description": "The classic 3×3×3 Rubik's Cube - the most popular twisty puzzle in the world",
-  "supportedMethods": ["beginner", "cfop"]
+  "dimensions": [3, 3, 3],
+  "algorithmSetGroups": ["cfop", "beginner"]
 }

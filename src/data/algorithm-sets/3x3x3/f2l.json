@@ -1,0 +1,13 @@
+{
+  "id": "f2l",
+  "puzzleId": "3x3x3",
+  "name": "F2L (First Two Layers)",
+  "shortName": "F2L",
+  "description": "Solve the first two layers simultaneously using corner-edge pairs",
+  "origin": "cfop",
+  "originName": "CFOP Method",
+  "order": 2,
+  "caseCount": 0,
+  "difficulty": "intermediate",
+  "categories": []
+}

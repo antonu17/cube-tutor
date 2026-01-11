@@ -11,8 +11,8 @@ const DATA_DIR = join(process.cwd(), "src", "data", "algorithms");
 
 /**
  * Load all algorithm cases for a specific method/stage
- * @param methodId - Method ID (e.g., "cfop", "beginner")
- * @param stageId - Stage ID (e.g., "oll", "pll")
+ * @param methodId - Method ID (e.g., "cfop", "beginner") - DEPRECATED, use algSetId
+ * @param stageId - Stage ID (e.g., "oll", "pll") or algorithm set ID
  * @returns Array of algorithm cases
  * @throws Error if file not found or invalid JSON
  */
@@ -20,10 +20,19 @@ export async function loadAlgorithms(
   methodId: string,
   stageId: string
 ): Promise<AlgorithmCase[]> {
-  // Beginner method stores all stages in one file
-  const filePath = methodId === "beginner" 
-    ? join(DATA_DIR, methodId, "all", "all-cases.json")
-    : join(DATA_DIR, methodId, stageId, "all-cases.json");
+  // New structure: algorithms are in flat directories by algorithm set ID
+  // Old: src/data/algorithms/cfop/oll/all-cases.json
+  // New: src/data/algorithms/oll/all-cases.json
+  
+  // Determine the actual directory name
+  let dirName = stageId;
+  
+  // Handle beginner method - still uses "beginner" directory
+  if (methodId === "beginner" || stageId === "beginner") {
+    dirName = "beginner";
+  }
+  
+  const filePath = join(DATA_DIR, dirName, "all-cases.json");
   
   try {
     const content = await readFile(filePath, "utf-8");
@@ -55,8 +64,8 @@ export async function loadAlgorithms(
       };
     });
     
-    // For beginner method, filter by stage
-    if (methodId === "beginner") {
+    // For beginner method, filter by stage if stageId is a specific stage
+    if (methodId === "beginner" && stageId !== "beginner") {
       const filtered = cases.filter((c: any) => c.stage === stageId);
       // Return empty array for intuitive stages (like white-cross)
       return filtered;

@@ -1,0 +1,32 @@
+{
+  "id": "pll",
+  "puzzleId": "3x3x3",
+  "name": "PLL (Permute Last Layer)",
+  "shortName": "PLL",
+  "description": "Permute the last layer pieces to solve the cube",
+  "origin": "cfop",
+  "originName": "CFOP Method",
+  "order": 4,
+  "caseCount": 21,
+  "difficulty": "advanced",
+  "categories": [
+    {
+      "id": "edges-only",
+      "name": "Edges Only",
+      "description": "Only edges need to be permuted",
+      "caseCount": 4
+    },
+    {
+      "id": "adjacent-swap",
+      "name": "Adjacent Swaps",
+      "description": "Two adjacent corners or an adjacent corner-edge pair need swapping",
+      "caseCount": 12
+    },
+    {
+      "id": "diagonal-swap",
+      "name": "Diagonal Swaps",
+      "description": "Two diagonal corners need swapping",
+      "caseCount": 5
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "id": "oll",
+  "puzzleId": "3x3x3",
+  "name": "OLL (Orient Last Layer)",
+  "shortName": "OLL",
+  "description": "Orient all pieces on the last layer to show the correct color on top",
+  "origin": "cfop",
+  "originName": "CFOP Method",
+  "order": 3,
+  "caseCount": 57,
+  "difficulty": "advanced",
+  "categories": [
+    {
+      "id": "dot",
+      "name": "Dot Shapes",
+      "description": "Cases with a yellow dot on top (no edges oriented)",
+      "caseCount": 8
+    },
+    {
+      "id": "line",
+      "name": "Line Shapes",
+      "description": "Cases with a yellow line across the top",
+      "caseCount": 4
+    },
+    {
+      "id": "lightning",
+      "name": "Lightning Bolts",
+      "description": "L-shaped yellow patterns",
+      "caseCount": 6
+    },
+    {
+      "id": "square",
+      "name": "Square Shapes",
+      "description": "Cases with a small square pattern",
+      "caseCount": 2
+    },
+    {
+      "id": "c-shape",
+      "name": "C Shapes",
+      "description": "Cases with a C or backwards C shape",
+      "caseCount": 2
+    },
+    {
+      "id": "p-shape",
+      "name": "P Shapes",
+      "description": "Cases resembling the letter P",
+      "caseCount": 4
+    },
+    {
+      "id": "t-shape",
+      "name": "T Shapes",
+      "description": "Cases resembling the letter T",
+      "caseCount": 2
+    },
+    {
+      "id": "w-shape",
+      "name": "W Shapes",
+      "description": "Cases resembling the letter W",
+      "caseCount": 2
+    },
+    {
+      "id": "big-l",
+      "name": "Big L Shapes",
+      "description": "Large L-shaped patterns",
+      "caseCount": 6
+    },
+    {
+      "id": "fish",
+      "name": "Fish Shapes",
+      "description": "Cases resembling fish",
+      "caseCount": 4
+    },
+    {
+      "id": "knight",
+      "name": "Knight Moves",
+      "description": "Cases with knight move patterns",
+      "caseCount": 4
+    },
+    {
+      "id": "awkward",
+      "name": "Awkward Shapes",
+      "description": "Miscellaneous awkward cases",
+      "caseCount": 4
+    },
+    {
+      "id": "ocll",
+      "name": "OCLL (Corners Oriented)",
+      "description": "All corners already oriented, only edges need orientation",
+      "caseCount": 9
+    }
+  ]
+}

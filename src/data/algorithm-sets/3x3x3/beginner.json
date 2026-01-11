@@ -1,0 +1,56 @@
+{
+  "id": "beginner",
+  "puzzleId": "3x3x3",
+  "name": "Beginner's Method",
+  "shortName": "Beginner",
+  "description": "Layer-by-layer solving method ideal for learning. Solves the cube in 7 intuitive steps using a small set of easy-to-remember algorithms.",
+  "origin": "beginner",
+  "originName": "Beginner's Method",
+  "order": 1,
+  "caseCount": 9,
+  "difficulty": "beginner",
+  "categories": [
+    {
+      "id": "white-cross",
+      "name": "White Cross",
+      "description": "Create a white cross on the bottom layer with matching edge colors",
+      "caseCount": 0
+    },
+    {
+      "id": "white-corners",
+      "name": "White Corners",
+      "description": "Position and orient all white corners to complete the first layer",
+      "caseCount": 1
+    },
+    {
+      "id": "middle-layer",
+      "name": "Middle Layer Edges",
+      "description": "Insert the four middle layer edges into their correct positions",
+      "caseCount": 2
+    },
+    {
+      "id": "yellow-cross",
+      "name": "Yellow Cross",
+      "description": "Create a yellow cross on the top layer",
+      "caseCount": 3
+    },
+    {
+      "id": "yellow-edges",
+      "name": "Yellow Edge Permutation",
+      "description": "Position the yellow edges correctly",
+      "caseCount": 1
+    },
+    {
+      "id": "yellow-corners-position",
+      "name": "Yellow Corner Position",
+      "description": "Move yellow corners to their correct positions",
+      "caseCount": 1
+    },
+    {
+      "id": "yellow-corners-orientation",
+      "name": "Yellow Corner Orientation",
+      "description": "Orient the yellow corners to solve the cube",
+      "caseCount": 1
+    }
+  ]
+}

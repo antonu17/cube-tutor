@@ -10,6 +10,10 @@ interface PuzzleCardProps {
  * PuzzleCard component for displaying puzzle information in a card format
  */
 export function PuzzleCard({ puzzle }: PuzzleCardProps) {
+  // Support both old (supportedMethods) and new (algorithmSetGroups) structure
+  const itemCount = puzzle.algorithmSetGroups?.length || puzzle.supportedMethods?.length || 0;
+  const itemLabel = puzzle.algorithmSetGroups ? "algorithm set" : "method";
+  
   return (
     <Link href={`/puzzles/${puzzle.id}`}>
       <Card className="h-full transition-colors hover:bg-accent">
@@ -19,7 +23,7 @@ export function PuzzleCard({ puzzle }: PuzzleCardProps) {
         </CardHeader>
         <CardContent>
           <div className="text-sm text-muted-foreground">
-            {puzzle.supportedMethods.length} method{puzzle.supportedMethods.length !== 1 ? "s" : ""} available
+            {itemCount} {itemLabel}{itemCount !== 1 ? "s" : ""} available
           </div>
         </CardContent>
       </Card>

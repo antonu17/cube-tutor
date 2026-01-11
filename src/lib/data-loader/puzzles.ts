@@ -11,12 +11,12 @@ export async function loadPuzzles(): Promise<Puzzle[]> {
   
   return [
     {
-      id: "3x3x3",
+      id: puzzle3x3.id,
       type: puzzle3x3.type,
       name: puzzle3x3.name,
       description: puzzle3x3.description,
-      dimensions: [3, 3, 3],
-      supportedMethods: puzzle3x3.supportedMethods as MethodType[],
+      dimensions: puzzle3x3.dimensions,
+      algorithmSetGroups: puzzle3x3.algorithmSetGroups,
     },
   ];
 }

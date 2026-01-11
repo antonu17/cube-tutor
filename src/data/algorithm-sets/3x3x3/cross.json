@@ -1,0 +1,13 @@
+{
+  "id": "cross",
+  "puzzleId": "3x3x3",
+  "name": "Cross",
+  "shortName": "Cross",
+  "description": "Solve the first layer cross (usually white or yellow)",
+  "origin": "cfop",
+  "originName": "CFOP Method",
+  "order": 1,
+  "caseCount": 0,
+  "difficulty": "beginner",
+  "categories": []
+}
