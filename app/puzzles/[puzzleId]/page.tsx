@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container, PageHeader } from "@/src/components/layout";
-import { Breadcrumbs } from "@/src/components/navigation";
-import { MethodCard } from "@/src/components/navigation";
-import { loadPuzzle, loadAllMethods } from "@/src/lib/data-loader";
+import { Breadcrumbs, AlgorithmSetGroupCard } from "@/src/components/navigation";
+import { loadPuzzle, loadAlgorithmSetsByGroup } from "@/src/lib/data-loader";
 
 interface PuzzlePageProps {
   params: Promise<{ puzzleId: string }>;
@@ -21,19 +20,19 @@ export async function generateMetadata({ params }: PuzzlePageProps): Promise<Met
       };
     }
 
-    const description = `Learn solving methods for ${puzzle.name}. ${puzzle.description}`;
+    const description = `Learn algorithms for ${puzzle.name}. ${puzzle.description}`;
 
     return {
       title: puzzle.name,
       description,
       openGraph: {
-        title: `${puzzle.name} - Solving Methods`,
+        title: `${puzzle.name} - Algorithms`,
         description,
         type: "website",
       },
       twitter: {
         card: "summary",
-        title: `${puzzle.name} - Solving Methods`,
+        title: `${puzzle.name} - Algorithms`,
         description,
       },
     };
@@ -52,7 +51,7 @@ export default async function PuzzlePage({ params }: PuzzlePageProps) {
     notFound();
   }
 
-  const methods = await loadAllMethods(puzzleId);
+  const algorithmSetGroups = await loadAlgorithmSetsByGroup(puzzleId);
 
   return (
     <Container className="py-10">
@@ -70,22 +69,19 @@ export default async function PuzzlePage({ params }: PuzzlePageProps) {
           subtitle={puzzle.description}
         />
 
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">Solving Methods</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {methods.map((method) => (
-              <MethodCard
-                key={method.method}
-                puzzleId={puzzleId}
-                method={method}
-              />
-            ))}
-          </div>
+        <div className="space-y-6">
+          {algorithmSetGroups.map((group) => (
+            <AlgorithmSetGroupCard
+              key={group.name}
+              puzzleId={puzzleId}
+              group={group}
+            />
+          ))}
         </div>
 
-        {methods.length === 0 && (
+        {algorithmSetGroups.length === 0 && (
           <div className="text-center py-12 text-muted-foreground">
-            No methods available for this puzzle yet.
+            No algorithm sets available for this puzzle yet.
           </div>
         )}
       </div>

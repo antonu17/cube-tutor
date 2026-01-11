@@ -6,46 +6,44 @@ import { AlgorithmNotation, AlgorithmMetadata, AlgorithmAnimation, CaseDescripti
 import { CubeView } from "@/src/components/cube/CubeView";
 import { Badge } from "@/src/components/ui/badge";
 import { Separator } from "@/src/components/ui/separator";
-import { loadPuzzle, loadMethod, loadCase } from "@/src/lib/data-loader";
+import { loadPuzzle, loadAlgorithmSet, loadCase } from "@/src/lib/data-loader";
 import { parseAlgorithm, invertAlgorithm } from "@/src/lib/cube-engine/parser";
 import { createSolvedState } from "@/src/lib/cube-engine/state";
 import { applyAlgorithm } from "@/src/lib/cube-engine/executor";
 
 interface CasePageProps {
-  params: Promise<{ puzzleId: string; methodId: string; stageId: string; caseId: string }>;
+  params: Promise<{ puzzleId: string; algSetId: string; caseId: string }>;
 }
 
 export async function generateMetadata({ params }: CasePageProps): Promise<Metadata> {
-  const { puzzleId, methodId, stageId, caseId } = await params;
+  const { puzzleId, algSetId, caseId } = await params;
   
   try {
-    const [puzzle, method, algorithmCase] = await Promise.all([
+    const [puzzle, algorithmSet, algorithmCase] = await Promise.all([
       loadPuzzle(puzzleId),
-      loadMethod(puzzleId, methodId),
-      loadCase(methodId, stageId, caseId),
+      loadAlgorithmSet(puzzleId, algSetId),
+      loadCase(algSetId, algSetId, caseId),
     ]);
 
-    if (!puzzle || !method || !algorithmCase) {
+    if (!puzzle || !algorithmSet || !algorithmCase) {
       return {
         title: "Case Not Found",
       };
     }
 
-    const stage = method.stages?.find((s) => s.id === stageId);
-    const stageName = stage?.name || stageId.toUpperCase();
-    const description = `Learn ${algorithmCase.name} - ${method.name} ${stageName} algorithm for ${puzzle.name}. Includes notation, fingertricks, and recognition hints.`;
+    const description = `Learn ${algorithmCase.name} - ${algorithmSet.name} algorithm for ${puzzle.name}. Includes notation, fingertricks, and recognition hints.`;
 
     return {
-      title: `${algorithmCase.name} - ${stageName}`,
+      title: `${algorithmCase.name} - ${algorithmSet.name}`,
       description,
       openGraph: {
-        title: `${algorithmCase.name} - ${method.name} ${stageName}`,
+        title: `${algorithmCase.name} - ${algorithmSet.name}`,
         description,
         type: "website",
       },
       twitter: {
         card: "summary",
-        title: `${algorithmCase.name} - ${stageName}`,
+        title: `${algorithmCase.name} - ${algorithmSet.name}`,
         description,
       },
     };
@@ -73,21 +71,15 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
 };
 
 export default async function CasePage({ params }: CasePageProps) {
-  const { puzzleId, methodId, stageId, caseId } = await params;
+  const { puzzleId, algSetId, caseId } = await params;
   
-  const [puzzle, method, algorithmCase] = await Promise.all([
+  const [puzzle, algorithmSet, algorithmCase] = await Promise.all([
     loadPuzzle(puzzleId),
-    loadMethod(puzzleId, methodId),
-    loadCase(methodId, stageId, caseId),
+    loadAlgorithmSet(puzzleId, algSetId),
+    loadCase(algSetId, algSetId, caseId),
   ]);
 
-  if (!puzzle || !method || !algorithmCase) {
-    notFound();
-  }
-
-  const stage = method.stages?.find((s) => s.id === stageId);
-
-  if (!stage) {
+  if (!puzzle || !algorithmSet || !algorithmCase) {
     notFound();
   }
 
@@ -95,7 +87,7 @@ export default async function CasePage({ params }: CasePageProps) {
   // If setupMoves exist, use them. Otherwise, use inverse of primary algorithm.
   // For OLL/PLL, prepend z2 to start with yellow on top.
   let effectiveSetupMoves: string | undefined = algorithmCase.setupMoves;
-  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
+  const isOllOrPll = algSetId === 'oll' || algSetId === 'pll';
   
   if (!algorithmCase.setupMoves) {
     try {
@@ -135,8 +127,7 @@ export default async function CasePage({ params }: CasePageProps) {
             { label: "Home", href: "/" },
             { label: "Puzzles", href: "/puzzles" },
             { label: puzzle.name, href: `/puzzles/${puzzleId}` },
-            { label: method.name, href: `/puzzles/${puzzleId}/${methodId}` },
-            { label: stage.name, href: `/puzzles/${puzzleId}/${methodId}/${stageId}` },
+            { label: algorithmSet.name, href: `/puzzles/${puzzleId}/${algSetId}` },
             { label: algorithmCase.name },
           ]}
         />
@@ -202,7 +193,7 @@ export default async function CasePage({ params }: CasePageProps) {
                 notation={algorithmCase.primaryAlg.notation}
                 setupMoves={effectiveSetupMoves}
                 mode="case"
-                stageId={stageId}
+                stageId={algSetId}
               />
             </div>
           </div>
@@ -219,7 +210,7 @@ export default async function CasePage({ params }: CasePageProps) {
                     mode={isOllOrPll ? "case" : "top"}
                     options={{ 
                       stickerSize: 20,
-                      grayscaleNonYellow: stageId === 'oll'
+                      grayscaleNonYellow: algSetId === 'oll'
                     }} 
                   />
                 </div>
