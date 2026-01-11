@@ -45,12 +45,12 @@ export function HamburgerMenu({ isOpen, onToggle }: HamburgerMenuProps) {
     <Button
       variant="ghost"
       size="icon"
-      className="h-12 w-12 hover:bg-neutral-700"
+      className="h-10 w-10 hover:bg-neutral-700"
       style={{ color: '#ededed' }}
       aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
       onClick={onToggle}
     >
-      <Menu className="h-6 w-6" style={{ width: '24px', height: '24px' }} />
+      <Menu style={{ width: '20px', height: '20px' }} />
     </Button>
   );
 }

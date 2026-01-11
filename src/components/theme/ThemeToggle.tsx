@@ -11,14 +11,14 @@ export function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      className="h-12 w-12"
+      className="h-10 w-10"
       onClick={toggleTheme}
       aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <Moon className="h-6 w-6" style={{ width: '24px', height: '24px' }} />
+        <Moon style={{ width: '20px', height: '20px' }} />
       ) : (
-        <Sun className="h-6 w-6" style={{ width: '24px', height: '24px' }} />
+        <Sun style={{ width: '20px', height: '20px' }} />
       )}
     </Button>
   );
