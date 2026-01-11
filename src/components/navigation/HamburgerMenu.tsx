@@ -55,7 +55,7 @@ export function HamburgerMenu() {
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="w-[280px] sm:w-[320px]">
+      <SheetContent side="left" className="w-[280px] sm:w-[320px]" showOverlay={false}>
         <SheetHeader>
           <SheetTitle>Navigation</SheetTitle>
         </SheetHeader>
