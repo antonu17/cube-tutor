@@ -13,6 +13,8 @@ export interface CubeView3DProps {
   view?: ViewAngle;
   /** Sticker size in pixels (default: 30) */
   stickerSize?: number;
+  /** Background color (default: "#F3F4F6") */
+  backgroundColor?: string;
   /** Additional CSS classes */
   className?: string;
   /** ARIA label for accessibility */
@@ -38,6 +40,7 @@ export const CubeView3D: React.FC<CubeView3DProps> = ({
   state,
   view = 'front',
   stickerSize = 30,
+  backgroundColor,
   className = "",
   ariaLabel = "3D cube visualization",
 }) => {
@@ -46,9 +49,10 @@ export const CubeView3D: React.FC<CubeView3DProps> = ({
     const options: Render3DOptions = {
       stickerSize,
       view,
+      ...(backgroundColor && { backgroundColor }),
     };
     return renderCube3D(state, options);
-  }, [state, view, stickerSize]);
+  }, [state, view, stickerSize, backgroundColor]);
 
   return (
     <div

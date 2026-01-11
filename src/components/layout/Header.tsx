@@ -37,6 +37,7 @@ export function Header({ isMenuOpen, onMenuToggle }: HeaderProps) {
                 state={solvedState}
                 view="front"
                 stickerSize={6}
+                backgroundColor="#1a1a1a"
                 className="w-full h-full"
               />
             </div>
