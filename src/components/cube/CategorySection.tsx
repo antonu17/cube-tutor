@@ -3,8 +3,7 @@ import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CategorySectionProps {
   puzzleId: string;
-  methodId: string;
-  stageId: string;
+  algSetId: string;
   category: {
     name: string;
     description: string;
@@ -19,8 +18,7 @@ interface CategorySectionProps {
  */
 export function CategorySection({
   puzzleId,
-  methodId,
-  stageId,
+  algSetId,
   category,
   categoryKey,
 }: CategorySectionProps) {
@@ -45,8 +43,7 @@ export function CategorySection({
           <CaseListItem
             key={algorithmCase.id}
             puzzleId={puzzleId}
-            methodId={methodId}
-            stageId={stageId}
+            algSetId={algSetId}
             algorithmCase={algorithmCase}
           />
         ))}

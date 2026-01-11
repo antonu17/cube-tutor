@@ -12,8 +12,7 @@ import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseCardProps {
   puzzleId: string;
-  methodId: string;
-  stageId: string;
+  algSetId: string;
   algorithmCase: AlgorithmCase;
 }
 
@@ -36,10 +35,10 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
 /**
  * CaseCard component for displaying algorithm case information in a card format
  */
-export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCardProps) {
+export function CaseCard({ puzzleId, algSetId, algorithmCase }: CaseCardProps) {
   // Check if this is an OLL or PLL case (should start with yellow on top)
-  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
-  const isOll = stageId === 'oll';
+  const isOllOrPll = algSetId === 'oll' || algSetId === 'pll';
+  const isOll = algSetId === 'oll';
   
   // Generate cube state for visualization (memoized for performance)
   // Use setup moves if available, otherwise use inverse of primary algorithm
@@ -72,7 +71,7 @@ export function CaseCard({ puzzleId, methodId, stageId, algorithmCase }: CaseCar
   }, [algorithmCase.setupMoves, algorithmCase.primaryAlg.notation, isOllOrPll]);
 
   return (
-    <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
+    <Link href={`/puzzles/${puzzleId}/${algSetId}/${algorithmCase.id}`}>
       <Card className="h-full transition-colors hover:bg-accent">
         <CardHeader>
           <div className="flex items-center justify-between">

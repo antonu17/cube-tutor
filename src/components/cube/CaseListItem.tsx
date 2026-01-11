@@ -11,8 +11,7 @@ import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseListItemProps {
   puzzleId: string;
-  methodId: string;
-  stageId: string;
+  algSetId: string;
   algorithmCase: AlgorithmCase;
 }
 
@@ -35,10 +34,10 @@ const difficultyColors: Record<1 | 2 | 3 | 4 | 5, "default" | "secondary" | "des
 /**
  * CaseListItem component for displaying algorithm case information in a list row format
  */
-export function CaseListItem({ puzzleId, methodId, stageId, algorithmCase }: CaseListItemProps) {
+export function CaseListItem({ puzzleId, algSetId, algorithmCase }: CaseListItemProps) {
   // Check if this is an OLL or PLL case (should start with yellow on top)
-  const isOllOrPll = stageId === 'oll' || stageId === 'pll';
-  const isOll = stageId === 'oll';
+  const isOllOrPll = algSetId === 'oll' || algSetId === 'pll';
+  const isOll = algSetId === 'oll';
   
   // Generate cube state for visualization (memoized for performance)
   const caseState = useMemo(() => {
@@ -70,7 +69,7 @@ export function CaseListItem({ puzzleId, methodId, stageId, algorithmCase }: Cas
   }, [algorithmCase.setupMoves, algorithmCase.primaryAlg.notation, isOllOrPll]);
 
   return (
-    <Link href={`/puzzles/${puzzleId}/${methodId}/${stageId}/${algorithmCase.id}`}>
+    <Link href={`/puzzles/${puzzleId}/${algSetId}/${algorithmCase.id}`}>
       <div className="flex items-start gap-4 p-3 rounded-lg border bg-card hover:bg-accent transition-colors">
         {/* Cube visualization */}
         {caseState && (

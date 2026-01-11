@@ -95,8 +95,7 @@ export default async function AlgorithmSetPage({ params }: AlgorithmSetPageProps
         ) : (
           <CaseBrowser
             puzzleId={puzzleId}
-            methodId={algSetId}
-            stageId={algSetId}
+            algSetId={algSetId}
             categories={categories}
           />
         )}

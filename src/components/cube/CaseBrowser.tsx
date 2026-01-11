@@ -4,8 +4,7 @@ import type { AlgorithmCase } from "@/src/types/cube";
 
 interface CaseBrowserProps {
   puzzleId: string;
-  methodId: string;
-  stageId: string;
+  algSetId: string;
   categories: Record<
     string,
     {
@@ -21,8 +20,7 @@ interface CaseBrowserProps {
  */
 export function CaseBrowser({
   puzzleId,
-  methodId,
-  stageId,
+  algSetId,
   categories,
 }: CaseBrowserProps) {
   const categoryEntries = Object.entries(categories);
@@ -30,7 +28,7 @@ export function CaseBrowser({
   if (categoryEntries.length === 0) {
     return (
       <div className="text-center py-12 text-muted-foreground">
-        No cases available for this stage.
+        No cases available for this algorithm set.
       </div>
     );
   }
@@ -46,8 +44,7 @@ export function CaseBrowser({
           <CategorySection
             key={key}
             puzzleId={puzzleId}
-            methodId={methodId}
-            stageId={stageId}
+            algSetId={algSetId}
             category={category}
             categoryKey={key}
           />
